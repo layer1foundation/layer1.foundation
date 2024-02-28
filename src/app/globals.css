@@ -1,0 +1,67 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --foreground-hex: #000000;
+  --background-hex: #FFFFFF;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: var(--foreground-hex);
+  background: var(--background-hex)
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+h1{
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 400;
+}
+h2{
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+h3{
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h4{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+h5{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+h6{
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+p{
+  @apply text-m
+}
+
+a{
+  @apply text-sm
+}
