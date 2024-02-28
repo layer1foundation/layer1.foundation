@@ -7,12 +7,35 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontSize: {
+      'xs': ['12px','18.7px'],
+      'sm': ['14px','18.7px'],
+      'm': ['16px','24px'],
+      'lg': ['16px','24px'],
+      'xl': ['24px','38px'],
+      '2xl': ['28px', '38px']
+      
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors:{
+        light:"#FFFFFF",
+        dark:"#000000",
+        smoke70:"#131313",
+        smoke60:"#494949",
+        smoke50:"#7F7F7F",
+        smoke40:"#9F9F9F",
+        smoke30:"#BCBCBC",
+        smoke20:"#E4E4E4",
+        smoke10:"#FAFAFA"
+      },
+      fontFamily: {
+        'mono': ['Menlo', 'Monaco', 'Courier New', 'monospace'],
+      }
     },
   },
   plugins: [],
