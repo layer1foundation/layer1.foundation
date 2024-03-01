@@ -25,7 +25,7 @@ export default function Chapter({chapter, children}: {chapter: any, children?: R
         {
             chapter.subsection1.footer ? 
             chapter.subsection1.footer.map((p:string, i:number)=>{
-                return <h3 className='text-smoke40 mb-8 font-suisse'>{p}<a href='/' className='text-smoke70 text-xl'> click here</a></h3>
+                return <h3 key={i} className='text-smoke40 mb-8 font-suisse'>{p}<a href='/' className='text-smoke70 text-xl'> click here</a></h3>
             }) : null
         }
         {
