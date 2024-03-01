@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="px-16 py-8">
+      <body className="py-3 md:px-16 md:py-8">
         <Header />
         <main>{children}</main>
         <Footer />

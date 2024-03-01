@@ -34,9 +34,18 @@ const config: Config = {
         smoke10:"#FAFAFA"
       },
       fontFamily: {
-        'mono': ['Menlo', 'Monaco', 'Courier New', 'monospace'],
+        'mono': ['SuisseIntlMono', 'Monaco', 'Courier New', 'monospace'],
+        'untitled':['UntitledSerifRegular', 'serif'],
+        'italic':['UntitledSerifItalic', 'serif'],
+        'suisse':['SuisseIntlRegular', 'sans-serif'],
       }
     },
+  },
+  variants: {
+    extend: {
+      textColor: ['hover'],
+      backgroundColor: ['hover'], // This enables hover for background color
+    }
   },
   plugins: [],
 };

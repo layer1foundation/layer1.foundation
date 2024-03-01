@@ -7,6 +7,22 @@
   --background-hex: #FFFFFF;
 }
 
+@font-face {
+  font-family: "UntitledSerifRegular";
+  src: url('/fonts/UntitledSerif-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: "UntitledSerifItalic";
+  src: url('/fonts/UntitledSerif-Regularitalic.otf') format('opentype');
+}
+@font-face {
+  font-family: "SuisseIntlRegular";
+  src: url('/fonts/suisseintl-regular_0.otf') format('opentype');
+}
+@font-face {
+  font-family: "SuisseIntlMono";
+  src: url('/fonts/Suisseintl-Mono.otf') format('opentype');
+}
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -21,9 +37,9 @@ body {
 }
 
 @layer utilities {
-  .text-balance {
+  /* .text-balance {
     text-wrap: balance;
-  }
+  } */
 }
 h1{
   font-size: 48px;
@@ -59,9 +75,22 @@ h6{
 }
 
 p{
-  @apply text-m
+  @apply text-sm;
+  margin-bottom: 4px;
 }
-
+span{
+  font-size: 12px;
+}
 a{
   @apply text-sm
+}
+@media(max-width:800px){
+  .advancing{
+    line-height: 54px;
+    font-size: 42px;
+  }
+  .metaprotocols{
+    width: 100%;
+    display: flex;
+  }
 }
