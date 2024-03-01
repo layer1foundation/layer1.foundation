@@ -11,7 +11,8 @@ export default function Home() {
         <img className='hidden md:block px-4' src='/l1f-image-1.png'></img>
         <img className='md:hidden px-4' src='/l1f-image-1-mobi.png'></img>
         <div className='w-full px-4'>
-            <h1 className='font-suisse advancing'>Advancing the development of <em className='metaprotocols'>Metaprotocols</em> on Bitcoin</h1>
+            <p className='mt-6 mb-12 font-mono text-2xl leading-8'><span className='font-mono text-lg leading-6'>THE REALIZATION</span><span className='font-mono text-lg leading-6'> OF A DECENTRALIZED ECONOMY ON BITCOIN</span></p>
+            <h1 className='font-suisse advancing border-b pb-8 mb-6'>Advancing the development of <em className='metaprotocols'>Metaprotocols</em> on Bitcoin</h1>
             <Glossary />
             
             

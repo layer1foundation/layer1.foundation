@@ -15,8 +15,8 @@ export default function Chapter({chapter, children}: {chapter: any, children?: R
         {chapter.subsection1.paragraphs ? 
             <ul className=''>
                 {chapter.subsection1.paragraphs.map((p: Paragraph, i: number) => {
-                    return <li key={i} className='text-xl leading-8 mb-8 font-suisse'>{p.text} {p.bullets ? <ul> {p.bullets.map((bullet)=>{
-                        return <li key={i} className='text-smoke40'>{bullet}</li>
+                    return <li key={i} className='text-xl leading-8 mb-8 font-suisse'>{p.text} {p.bullets ? <ul className='list-disc pl-5 mt-8'> {p.bullets.map((bullet)=>{
+                        return <li key={i} className='text-smoke40 mb-6 font-sans'>{bullet}</li>
                     })}</ul> : null}</li>
                 })}
             </ul> : null 

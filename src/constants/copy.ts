@@ -117,20 +117,19 @@ const copy = {
                     {
                         text:"L1F supports ongoing public discourse related to both macro-level protocol development, as well as for the collaboration of development on independent projects built on these technologies. We hope to foster an environment where collaboration and discussion about these topics is easy and productive, and as such, have developed:",
                         bullets:[
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
+                            "The L1F Forum for users and developers to collaborate and exchange ideas on projects and protocol advancements (aka ‘the forum’)",
+                            "A Gitbook repository for the documentation of various standards and tools, featuring Gitbooks for each metaprotocol, serving as a comprehensive resource for developers (e.g. protocol specifications).",
+                            "A GitHub repository to promote open contributions and collaborative development (i.e. protocol implementations).",
+                            "Dashboards for the exploration of metaprotocols’ on-chain data—e.g. aggregated and custom displays of data analysis [COMING SOON].",
                         ]
+                    },
+                    {
+                        text: "By integrating community discourse with curated information and resources, L1F aims to foster innovation and collaboration within the ecosystem."
                     }
-                ],
-                footer:[
-                    "To review these resources in more detail, visit our Layer 1 Foundation public tooling,"
                 ],
                 links:[
                     {
-                        name:'TOOLS',
+                        name:'L1F DISCOURSE',
                         link:"/tools",
                         grow: true
                     }

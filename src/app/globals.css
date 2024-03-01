@@ -23,6 +23,10 @@
   font-family: "SuisseIntlMono";
   src: url('/fonts/Suisseintl-Mono.otf') format('opentype');
 }
+@font-face {
+  font-family: "UntitledSansRegular";
+  src: url('/fonts/UnititledSans-Regular.otf') format('opentype');
+}
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

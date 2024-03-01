@@ -38,6 +38,7 @@ const config: Config = {
         'untitled':['UntitledSerifRegular', 'serif'],
         'italic':['UntitledSerifItalic', 'serif'],
         'suisse':['SuisseIntlRegular', 'sans-serif'],
+        'sans':['UntitledSansRegular', 'sans-serif'],
       }
     },
   },
