@@ -16,9 +16,7 @@ export default function Glossary() {
             <Link href='/' className='flex justify-between font-mono'><p>TOOLS</p><img src='arrow-top-right.svg'/></Link>
             <Link href='/' className='flex justify-between font-mono'><p>FORM</p><img src='arrow-top-right.svg'/></Link>
         </div>
-        <div className='md:w-1/3'>
-
-        </div>
+        
     </div>
   )
 }

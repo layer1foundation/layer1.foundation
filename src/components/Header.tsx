@@ -12,7 +12,7 @@ export default function Header() {
                         <img src='/bars-two.svg'/>
                     </div>
                 </div>
-                <div className='border border-dark flex space-x-3 px-16 py-2 items-center justify-center font-mono'><img src='/arrow-top-left.svg' className='w-3'/> <p>DONATE</p></div>
+                <div className='border border-dark flex space-x-3 px-16 py-2 items-center justify-center font-mono'><img src='/arrow-top-left.svg' className='w-3'/> <h6>DONATE</h6></div>
             </div>
             <div className='gap-3 space-x-14 hidden md:flex'>
                 <Link href='/mission' className='font-mono'>MISSION</Link>

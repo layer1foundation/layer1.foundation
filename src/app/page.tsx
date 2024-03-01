@@ -11,7 +11,7 @@ export default function Home() {
         <img className='hidden md:block px-4' src='/l1f-image-1.png'></img>
         <img className='md:hidden px-4' src='/l1f-image-1-mobi.png'></img>
         <div className='w-full px-4'>
-            <p className='mt-6 mb-12 font-mono text-2xl leading-8'><span className='font-mono text-lg leading-6'>THE REALIZATION</span><span className='font-mono text-lg leading-6'> OF A DECENTRALIZED ECONOMY ON BITCOIN</span></p>
+            <div className='mt-2 mb-12 font-mono text-2xl leading-8'><h6 className='font-mono leading-6'>THE REALIZATION OF A DECENTRALIZED ECONOMY ON BITCOIN</h6></div>
             <h1 className='font-suisse advancing border-b pb-8 mb-6'>Advancing the development of <em className='metaprotocols'>Metaprotocols</em> on Bitcoin</h1>
             <Glossary />
             
@@ -28,7 +28,7 @@ export default function Home() {
                 <Projects /> 
             </ Chapter>
         </Segment>
-        <Segment bg="px-4" scroll={false} title='THE FOLLOWING PROJECTS ARE KEY PRIORITIES FOR L1F IN 2024 AND BEYOND'>
+        <Segment bg="px-4" scroll={false} title='THE FOLLOWING PROJECTS ARE KEY PRIORITIES FOR L1F IN 2024 AND BEYOND:'>
             <Chapter chapter={copy.home.chapter3}/>
         </Segment>
         <Segment bg="px-4" scroll={false}>

@@ -9,7 +9,8 @@ const copy = {
                     text:"Layer 1 Foundation is a non-profit organization supporting the development of the BRC20 token standard and other metaprotocols built on Bitcoin and Ordinals."
                     },
                     {
-                    text:"We imagine the realization of a decentralized economy on Bitcoin—and support that vision through the development of governance standards, public tooling, and the promotion of builder education and discourse."
+                    text:"We imagine the realization of a decentralized economy on Bitcoin—and support that vision through the development of governance standards, public tooling, and the promotion of builder education and discourse.",
+                    color:"text-smoke50"
                     }
                 ],
                 links:[

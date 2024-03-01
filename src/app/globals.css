@@ -57,7 +57,7 @@ h2{
 }
 
 h3{
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
 }
 
@@ -79,14 +79,14 @@ h6{
 }
 
 p{
-  @apply text-sm;
-  margin-bottom: 4px;
+  font-size: 12px;
+  
 }
 span{
   font-size: 12px;
 }
 a{
-  @apply text-sm
+  font-size: 12px;
 }
 @media(max-width:800px){
   .advancing{
