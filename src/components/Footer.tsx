@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function Footer() {
   return (
@@ -48,15 +48,28 @@ export default function Footer() {
       <div className='w-52 mt-16'>
         <img src='/img/l1f-logo-default.svg'></img>
       </div>
-      <div className='my-20'>
-        <ul>
-          <li className=' text-smoke50 font-mono mb-4'><a>Media kit</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a>Terms of use</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a>Privacy Policy</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a>Cookie Policy</a></li>
-        </ul>
+      <div className="md:flex md:items-center md:space-x-20 md:mb-6 md:justify-between">
+        <div className="md:flex ">
+          <div className="w-52 mt-16 md:mt-0 md:mr-12">
+            <img src="/l1f-logo-default.svg"></img>
+          </div>
+          <ul className="my-20 md:flex md:my-0 md:items-center md:space-x-8">
+            <li className=" text-smoke50 font-mono mb-4 md:mb-0">
+              <a>Media kit</a>
+            </li>
+            <li className=" text-smoke50 font-mono mb-4 md:mb-0">
+              <a>Terms of use</a>
+            </li>
+            <li className=" text-smoke50 font-mono mb-4 md:mb-0">
+              <a>Privacy Policy</a>
+            </li>
+            <li className=" text-smoke50 font-mono mb-4 md:mb-0">
+              <a>Cookie Policy</a>
+            </li>
+          </ul>
+        </div>
+        <p>©2024 LAYER 1 FOUNDATIONS</p>
       </div>
-      <p>©2024 LAYER 1 FOUNDATIONS</p>
     </div>
-  )
+  );
 }

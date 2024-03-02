@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Glossary() {
   return (
-    <div className='flex flex-col w-full md:flex-row justify-between'>
+    <div className='flex flex-col w-full md:flex-row justify-between md:justify-start'>
         <div className='md:w-1/3 text-smoke40 font-mono mb-12'>
             <p>00 / OVERVIEW</p>
             <p>01 / MISSION</p>

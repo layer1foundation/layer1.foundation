@@ -39,8 +39,14 @@ const config: Config = {
         'italic':['UntitledSerifItalic', 'serif'],
         'suisse':['SuisseIntlRegular', 'sans-serif'],
         'sans':['UntitledSansRegular', 'sans-serif'],
+      },
+      keyframes: {
+        'slide-down':{
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0)' }
+        }
       }
-    },
+    }
   },
   variants: {
     extend: {

@@ -27,6 +27,22 @@
   font-family: "UntitledSansRegular";
   src: url('/fonts/UnititledSans-Regular.otf') format('opentype');
 }
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -40,11 +56,12 @@ body {
   background: var(--background-hex)
 }
 
-@layer utilities {
-  /* .text-balance {
+/* @layer utilities {
+  .text-balance {
     text-wrap: balance;
-  } */
-}
+  } 
+}*/
+
 h1{
   font-size: 48px;
   line-height: 50px;
@@ -98,3 +115,4 @@ a{
     display: flex;
   }
 }
+

@@ -71,7 +71,7 @@ const copy = {
         chapter3:{
             heading:"[ 02 / PROTOCOL GOVERNANCE]",
             subsection1:{
-                title:"PUBLIC TOOLING FOR DEVELOPERS",
+                title:"PROTOCOL GOVERNANCE FOR BRC20",
                 paragraphs:[
                     {
                     text:"As a first order of business, L1F and its partners are defining standards of governance for the development and maintenance of the BRC20 protocol. It is critical for the health and safety of both users and businesses that there is clear transparent consensus around how this protocol, and its indexers, are maintained. We are thrilled to announce that L1F has partnered with the leading indexers in the space to create a resolution for governance for the protection and benefit of BRC20’s collective user base. "
@@ -92,7 +92,7 @@ const copy = {
         chapter4:{
             heading:"[ 03 / TOOLS]",
             subsection1:{
-                title:"PROTOCOL GOVERNANCE FOR BRC20",
+                title:"PUBLIC TOOLING FOR DEVELOPERS",
                 paragraphs:[
                     {
                     text:"To support builders in this space, L1F aims to review, aggregate and share resources that may be useful to developers of metaprotocol technologies or technologies built on such protocols. Additionally, we aim to educate users about protocol updates, proposals and tooling that we believe pushes this ecosystem forward. In our aggregation of such technologies, we prioritize the promotion of tooling that is open-source and permissionless—and pursues decentralization when appropriate (e.g. for technologies that dictate value)."
