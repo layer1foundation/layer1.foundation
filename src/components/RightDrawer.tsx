@@ -7,18 +7,22 @@ interface RightDrawerProps {
 }
 
 export default function RightDrawer({children, open, setIsOpen} : RightDrawerProps) {
+  const stopPropagation = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
   return (
     open && (
-      <div className="fixed inset-0 bg-gray-400 bg-opacity-50 w-full h-full cursor-pointer" onClick={()=>{setIsOpen(!open)}} >
+      <div className="fixed inset-0 z-1 bg-gray-400 bg-opacity-50 w-full h-full cursor-pointer" onClick={()=>{setIsOpen(!open)}} >
         <div 
-        className="fixed z-99 w-3/4 top-0 right-0 h-full px-5 py-5 flex flex-col bg-light space-y-8 overflow-auto" 
+        className="fixed z-99 w-4/5 top-0 right-0 h-full py-5 flex flex-col bg-light space-y-8 overflow-auto max-w-5xl" 
         style={open ? { animation: "slide-left 500ms" } : {}}
+        onClick={stopPropagation}
         >
-        <div onClick={()=>{
+        {/* <div onClick={()=>{
           setIsOpen(!open);
         }}>
           <img src="/close.svg" />
-        </div>
+        </div> */}
         {children}
         </div>
       </div>

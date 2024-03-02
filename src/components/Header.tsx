@@ -35,12 +35,15 @@ export default function Header() {
             </RightDrawer>
             
           </div>
-          <div className="border border-dark flex space-x-3 px-16 py-2 items-center justify-center font-mono cursor-pointer"
+          <div className="hidden border border-dark md:flex space-x-3 px-16 py-2 items-center justify-center font-mono cursor-pointer"
           onClick={()=>{
             setDonateOpen(!donateOpen);
           }}>
             <img src="/arrow-top-left.svg" className="w-3" /> <h6>DONATE</h6>
           </div>
+          <a href="/donate" className="md:hidden border border-dark flex space-x-3 px-16 py-2 items-center justify-center font-mono cursor-pointer">
+            <img src="/arrow-top-left.svg" className="w-3" /> <h6>DONATE</h6>
+          </a>
           <RightDrawer open={donateOpen} setIsOpen={setDonateOpen}>
             <Donate />
           </RightDrawer>
