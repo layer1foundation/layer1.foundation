@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MobileNav() {
   return (
-    <nav className="flex flex-col text-right">
+    <nav className="flex flex-col text-right pr-4">
       <Link href="/" className="font-mono text-xl">
         MISSION
       </Link>

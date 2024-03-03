@@ -3,7 +3,27 @@ import React, { ReactNode } from "react";
 interface Paragraph {
   text: string;
   bullets?: string[];
-  color?: string;
+  props?: string;
+}
+interface ChapterProps {
+    heading: string;
+    subheading?: string;
+    headingList?: string[];
+    headingBig?: boolean;
+    subsection1?: {
+        title: string;
+        paragraphs: Paragraph[];
+        textSize?: string;
+        footer?: string[];
+        links?: { name: string; link: string; grow: boolean }[];
+    };
+    subsection2?: {
+        title: string;
+        paragraphs: Paragraph[];
+        textSize?: string;
+        items?: string[];
+    };
+    
 }
 
 export default function Chapter({
@@ -19,32 +39,57 @@ export default function Chapter({
     <div className="flex flex-col md:flex-row md:w-full md:justify-between">
       <div className={`${half ? "md:w-3/5" : ""}`}>
         {chapter.headingBig ? (
-          <h1 className={`mb-5 md:pr-16`}>
-            {chapter.heading}
-          </h1>
+          <h1 className={`mb-5 md:pr-16 `}>{chapter.heading}</h1>
         ) : (
           <h6 className="text-smoke50 mb-5 font-mono">{chapter.heading}</h6>
         )}
         {chapter.subheading ? (
-          <h6 className={`text-smoke50 mb-8 mt-20 font-mono md:max-w-72`}>{chapter.subheading}</h6>
+          <h6 className={`text-smoke50 mb-8 mt-20 font-mono md:max-w-72`}>
+            {chapter.subheading}
+          </h6>
         ) : null}
+        {chapter.headingList ? 
+            <div className="hidden md:flex md:flex-col">
+            {chapter.headingList.map((h: string, i: number) => {
+                return (
+                <h6 key={i} className="text-smoke50 mb-2 font-mono">
+                    {h}
+                </h6>
+                );
+            })
+            }
+            </div>: null
+        }
       </div>
       {chapter.subsection1 ? (
         <div className={`flex flex-col ${half ? "md:w-2/5" : "md:w-2/3"}`}>
-          {chapter.subsection1.title ? <h6 className="text-smoke50 mb-8 font-mono">
-            {chapter.subsection1.title}
-          </h6> : null}
+          {chapter.subsection1.title ? (
+            <h6 className="text-smoke50 mb-8 font-mono">
+              {chapter.subsection1.title}
+            </h6>
+          ) : null}
           {chapter.subsection1.paragraphs ? (
-            <ul className={`${chapter.subsection1.textSize ? `text-${chapter.subsection1.textSize}` : null}`}>
+            <div>
+            <ul
+              className={`${
+                chapter.subsection1.textSize
+                  ? `text-${chapter.subsection1.textSize}`
+                  : null
+              }`}
+            >
               {chapter.subsection1.paragraphs.map((p: Paragraph, i: number) => {
                 return (
                   <li
                     key={i}
                     className={`leading-8 mb-8 font-suisse ${
-                      p.color ? p.color : null
+                      p.props ? p.props : null
                     }`}
                   >
-                    {chapter.subsection1.smallText ? <h4 className="font-sans">{p.text}</h4> : <h3>{p.text}</h3>}{" "}
+                    {chapter.subsection1.smallText ? (
+                      <h4 className="font-sans">{p.text}</h4>
+                    ) : (
+                      <h3>{p.text}</h3>
+                    )}{" "}
                     {p.bullets ? (
                       <ul className="list-disc pl-5 mt-8">
                         {" "}
@@ -61,7 +106,27 @@ export default function Chapter({
                 );
               })}
             </ul>
-          ) : null}
+            { chapter.subsection1.outerLink ? (
+                <div className="border-b w-full flex justify-between items-center">
+                    <a href={chapter.subsection1.outerLink.link} className="font-mono">{chapter.subsection1.outerLink.text}</a>
+                    <img src="/arrow-top-right.svg"/>
+                </div>
+                ) : null }
+            </div>
+          ) : null 
+          }
+          {chapter.headingList ? 
+            <div className=" md:hidden md:flex-col">
+            {chapter.headingList.map((h: string, i: number) => {
+                return (
+                <h6 key={i} className="text-smoke50 mb-2 font-mono">
+                    {h}
+                </h6>
+                );
+            })
+            }
+            </div>: null
+            }
           {chapter.subsection1.footer
             ? chapter.subsection1.footer.map((p: string, i: number) => {
                 return (
@@ -110,17 +175,27 @@ export default function Chapter({
                 {chapter.subsection2.title}
               </p>
               {chapter.subsection2.paragraphs ? (
-                <ul className={`${chapter.subsection2.textSize ? `text-${chapter.subsection2.textSize}` : null}`}>
+                <ul
+                  className={`${
+                    chapter.subsection2.textSize
+                      ? `text-${chapter.subsection2.textSize}`
+                      : null
+                  }`}
+                >
                   {chapter.subsection2.paragraphs.map(
                     (p: Paragraph, i: number) => {
                       return (
                         <li
                           key={i}
                           className={`leading-8 mb-8 font-suisse ${
-                            p.color ? p.color : null
+                            p.props ? p.props : null
                           }`}
                         >
-                          {chapter.subsection2.smallText ? <h4 className="font-sans">{p.text}</h4> : <h3>{p.text}</h3>}{" "}
+                          {chapter.subsection2.smallText ? (
+                            <h4 className="font-sans">{p.text}</h4>
+                          ) : (
+                            <h3>{p.text}</h3>
+                          )}{" "}
                           {p.bullets ? (
                             <ul className="list-disc pl-5 mt-8">
                               {" "}
@@ -161,9 +236,10 @@ export default function Chapter({
               ) : null}
             </div>
           ) : null}
-          {children}
+         
         </div>
       ) : null}
+       {children}
     </div>
   );
 }

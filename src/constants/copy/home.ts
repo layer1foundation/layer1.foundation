@@ -10,7 +10,7 @@ const copy = {
                     },
                     {
                     text:"We imagine the realization of a decentralized economy on Bitcoin—and support that vision through the development of governance standards, public tooling, and the promotion of builder education and discourse.",
-                    color:"text-smoke50"
+                    props:"text-smoke50"
                     }
                 ],
                 links:[
