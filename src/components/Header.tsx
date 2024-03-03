@@ -52,7 +52,7 @@ export default function Header() {
           <Link href="/" className="font-mono">
             MISSION
           </Link>
-          <Link href="/BRC20" className="font-mono">
+          <Link href="/brc20" className="font-mono">
             METAPROTOCOLS
           </Link>
           <Link href="/tools" className="font-mono">
@@ -61,9 +61,9 @@ export default function Header() {
           <Link href="/donate" className="font-mono">
             PARTNERS
           </Link>
-          <Link href="/blog" className="font-mono">
+          {/* <Link href="/blog" className="font-mono">
             BLOG
-          </Link>
+          </Link> */}
         </nav>
       </div>
     </header>

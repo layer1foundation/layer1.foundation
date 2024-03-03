@@ -7,7 +7,7 @@ export default function MobileNav() {
       <Link href="/" className="font-mono text-xl">
         MISSION
       </Link>
-      <Link href="/BRC20" className="font-mono text-xl">
+      <Link href="/brc20" className="font-mono text-xl">
         METAPROTOCOLS
       </Link>
       <Link href="/tools" className="font-mono text-xl">
@@ -16,9 +16,9 @@ export default function MobileNav() {
       <Link href="/donate" className="font-mono text-xl">
         PARTNERS
       </Link>
-      <Link href="/blog" className="font-mono text-xl">
+      {/* <Link href="/blog" className="font-mono text-xl">
         BLOG
-      </Link>
+      </Link> */}
     </nav>
   );
 }
