@@ -31,39 +31,40 @@ export default function Tools() {
         </Segment>
         <Segment>
           <Chapter chapter={copy.tools.chapter1}>
-            <img src="/tools-hero-mobi.svg" className='mb:hidden'/>
-            <img src="/tools-hero-dt.svg" className='hidden md:flex'/>
+            
           </Chapter>
+          <img src="/tools-hero-mobi.svg" className='md:hidden'/>
+          <img src="/tools-hero-dt.svg" className='hidden md:flex'/>
         </Segment>
         <Segment scroll={false} bg='bg-smoke10'>
           <Chapter chapter={copy.tools.chapter2}></Chapter>
         </Segment>
-        <Segment scroll={false} bg="border-b mb-20">
+        <Segment scroll={false} bg="border-b mb-20 md:mb-0">
           <Tool tool={copy.tools.tool1}></Tool>
           <Chapter chapter={copy.tools.chapterMeta}></Chapter>
         </Segment>
-        <Segment scroll={false} bg="border-b mb-20">
+        <Segment scroll={false} bg="border-b mb-20 md:mb-0">
           <Chapter chapter={copy.tools.chapterSand}></Chapter>
         </Segment>
-        <Segment scroll={false} bg="border-b mb-20">
+        <Segment scroll={false} bg="border-b mb-20 md:mb-0">
           <Tool tool={copy.tools.tool2}></Tool>
           <Chapter chapter={copy.tools.chapterOpi}></Chapter>
         </Segment>
-        <Segment scroll={false} bg="border-b mb-20">
+        <Segment scroll={false} bg="border-b mb-20 md:mb-0">
           <Tool tool={copy.tools.tool3}></Tool>
           <Chapter chapter={copy.tools.chapterChisel}></Chapter>
-        </Segment>
-        <Segment bg="border-b mb-20">
+        </Segment >
+        <Segment scroll={false} bg="border-b mb-20 md:mb-0">
           <Chapter chapter={copy.tools.chapterOrdinalsBot}></Chapter>
         </Segment>
-        <Segment scroll={false} bg='border-b mb-20'>
+        <Segment scroll={false} bg='border-b mb-20 md:mb:0'>
           <Tool tool={copy.tools.tool4}></Tool>
           <Chapter chapter={copy.tools.chapterScan}></Chapter>
         </Segment>
-        <Segment scroll={false} bg="border-b mb-20">
+        <Segment scroll={false} bg="border-b mb-20 md:mb-0">
           <Chapter chapter={copy.tools.chapterOrdIo}></Chapter>
         </Segment>
-        <Segment scroll={false} bg="border-b mb-20">
+        <Segment scroll={false} bg="border-b mb-20 md:mb-0">
           <Tool tool={copy.tools.tool5}></Tool>
           <Chapter chapter={copy.tools.chapterOYL}></Chapter>
         </Segment>

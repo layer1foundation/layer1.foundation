@@ -26,6 +26,9 @@ const copy = {
         chapter1:{
             heading:"Lifecycle Support for Metaprotocols",
             headingBig:true,
+            subsection1:{
+                title:""
+            }
         },
         chapter2:{
             headingList:[" 00 / OPI"," 01 / METASHREW"," 02 / FORUM]"," 03 / CHISEL", " 04 / ORIDINALSBOT", " 05 / ORDISCAN", " 06 / ORD.IO"],
@@ -132,7 +135,7 @@ const copy = {
         tool4:{
             subheading:"LIFECYCLE SUPPORT",
             heading:"Explorer",
-            text:"Explore & display a world of inscriptions"
+            text:"For monitoring protocol activities, enhancing transparency and operational efficiency"
         },
         chapterScan:{
             heading:"[ 06 / ORDISCAN]",

@@ -69,7 +69,7 @@ export default function Chapter({
             </h6>
           ) : null}
           {chapter.subsection1.paragraphs ? (
-            <div>
+            <div className="md:flex">
             <ul
               className={`${
                 chapter.subsection1.textSize
@@ -107,7 +107,7 @@ export default function Chapter({
               })}
             </ul>
             { chapter.subsection1.outerLink ? (
-                <div className="border-b w-full flex justify-between items-center">
+                <div className="border-b w-full flex justify-between md:items-center h-6 md:ml-16">
                     <a href={chapter.subsection1.outerLink.link} className="font-mono">{chapter.subsection1.outerLink.text}</a>
                     <img src="/arrow-top-right.svg"/>
                 </div>
@@ -236,10 +236,10 @@ export default function Chapter({
               ) : null}
             </div>
           ) : null}
-         
+         {children}
         </div>
       ) : null}
-       {children}
+       
     </div>
   );
 }

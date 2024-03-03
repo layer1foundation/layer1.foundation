@@ -4,7 +4,7 @@ export default function
 ({tool}:any) {
    
   return (
-    <div className='md:flex mb-20'>
+    <div className='md:flex mb-20 md:mb-8 md:items-center'>
         <div className='md:w-1/3 mb-4 space-y-4'>
         <h6 className='font-mono text-smoke40'>{tool.subheading}</h6>
         <h1>{tool.heading}</h1>
