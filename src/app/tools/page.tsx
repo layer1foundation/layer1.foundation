@@ -66,7 +66,7 @@ export default function Tools() {
         </Segment>
         <Segment scroll={false} bg="border-b mb-20 md:mb-0">
           <Tool tool={copy.tools.tool5}></Tool>
-          <Chapter chapter={copy.tools.chapterOYL}></Chapter>
+          <Chapter chapter={copy.tools.chapterOYL} />
         </Segment>
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function 
+export default function QR
 
 () {
     const textToCopy = 'bc1qpq6600v0kua...rjhz83qk0s7fk32';
