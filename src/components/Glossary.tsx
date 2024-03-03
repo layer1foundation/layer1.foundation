@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import Link from 'next/link'
 
@@ -15,7 +17,7 @@ export default function Glossary({content, chapters = true}: GlossaryProps) {
             {content?.chapters ? 
             content.chapters.map((chapter: any, i: number) => {
                 return (
-                    <p key={i} className='flex justify-between md:mr-20'><p>{chapter.heading}</p></p>
+                    <p key={i} className='flex justify-between md:mr-20'>{chapter.heading}</p>
                 )
             }) : chapters ?
             <div>
@@ -29,9 +31,9 @@ export default function Glossary({content, chapters = true}: GlossaryProps) {
           }
         </div>
         <div className='md:w-1/3 space-y-3'>
-            <Link href='/' className='flex justify-between font-mono'><p>GITHUB</p><img src='/img/arrow-top-right.svg'/></Link>
-            <Link href='/' className='flex justify-between font-mono'><p>TOOLS</p><img src='/img/arrow-top-right.svg'/></Link>
-            <Link href='/' className='flex justify-between font-mono'><p>FORM</p><img src='/img/arrow-top-right.svg'/></Link>
+            <Link href='/' className='flex justify-between font-mono'>GITHUB<img src='arrow-top-right.svg'/></Link>
+            <Link href='/' className='flex justify-between font-mono'>TOOLS<img src='arrow-top-right.svg'/></Link>
+            <Link href='/' className='flex justify-between font-mono'>FORM<img src='arrow-top-right.svg'/></Link>
         </div>
         
     </div>

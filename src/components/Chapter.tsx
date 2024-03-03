@@ -1,29 +1,32 @@
 import React, { ReactNode } from "react";
 
 interface Paragraph {
-  text: string;
+  text?: string;
   bullets?: string[];
   props?: string;
 }
 interface ChapterProps {
-    heading: string;
+    heading?: string;
     subheading?: string;
     headingList?: string[];
     headingBig?: boolean;
+    subheadingBig?: boolean;
     subsection1?: {
-        title: string;
-        paragraphs: Paragraph[];
+        title?: string;
+        paragraphs?: Paragraph[];
         textSize?: string;
+        smallText?: boolean;
         footer?: string[];
-        links?: { name: string; link: string; grow: boolean }[];
+        links?: { name: string; link: string; grow?: boolean }[];
+        outerLink?: { link: string; text: string };
     };
     subsection2?: {
-        title: string;
-        paragraphs: Paragraph[];
+        title?: string;
+        paragraphs?: Paragraph[];
         textSize?: string;
         items?: string[];
+        smallText?:boolean
     };
-    
 }
 
 export default function Chapter({
@@ -31,22 +34,31 @@ export default function Chapter({
   half,
   children,
 }: {
-  chapter?: any;
+  chapter?: ChapterProps;
   half?: boolean;
   children?: React.ReactNode;
 }) {
-  return (
+  if(chapter){
+    return (
     <div className="flex flex-col md:flex-row md:w-full md:justify-between">
       <div className={`${half ? "md:w-3/5" : ""}`}>
-        {chapter.headingBig ? (
+        {chapter.heading ? (
+         chapter.headingBig ? (
           <h1 className={`mb-5 md:pr-16 `}>{chapter.heading}</h1>
         ) : (
           <h6 className="text-smoke50 mb-5 font-mono">{chapter.heading}</h6>
-        )}
+        )
+        ) : null }
         {chapter.subheading ? (
+            chapter.subheadingBig ? (
+                <h1 className={`mb-8 mt-10 font-suisse md:max-w-72`}>
+                    {chapter.subheading}
+                </h1>
+            ) : (
           <h6 className={`text-smoke50 mb-8 mt-20 font-mono md:max-w-72`}>
             {chapter.subheading}
           </h6>
+            )
         ) : null}
         {chapter.headingList ? 
             <div className="hidden md:flex md:flex-col">
@@ -85,7 +97,7 @@ export default function Chapter({
                       p.props ? p.props : null
                     }`}
                   >
-                    {chapter.subsection1.smallText ? (
+                    {chapter.subsection1 && chapter.subsection1.smallText ? (
                       <h4 className="font-sans">{p.text}</h4>
                     ) : (
                       <h3>{p.text}</h3>
@@ -93,10 +105,10 @@ export default function Chapter({
                     {p.bullets ? (
                       <ul className="list-disc pl-5 mt-8">
                         {" "}
-                        {p.bullets.map((bullet) => {
+                        {p.bullets.map((bullet,b) => {
                           return (
-                            <li key={i} className="text-smoke40 mb-6 font-sans">
-                              <h3 key={i}>{bullet}</h3>
+                            <li key={b} className="text-smoke40 mb-6 font-sans">
+                              <h3 >{bullet}</h3>
                             </li>
                           );
                         })}
@@ -144,14 +156,14 @@ export default function Chapter({
             <div className="w-full flex justify-start space-x-2">
               {chapter.subsection1.links.map(
                 (
-                  l: { name: string; link: string; grow: boolean },
+                  l: { name: string; link: string; grow?: boolean },
                   k: number
                 ) => {
                   return (
                     <a
                       key={k}
                       href={l.link}
-                      className={`text-dark flex items-center border-2 border-dark rounded-full justify-center py-3 space-x-4 hover:bg-black hover:text-light  ${
+                      className={`text-dark h-10 flex items-center border-2 border-dark rounded-full justify-between py-3 space-x-2 hover:bg-black hover:text-light  ${
                         l.grow ? "flex-grow md:flex-grow-0" : null
                       } `}
                     >
@@ -191,7 +203,7 @@ export default function Chapter({
                             p.props ? p.props : null
                           }`}
                         >
-                          {chapter.subsection2.smallText ? (
+                          {chapter.subsection2 && chapter.subsection2.smallText ? (
                             <h4 className="font-sans">{p.text}</h4>
                           ) : (
                             <h3>{p.text}</h3>
@@ -199,13 +211,13 @@ export default function Chapter({
                           {p.bullets ? (
                             <ul className="list-disc pl-5 mt-8">
                               {" "}
-                              {p.bullets.map((bullet) => {
+                              {p.bullets.map((bullet,b) => {
                                 return (
                                   <li
-                                    key={i}
+                                    key={b}
                                     className="text-smoke40 mb-6 font-sans"
                                   >
-                                    <h3 key={i}>{bullet}</h3>
+                                    <h3>{bullet}</h3>
                                   </li>
                                 );
                               })}
@@ -242,4 +254,5 @@ export default function Chapter({
        
     </div>
   );
+}
 }

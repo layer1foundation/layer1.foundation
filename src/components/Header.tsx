@@ -49,7 +49,7 @@ export default function Header() {
           </RightDrawer>
         </div>
         <nav className="gap-3 space-x-14 hidden md:flex">
-          <Link href="/mission" className="font-mono">
+          <Link href="/" className="font-mono">
             MISSION
           </Link>
           <Link href="/BRC20" className="font-mono">
