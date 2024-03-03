@@ -8,9 +8,9 @@ import Projects from '@/components/Projects'
 export default function Home() {
   return (
     <div className='flex flex-col items-center'>
-        <img className='hidden md:block px-4' src='/img/l1f-image-1.png'></img>
-        <img className='md:hidden px-4' src='/img/l1f-image-1-mobi.png'></img>
-        <div className='w-full px-4'>
+        <img className='hidden md:block ' src='/img/l1f-image-1.png'></img>
+        <img className='md:hidden ' src='/img/l1f-image-1-mobi.png'></img>
+        <div className='w-full'>
             <div className='mt-2 mb-12 font-mono text-2xl leading-8'><h6 className='font-mono leading-6'>THE REALIZATION OF A DECENTRALIZED ECONOMY ON BITCOIN</h6></div>
             <h1 className='font-suisse advancing border-b pb-8 mb-6 md:max-w-3xl'>Advancing the development of <em className='metaprotocols'>Metaprotocols</em> on Bitcoin</h1>
             <Glossary />

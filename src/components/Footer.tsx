@@ -2,7 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className='px-4 pt-12 '>
+    <div className='px-4 md:px-10 pt-12'>
+      <div className="md:flex md:space-x-10">
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono'>PARTNERS</p>
         <ul>
@@ -24,7 +25,7 @@ export default function Footer() {
         </ul>
       </div>
       <div className='mb-20'>
-        <p className='mb-8 text-lg font-mono'>SOCIAL</p>
+        <p className='mb-8 text-lg font-mono md:mr-10'>SOCIAL</p>
         <ul>
           <li className=' text-smoke50 font-mono mb-4'><a>X.COM</a></li>
         </ul>
@@ -45,8 +46,6 @@ export default function Footer() {
           <li className=' text-smoke50 font-mono mb-4'><a>INFO@L1F.XYZ</a></li>
         </ul>
       </div>
-      <div className='w-52 mt-16'>
-        <img src='/img/l1f-logo-default.svg'></img>
       </div>
       <div className="md:flex md:items-center md:space-x-20 md:mb-6 md:justify-between">
         <div className="md:flex ">
