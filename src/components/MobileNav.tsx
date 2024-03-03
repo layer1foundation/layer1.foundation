@@ -7,7 +7,7 @@ export default function MobileNav() {
       <Link href="/" className="font-mono text-xl">
         MISSION
       </Link>
-      <Link href="/brc20" className="font-mono text-xl">
+      <Link href="/metaprotocols" className="font-mono text-xl">
         METAPROTOCOLS
       </Link>
       <Link href="/tools" className="font-mono text-xl">

@@ -52,7 +52,7 @@ export default function Header() {
           <Link href="/" className="font-mono">
             MISSION
           </Link>
-          <Link href="/brc20" className="font-mono">
+          <Link href="/metaprotocols" className="font-mono">
             METAPROTOCOLS
           </Link>
           <Link href="/tools" className="font-mono">

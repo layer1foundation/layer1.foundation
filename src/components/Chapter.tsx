@@ -17,8 +17,8 @@ interface ChapterProps {
         textSize?: string;
         smallText?: boolean;
         footer?: string[];
-        links?: { name: string; link: string; grow?: boolean }[];
-        outerLink?: { link: string; text: string };
+        links?: { name: string; link?: string; grow?: boolean }[];
+        outerLink?: { link?: string; text: string };
     };
     subsection2?: {
         title?: string;
@@ -38,7 +38,7 @@ export default function Chapter({
   half?: boolean;
   children?: React.ReactNode;
 }) {
-  if(chapter){
+  if(!chapter) return <div>Chapter Not Found</div>
     return (
     <div className="flex flex-col md:flex-row md:w-full md:justify-between">
       <div className={`${half ? "md:w-3/5" : ""}`}>
@@ -154,14 +154,10 @@ export default function Chapter({
             : null}
           {chapter.subsection1.links ? (
             <div className="w-full flex justify-start space-x-2">
-              {chapter.subsection1.links.map(
-                (
-                  l: { name: string; link: string; grow?: boolean },
-                  k: number
-                ) => {
+              {chapter.subsection1.links.map((l, i) => {
                   return (
                     <a
-                      key={k}
+                      key={i}
                       href={l.link}
                       className={`text-dark h-10 flex items-center border-2 border-dark rounded-full justify-between py-3 space-x-2 hover:bg-black hover:text-light  ${
                         l.grow ? "flex-grow md:flex-grow-0" : null
@@ -254,5 +250,4 @@ export default function Chapter({
        
     </div>
   );
-}
 }
