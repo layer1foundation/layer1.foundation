@@ -27,6 +27,10 @@
   font-family: "UntitledSansRegular";
   src: url('/fonts/UntitledSans-Regular.otf') format('opentype');
 }
+@font-face {
+  font-family: "Meliore";
+  src: url('/fonts/MeliorLTStd-italic.ttf') format('truetype');
+}
 @keyframes slide-left {
   from {
     transform: translateX(100%);
@@ -103,7 +107,7 @@ span{
   font-size: 12px;
 }
 a{
-  font-size: 12px;
+  font-size: 14px;
 }
 @media(max-width:800px){
   .advancing{
@@ -114,5 +118,6 @@ a{
     width: 100%;
     display: flex;
   }
+  
 }
 

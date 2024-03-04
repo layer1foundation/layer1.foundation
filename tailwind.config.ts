@@ -13,7 +13,8 @@ const config: Config = {
       'm': ['16px','24px'],
       'lg': ['16px','24px'],
       'xl': ['24px','38px'],
-      '2xl': ['28px', '38px']
+      '2xl': ['28px', '38px'],
+      '4xl': ['64px', '70px'],
       
     },
     extend: {
@@ -39,14 +40,24 @@ const config: Config = {
         'italic':['UntitledSerifItalic', 'serif'],
         'suisse':['SuisseIntlRegular', 'sans-serif'],
         'sans':['UntitledSansRegular', 'sans-serif'],
+        'melior':['Melior', 'serif'],
       },
       keyframes: {
         'slide-down':{
           '0%': { transform: 'translateY(-100%)' },
           '100%': { transform: 'translateY(0)' }
         }
+      },
+      spacing:{
+        '0.5':'0.1rem',
+      },
+      display: ['group-hover'],
+      vsibility: ['group-hover'],
+      screens: {
+        'ipad': {'min': '768px', 'max': '1024px'},
       }
     }
+    
   },
   variants: {
     extend: {

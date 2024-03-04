@@ -13,11 +13,11 @@ const copy = {
                 links:[
                     {
                         name:"DONATE",
-                        href:"/"
+                        href:"/donate"
                     },
                     {
                         name:"READ DOCUMENTATION",
-                        href:"/"
+                        href:"https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation"
                     }
                 ]
             }
@@ -31,7 +31,7 @@ const copy = {
             }
         },
         chapter2:{
-            headingList:[" 00 / OPI"," 01 / METASHREW"," 02 / FORUM]"," 03 / CHISEL", " 04 / ORIDINALSBOT", " 05 / ORDISCAN", " 06 / ORD.IO"],
+            headingList:[" 00 / OPI"," 01 / METASHREW"," 02 / FORUM"," 03 / CHISEL", " 04 / ORIDINALSBOT", " 05 / ORDISCAN", " 06 / ORD.IO"],
             subsection1:{
                 title:"RESOURCES THAT ARE BEING BUILT ON L1F",
                 paragraphs:[
@@ -58,7 +58,8 @@ const copy = {
                 },
                 ],
                 outerLink:{
-                    text:"EXPLORE METASHREW"
+                    text:"EXPLORE METASHREW",
+                    link:"https://www.sandshrew.io/"   
                 }
             }
         },
@@ -73,7 +74,8 @@ const copy = {
                 },
                 ],
                 outerLink:{
-                    text:"EXPLORE SANDSHREW"
+                    text:"EXPLORE SANDSHREW",
+                    link:"https://www.sandshrew.io/"
                 }
             }
         },
@@ -93,7 +95,8 @@ const copy = {
                 },
                 ],
                 outerLink:{
-                    text:"EXPLORE OPI"
+                    text:"EXPLORE OPI",
+                    link:"https://opi.network/"
                 }
             }
         },
@@ -113,7 +116,8 @@ const copy = {
                 },
                 ],
                 outerLink:{
-                    text:"EXPLORE CHISEL"
+                    text:"EXPLORE CHISEL",
+                    link:"https://www.ordinalsbot.com/"
                 }
             }
         },
@@ -128,7 +132,8 @@ const copy = {
                 },
                 ],
                 outerLink:{
-                    text:"EXPLORE ORIDINALSBOT"
+                    text:"EXPLORE ORIDINALSBOT",
+                    link:"https://www.ordinalsbot.com/"
                 }
             }
         },
@@ -148,7 +153,8 @@ const copy = {
                 },
                 ],
                 outerLink:{
-                    text:"EXPLORE ORDISCAN"
+                    text:"EXPLORE ORDISCAN",
+                    link:"https://ordiscan.com/"
                 }
             }
         },
@@ -163,7 +169,8 @@ const copy = {
                 },
                 ],
                 outerLink:{
-                    text:"EXPLORE ORD.IO"
+                    text:"EXPLORE ORD.IO",
+                    link:"https://www.ord.io/"
                 }
             }
         },
@@ -183,7 +190,8 @@ const copy = {
                     },
                     ],
                     outerLink:{
-                        text:"EXPLORE OYL"
+                        text:"EXPLORE OYL",
+                        link:"https://www.oyl.io/"
                     }
                 }
             

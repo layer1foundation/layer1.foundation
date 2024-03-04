@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Glossary from '@/components/Glossary'
 import Segment from '@/components/Segment'
@@ -15,9 +17,9 @@ export default function BRC20() {
   }
   return (
     <div className='flex flex-col items-center'>
-      <img className='hidden md:block' src='/BRC20-dt.png'></img>
-      <img className='md:hidden' src='/BRC20-mobi.png'></img>
-      <div className='w-full'>
+      <img className='hidden md:block px-4 md:px-10' src='/BRC20-dt.png'></img>
+      <img className='md:hidden px-4 md:px-10' src='/BRC20-mobi.png'></img>
+      <div className='w-full px-6 md:px-10'>
         <div className='mt-2 mb-8 font-mono text-2xl leading-8 border-b'>
           <h6 className='font-mono leading-6'>METAPROTOCOLS IN BITCOIN</h6>
           <h1 className='font-suisse advancing pb-8 mb-6 md:max-w-lg mt-8'>Protocol Governance For BRC20</h1>
@@ -26,6 +28,9 @@ export default function BRC20() {
       </div>
       <Segment bg={"mb-20"}>
         <Chapter chapter={copy.BRC20.chapter0}></Chapter>
+      </Segment>
+      <Segment scroll={false} bg='w-full'>
+        <Chapter chapter={copy.BRC20.chapterTeam}></Chapter>
       </Segment>
       <Segment scroll={false} bg={"bg-smoke10"}>
         <Chapter chapter={copy.BRC20.chapter1}></Chapter>
