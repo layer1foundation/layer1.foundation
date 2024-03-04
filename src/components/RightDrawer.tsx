@@ -1,4 +1,6 @@
-import React, {ReactNode} from 'react'
+"use client"
+
+import React, {ReactNode, useEffect} from 'react'
 
 interface RightDrawerProps {
   children: ReactNode;
@@ -10,6 +12,18 @@ export default function RightDrawer({children, open, setIsOpen} : RightDrawerPro
   const stopPropagation = (e: React.MouseEvent) => {
     e.stopPropagation();
   };
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Clean up function
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
   return (
     open && (
       <div className="fixed inset-0 z-1 bg-gray-400 bg-opacity-50 w-full h-full cursor-pointer" onClick={()=>{setIsOpen(!open)}} >
@@ -18,11 +32,11 @@ export default function RightDrawer({children, open, setIsOpen} : RightDrawerPro
         style={open ? { animation: "slide-left 500ms" } : {}}
         onClick={stopPropagation}
         >
-        {/* <div onClick={()=>{
+        <div className="w-full flex pl-3 " onClick={()=>{
           setIsOpen(!open);
         }}>
           <img src="/close.svg" />
-        </div> */}
+        </div>
         {children}
         </div>
       </div>

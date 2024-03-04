@@ -10,17 +10,20 @@ export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
   const [donateOpen, setDonateOpen] = useState(false);
   return (
-    <header className="py-3 px-4 md:px-10 md:pt-4 md:pb-2  ">
+    <header className="pt-3 pb-6 px-4 md:px-10 md:pt-4 md:pb-2  ">
       <div className="d-fex flex-col ">
         <div className="flex flex-col md:flex-row justify-between">
           <div className="">
             <div className=" flex justify-between md:block">
+              <a href="/">
               <img
                 src="/l1f-logo-default.svg"
+                
                 width="176"
                 height="24"
                 className="pb-6 md:pb-0"
               ></img>
+              </a>
               <div
                 onClick={() => {
                   setNavOpen(!navOpen);
