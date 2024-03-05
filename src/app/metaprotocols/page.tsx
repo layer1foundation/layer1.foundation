@@ -47,10 +47,10 @@ export default function BRC20() {
                     showChapters={false}
                 ></Glossary>
             </div>
-            <Segment bg={"mb-20"}>
+            <Segment className={"mb-20"}>
                 <Chapter chapter={copy.BRC20.chapter0}></Chapter>
             </Segment>
-            <Segment scroll={false} bg="w-full">
+            <Segment scroll={false} className="w-full">
                 <Chapter chapter={copy.BRC20.chapterTeam}></Chapter>
             </Segment>
             <Segment scroll={false} bg={"bg-smoke10"}>

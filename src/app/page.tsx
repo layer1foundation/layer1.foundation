@@ -5,6 +5,7 @@ import Chapter from "@/components/Chapter";
 import copy from "@/constants/copy/home";
 import Projects from "@/components/Projects";
 import Image from "next/image";
+import Wrapper from "@/components/Wrapper";
 
 export default function Home() {
     return (
@@ -23,7 +24,7 @@ export default function Home() {
                 alt="Computer in a bed of flowers"
                 src="/img/l1f-image-1-mobi.png"
             ></Image>
-            <div className="w-full px-6 md:px-10">
+            <Wrapper className="w-full px-6 md:px-10">
                 <div className="mt-2 mb-12 font-mono text-2xl leading-8">
                     <div className="font-mono leading-6 flex flex-wrap space-x-1 ">
                         <h6 className="mr-1">THE REALIZATION</h6>{" "}
@@ -37,8 +38,8 @@ export default function Home() {
                     on Bitcoin.
                 </h1>
                 <Glossary />
-            </div>
-            <Segment className="md:pt-2 md:pb-10">
+            </Wrapper>
+            <Segment className="md:pt-2 md:pb-10" id="overview">
                 <Chapter chapter={copy.home.chapter0} />
             </Segment>
             <Segment bg="bg-smoke10" id="mission">
@@ -47,17 +48,20 @@ export default function Home() {
             <Segment className="pt-8" scroll={false} id="partners">
                 <Chapter chapter={copy.home.chapter2} />
             </Segment>
-            <Projects />
+            <Wrapper id="projects">
+                <Projects />
+            </Wrapper>
             <Segment
                 scroll={false}
                 title="THE FOLLOWING PROJECTS ARE KEY PRIORITIES FOR L1F IN 2024 AND BEYOND:"
+                id="governance"
             >
                 <Chapter chapter={copy.home.chapter3} />
             </Segment>
-            <Segment className="" scroll={false}>
+            <Segment className="" scroll={false} id="tools">
                 <Chapter chapter={copy.home.chapter4} />
             </Segment>
-            <Segment className="md:pb-32" scroll={false}>
+            <Segment className="md:pb-32" scroll={false} id="forum">
                 <Chapter chapter={copy.home.chapter5} />
             </Segment>
         </div>

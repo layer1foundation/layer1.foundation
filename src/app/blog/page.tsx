@@ -6,6 +6,7 @@ import Post from "@/components/Post";
 import Segemnt from "@/components/Segment";
 import Chapter from "@/components/Chapter";
 import copy from "@/constants/copy/BRC20";
+import Wrapper from "@/components/Wrapper";
 
 export default function BlogPage() {
     const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -17,11 +18,11 @@ export default function BlogPage() {
     return (
         <div className="flex flex-col items-center min-w-[350px]">
             {Array.isArray(blogs) &&
-                blogs.map(blog => <Post post={blog.attributes}></Post>)}
-            <Segemnt scroll={false} bg="pt-10">
+                blogs.map((blog, i) => <Post post={blog.attributes}></Post>)}
+            <Segemnt scroll={false} className="pt-10">
                 <Chapter chapter={copy.BRC20.chapter2}></Chapter>
             </Segemnt>
-            <Segemnt scroll={false} bg="pt-10">
+            <Segemnt scroll={false} className="pt-10">
                 <Chapter chapter={copy.BRC20.chapter2}></Chapter>
             </Segemnt>
         </div>

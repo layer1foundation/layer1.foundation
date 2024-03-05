@@ -1,5 +1,6 @@
 const LINKS = {
     home: "/",
+    overview: "/#overview",
     mission: "/#mission",
     metaprotocols: "/metaprotocols",
     tools: "/tools",
@@ -22,6 +23,7 @@ const LINKS = {
     ordio: "https://www.ord.io/",
     ordiscan: "https://ordiscan.com/",
     email: "mailto:",
+    governance: "/#governance"
 };
 
 export default LINKS;

@@ -2,11 +2,35 @@
 
 import React from "react";
 import Link from "next/link";
+import LINKS from "@/constants/links";
 
 interface GlossaryProps {
     content?: any;
     showChapters?: boolean;
 }
+
+const GLOSSARY_ITEMS = [
+    {
+        text: "00 / OVERVIEW",
+        link: LINKS.overview
+    },
+    {
+        text: "01 / MISSION",
+        link: LINKS.mission
+    },
+    {
+        text: "02 / PROTOCOL GOVERNANCE",
+        link: LINKS.governance
+    },
+    {
+        text: "03 / PUBLIC TOOLING FOR DEVELOPERS",
+        link: "/#tools"
+    },
+    {
+        text: "04 / DEVELOPMENT DISCOURSE FORUM",
+        link: "/#forum"
+    },
+]
 
 export default function Glossary({
     content,
@@ -33,15 +57,9 @@ export default function Glossary({
                     })
                 ) : showChapters ? (
                     <div>
-                        <h6 className="md:text-xs">00 / OVERVIEW</h6>
-                        <h6 className="md:text-xs">01 / MISSION</h6>
-                        <h6 className="md:text-xs">02 / PROTOCOL GOVERNANCE</h6>
-                        <h6 className="md:text-xs">
-                            03 / PUBLIC TOOLING FOR DEVELOPERS
-                        </h6>
-                        <h6 className="md:text-xs">
-                            04 / DEVELOPMENT DISCOURSE FORUM
-                        </h6>
+                        {GLOSSARY_ITEMS.map((g, i) => (
+                            <Link href={g.link} key={`glossary-item-${i}`}><h6 className="md:text-xs transition duration-150 hover:text-neutral-500">{g.text}</h6></Link>
+                        ))}
                     </div>
                 ) : null}
             </div>

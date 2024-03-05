@@ -7,13 +7,13 @@ export default function Post({ post }: { post: any }) {
         <div className="w-full  md:px-10 ">
             <div className="w-full">
                 <div className="w-full h-64 md:h-96 overflow-hidden relative">
-                    <Image
+                    <img
                         src={imageUrl}
                         alt="L1F Blog Post"
                         width={1300}
                         height={300}
                         className="absolute h-full w-full object-cover object-center"
-                    ></Image>
+                    />
                 </div>
                 <div className="bg-smoke10 md:px-48 py-6">
                     <div className=" ">
