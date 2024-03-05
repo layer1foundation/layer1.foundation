@@ -169,7 +169,9 @@ export default function Chapter({
             <div className="w-full flex justify-start space-x-2">
               {chapter.subsection1.links.map((l, i) => {
                   return (
+                    <div key={i}>
                     <Button text={l.name} link={l.link} grow={l.grow} outer={l.outer}/>
+                    </div>
                   );
                 }
               )}
