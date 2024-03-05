@@ -4,6 +4,7 @@ import Segment from '@/components/Segment'
 import Chapter from '@/components/Chapter'
 import Tool from '@/components/Tool'
 import copy from '@/constants/copy/tools'
+import Image from 'next/image'
 
 export default function Tools() {
   const glossContent = {
@@ -15,8 +16,8 @@ export default function Tools() {
   }
   return (
     <div className='flex flex-col items-center'>
-        <img className='hidden md:block px-4 md:px-10' src='/tools-dt.png'></img>
-        <img className='md:hidden px-4 md:px-10' src='/tools-mobi.png'></img>
+        <Image className='hidden md:block px-4 md:px-10' width={1300} height={300} alt="Layer 1 Foundations Tools" src='/img/tools-dt.png'></Image>
+        <Image className='md:hidden px-4 md:px-10' width={400} height={300} alt="Layer 1 Foundation Tools" src='/img/tools-mobi.png'></Image>
         <div className='w-full px-4 md:px-10'>
           <div className='mt-2 mb-8 font-mono text-2xl leading-8 border-b'>
             <h6 className='font-mono leading-6'>BUILDING THE TOOLS FOR A BITCOIN ECOSYSTEM</h6>
@@ -24,17 +25,16 @@ export default function Tools() {
           </div>
           
           {/* <p className='font-mono text-smoke40 pr-8 mb-4'>LAYER 1 FOUNDATION ENABLES PUBLIC TOOLING FOR USERS AND BUILDERS</p> */}
-          <Glossary content={glossContent} chapters={false}/>
+          <Glossary content={glossContent} showChapters={false}/>
         </div>
         <Segment>
           <Chapter chapter={copy.tools.chapter0}></Chapter>
         </Segment>
         <Segment>
           <Chapter chapter={copy.tools.chapter1}>
-            
           </Chapter>
-          <img src="/tools-hero-mobi.svg " className='md:hidden px-6'/>
-          <img src="/tools-hero-dt.svg" className='hidden md:flex  px-10'/>
+          <Image alt="tools hero" src="/img/tools-hero-mobi.svg" width={400} height={300} className='flex md:hidden px-6'/>
+          <Image alt="tools hero" src="/img/tools-hero-dt.svg" width={1200} height={300} className='hidden md:flex  px-10'/>
         </Segment>
         <Segment scroll={false} bg='bg-smoke10'>
           <Chapter chapter={copy.tools.chapter2}></Chapter>

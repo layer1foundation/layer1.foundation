@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import links from "@/constants/links";
 
 export default function Footer() {
   return (
@@ -7,63 +9,63 @@ export default function Footer() {
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono'>PARTNERS</p>
         <ul className="text-sm">
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://bestinslot.xyz/">BESTINSLOT</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://www.domo.com/">DOMO</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://www.okx.com/">OKX</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://ordinalswallet.com/" >ORDINALS WALLET</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://www.oyl.io/">OYL</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.bestinslot}>BESTINSLOT</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.domo}>DOMO</ a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.okx}>OKX</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.ordinalswallet} >ORDINALS WALLET</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.oyl}>OYL</a></li>
         </ul>
       </div>
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono'>RESOURCES</p>
         <ul>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation">DOCUMENTATION</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://domo-2.gitbook.io/brc-20-experiment/">BITCOIN WHITEPAPER</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="/metaprotocols">BRC-20</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="/tools">TOOLS</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href='https://l1f.discourse.group/latest'>FORUM</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.documentation}>DOCUMENTATION</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.bitcoinwhitepaper}>BITCOIN WHITEPAPER</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><Link target="_blank" href={links.metaprotocols}>BRC-20</Link></li>
+          <li className=' text-smoke50 font-mono mb-4'><Link target="_blank" href={links.tools}>TOOLS</Link></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.forum}>FORUM</a></li>
         </ul>
       </div>
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono md:mr-10'>SOCIAL</p>
         <ul>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://twitter.com/L1Fxyz">X.COM</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><Link href={links.twitter}>X.COM</Link></li>
         </ul>
       </div>
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono'>GET STARTED</p>
         <ul>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://opi.network/">OPI</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://www.sandshrew.io/">METASHREW</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://ordinalsbot.com/">ORDINALSBOT</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://www.ord.io/">ORD.IO</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a href="https://ordiscan.com/">ORDISCAN</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.opi}>OPI</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.metashrew}>METASHREW</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.ordinalsbot}>ORDINALSBOT</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.ordio}>ORD.IO</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.ordiscan}>ORDISCAN</a></li>
         </ul>
       </div>
       <div className='mb-32'>
         <p className='mb-8 text-lg font-mono'>CONTACT</p>
         <ul>
-          <li className=' text-smoke50 font-mono mb-4'><a>INFO@L1F.XYZ</a></li>
+          <li className=' text-smoke50 font-mono mb-4'><Link href="">INFO@L1F.XYZ</Link></li>
         </ul>
       </div>
       </div>
       <div className="md:flex md:items-center md:space-x-20 md:mb-6 md:justify-between">
         <div className="md:flex ">
           <div className="w-52 mt-16 md:mt-0 md:mr-12">
-            <img src="/l1f-logo-default.svg"></img>
+            <img src="/img/l1f-logo-default.svg"></img>
           </div>
           <ul className="mt-16 mb-16 md:flex md:my-0 md:items-center md:space-x-8">
             <li className=" text-smoke50 font-mono mb-4 md:mb-0">
-              <a>Media kit</a>
+              <Link href="/">Media kit</Link>
             </li>
             <li className=" text-smoke50 font-mono mb-4 md:mb-0">
-              <a>Terms of use</a>
+              <Link href="">Terms of use</Link>
             </li>
             <li className=" text-smoke50 font-mono mb-4 md:mb-0">
-              <a>Privacy Policy</a>
+              <Link href="">Privacy Policy</Link>
             </li>
             <li className=" text-smoke50 font-mono mb-4 md:mb-0">
-              <a>Cookie Policy</a>
+              <Link href="">Cookie Policy</Link>
             </li>
           </ul>
         </div>

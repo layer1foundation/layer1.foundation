@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchBlogs, Blog } from '../../api/fetchBlogs';
 import  Post  from '@/components/Post';
-import Glossary from '@/components/Glossary';
 import Segemnt from '@/components/Segment';
 import Chapter from '@/components/Chapter';
 import copy from '@/constants/copy/BRC20';

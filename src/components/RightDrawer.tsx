@@ -35,7 +35,7 @@ export default function RightDrawer({children, open, setIsOpen} : RightDrawerPro
         <div className="w-full flex pl-3 " onClick={()=>{
           setIsOpen(!open);
         }}>
-          <img src="/close.svg" />
+          <img src="/icons/close.svg" />
         </div>
         {children}
         </div>

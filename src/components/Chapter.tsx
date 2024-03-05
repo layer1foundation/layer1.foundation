@@ -1,6 +1,9 @@
 "use client"
 
 import React, { ReactNode } from "react";
+import Button from "./Button";
+import Link from "next/link";
+import links from "@/constants/links";
 
 interface Paragraph {
   text?: string;
@@ -25,7 +28,7 @@ interface ChapterProps {
         textSize?: string;
         smallText?: boolean;
         footer?: string[];
-        links?: { name: string; link?: string; grow?: boolean }[];
+        links?: { name: string; link?: string; grow?: boolean; outer?:boolean }[];
         outerLink?: { link?: string; text: string };
         items?: string[];
         team?: Team[]
@@ -130,8 +133,8 @@ export default function Chapter({
             </ul>
             { chapter.subsection1.outerLink ? (
                 <div className="border-b w-full flex justify-between md:items-center h-6 ">
-                    <a href={chapter.subsection1.outerLink.link} className="font-mono">{chapter.subsection1.outerLink.text}</a>
-                    <img src="/arrow-top-right.svg"/>
+                    <Link href={chapter.subsection1.outerLink.link ? chapter.subsection1.outerLink.link : "/"} className="font-mono">{chapter.subsection1.outerLink.text}</Link>
+                    <img src="/icons/arrow-top-right.svg"/>
                 </div>
                 ) : null }
             </div>
@@ -154,7 +157,7 @@ export default function Chapter({
                 return (
                   <h3 key={i} className="text-smoke40 mb-8 font-suisse">
                     {p}
-                    <a href="https://domo-2.gitbook.io/brc-20-experiment/" className="text-smoke70 text-xl">
+                    <a target="_blank" href={links.gitbook} className="text-smoke70 text-xl">
                       {" "}
                       click here
                     </a>
@@ -166,27 +169,7 @@ export default function Chapter({
             <div className="w-full flex justify-start space-x-2">
               {chapter.subsection1.links.map((l, i) => {
                   return (
-                    
-                    <a
-                      key={i}
-                      href={l.link}
-                      className={`flex items-center  bg-smoke50 rounded-full p-0.5 active:scale-90 cursor-pointer ${
-                        l.grow ? "flex-grow md:flex-grow-0" : null
-                      } `}
-                    >
-                      <div className={`bg-light text-dark h-9 flex justify-between w-full items-center space-x-2 rounded-full hover:bg-black hover:text-light active:bg-black active:text-light ${
-                        l.grow ? "flex-grow md:flex-grow-0" : null
-                      } `}>
-                        <img className="pl-2" src="/fan-left.svg" />
-                        <p
-                          className="mb-0 flex justify-center"
-                          style={{ fontSize: "12px" }}
-                        >
-                          {l.name}
-                        </p>
-                        <img className="pr-2" src="/fan-right.svg" />
-                      </div>
-                    </a>
+                    <Button text={l.name} link={l.link} grow={l.grow} outer={l.outer}/>
                   );
                 }
               )}
@@ -217,7 +200,7 @@ export default function Chapter({
             </ul>
             { chapter.subsection1.outerLink ? (
                 <div className="border-b w-full flex justify-between md:items-center h-6 md:ml-4">
-                    <a href={chapter.subsection1.outerLink.link} className="font-mono">{chapter.subsection1.outerLink.text}</a>
+                    <Link href={chapter.subsection1.outerLink.link ? chapter.subsection1.outerLink.link : "/"} className="font-mono">{chapter.subsection1.outerLink.text}</Link>
                     <img src="/arrow-top-right.svg"/>
                 </div>
                 ) : null }
