@@ -12,11 +12,11 @@
         "type-check": "tsc --project tsconfig.json --pretty --noEmit && echo "
     },
     "lint-staged": {
-        "*.{js,ts,tsx}": [
-            "eslint --quiet --fix"
-        ],
         "*.{json,js,ts,jsx,tsx,html}": [
             "prettier --check --write"
+        ],
+        "*.{js,ts,tsx}": [
+            "eslint --quiet --fix"
         ]
     },
     "dependencies": {
