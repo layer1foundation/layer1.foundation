@@ -16,7 +16,7 @@ export default function QR
   return (
     <div className='border flex flex-col items-center space-y-8 py-8'>
         <div>
-            <img src='/QR.svg' />
+            <img src='/img/QR.svg' />
         </div>
         <p className='font-mono'>bc1qpq6600v0kua...rjhz83qk0s7fk32</p>
         <div className='border-2 border-dark px-10 py-3 w-3/4 text-center mx-3' onClick={copyToClipboard}>

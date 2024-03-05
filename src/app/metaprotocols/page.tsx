@@ -6,6 +6,7 @@ import Segment from '@/components/Segment'
 import Chapter from '@/components/Chapter'
 import Projects from '@/components/Projects'
 import copy from '@/constants/copy/BRC20'
+import Image from 'next/image'
 
 export default function BRC20() {
   const glossContent = {
@@ -17,14 +18,14 @@ export default function BRC20() {
   }
   return (
     <div className='flex flex-col items-center'>
-      <img className='hidden md:block px-4 md:px-10' src='/BRC20-dt.png'></img>
-      <img className='md:hidden px-4 md:px-10' src='/BRC20-mobi.png'></img>
+      <Image className='hidden md:block px-4 md:px-10' width={1300} height={300} alt="Layer 1 Foundations Tools" src='/img/BRC20-dt.png'></Image>
+        <Image className='md:hidden px-4 md:px-10' width={400} height={300} alt="Layer 1 Foundation Tools" src='/img/BRC20-mobi.png'></Image>
       <div className='w-full px-6 md:px-10'>
         <div className='mt-2 mb-8 font-mono text-2xl leading-8 border-b'>
           <h6 className='font-mono leading-6'>METAPROTOCOLS IN BITCOIN</h6>
           <h1 className='font-suisse advancing pb-8 mb-6 md:max-w-lg mt-8'>Protocol Governance For BRC20</h1>
         </div>
-        <Glossary content={glossContent} chapters={false}></Glossary>
+        <Glossary content={glossContent} showChapters={false}></Glossary>
       </div>
       <Segment bg={"mb-20"}>
         <Chapter chapter={copy.BRC20.chapter0}></Chapter>

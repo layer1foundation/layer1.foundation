@@ -20,7 +20,7 @@ const copy = {
                     },
                     {
                         name:'READ DOCUMENTATION',
-                        link:"/https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation"
+                        link:"https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation"
                     }
                 ]
             }
