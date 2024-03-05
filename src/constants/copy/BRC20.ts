@@ -16,18 +16,50 @@ const copy = {
                 links:[
                     {
                         name:'DONATE',
-                        link:"/"
+                        link:"/donate"
                     },
                     {
                         name:'READ DOCUMENTATION',
-                        link:"/"
+                        link:"https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation"
                     }
+                ]
+            }
+        },
+        chapterTeam:{
+            heading:"[ 00 / TEAM]",
+            subsection1:{
+                team:[
+                    {
+                        title:"LEAD MAINTAINERS OF BRC20:",
+                        name:"CSarp and Name?",
+                        role:"BiS and Unisat",
+                       
+                    },
+                    {
+                        title:"L1F PRESIDENT:",
+                        name:"Domo",
+                        role:"Creator of BRC20",
+                       
+                    },
+                    {
+                        title:"L1F (TITLE TBD)",
+                        name:"Isabel Foxen Duke",
+                        role:"GP Unbroken Chain",
+                       
+                    },
+                    {
+                        title:"L1F PRODUCT",
+                        name:"Oyl Dynamics",
+                        role:"Led by Cole Jorissen",
+                       
+                    },
                 ]
             }
         },
         chapter1:{
             heading:'Move The Needle Forward',
             headingBig:true,
+            column:true,
             subsection1:{
                 
                 paragraphs:[
@@ -44,7 +76,7 @@ const copy = {
                 links:[
                     {
                         name:'READ MORE',
-                        link:"/",
+                        link:"/blog",
                         grow:true
                     }
                 ]
@@ -57,17 +89,17 @@ const copy = {
             subsection1:{
                 paragraphs:[
                     {
-                        text:"The BRC20 protocol is a standard for the creation of digital assets on the Bitcoin blockchain. It is a technical standard that defines a set of rules and behaviors for the creation of digital assets. The protocol is designed to be a decentralized and open standard, and it is intended to be a foundation for the development of a wide range of digital assets."
+                        text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis varius maximus. Nulla facilisi. Vivamus in mauris ac velit bibendum auctor. Fusce sed libero eget nunc fringilla condimentum."
                     },
                     {
-                        text:"The BRC20 protocol is a standard for the creation of digital assets on the Bitcoin blockchain. It is a technical standard that defines a set of rules and behaviors for the creation of digital assets. The protocol is designed to be a decentralized and open standard, and it is intended to be a foundation for the development of a wide range of digital assets.",
+                        text:"Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sit amet lacus quis ipsum commodo aliquam.",
                         props:"text-smoke50"
                     }
                 ],
                 links:[
                     {
                         name:'READ MORE',
-                        link:"/"
+                        link:"/blog"
                     }
                 ]
             }
@@ -89,7 +121,7 @@ const copy = {
                 links:[
                     {
                         name:'READ MORE',
-                        link:"/"
+                        link:"/blog"
                     }
                 ]
             }
@@ -108,7 +140,7 @@ const copy = {
                 links:[
                     {
                         name:'BECOME A PARTNER',
-                        link:"/"
+                        link:"/donate"
                     }
                 ]
             }

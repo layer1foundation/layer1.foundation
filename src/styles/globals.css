@@ -25,7 +25,27 @@
 }
 @font-face {
   font-family: "UntitledSansRegular";
-  src: url('/fonts/UnititledSans-Regular.otf') format('opentype');
+  src: url('/fonts/UntitledSans-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: "Meliore";
+  src: url('/fonts/MeliorLTStd-italic.ttf') format('truetype');
+}
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -35,16 +55,23 @@
   }
 } */
 
-body {
-  color: var(--foreground-hex);
-  background: var(--background-hex)
+html {
+  scroll-behavior: smooth;
 }
 
-@layer utilities {
-  /* .text-balance {
-    text-wrap: balance;
-  } */
+body {
+  color: var(--foreground-hex);
+  background: var(--background-hex);
+  scroll-behavior: smooth;
+
 }
+
+/* @layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  } 
+}*/
+
 h1{
   font-size: 48px;
   line-height: 50px;
@@ -86,7 +113,7 @@ span{
   font-size: 12px;
 }
 a{
-  font-size: 12px;
+  font-size: 14px;
 }
 @media(max-width:800px){
   .advancing{
@@ -97,4 +124,9 @@ a{
     width: 100%;
     display: flex;
   }
+  
+}
+
+#alexgo {
+  fill:blue
 }

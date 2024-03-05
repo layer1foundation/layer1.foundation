@@ -1,10 +1,10 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import "./globals.css";
-
+import "../styles/globals.css";
 import { sharedMetadata } from "@/constants/metadata";
 
-export const metadata = sharedMetadata;
+export const metadata: Metadata = sharedMetadata
 
 export default function RootLayout({
   children,
@@ -17,7 +17,7 @@ export default function RootLayout({
         <div className="flex flex-col items-center">
           <div className="max-w-7xl">        
             <Header />
-            <main className="py-3 px-4 md:py-4 md:px-10">{children}</main>
+            <main className="py-3  md:py-4">{children}</main>
             <Footer />
           </div>
         </div>

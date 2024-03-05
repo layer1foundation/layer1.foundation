@@ -16,11 +16,11 @@ const copy = {
                 links:[
                     {
                         name:'DONATE',
-                        link:"/"
+                        link:"/donate"
                     },
                     {
                         name:'READ DOCUMENTATION',
-                        link:"/"
+                        link:"https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation"
                     }
                 ]
             }
@@ -83,7 +83,7 @@ const copy = {
                 links:[
                     {
                         name:'STANDARDS OF OPERATION',
-                        link:"/tools",
+                        link:"https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/indexing",
                         grow: true
                     }
                 ]
@@ -131,7 +131,7 @@ const copy = {
                 links:[
                     {
                         name:'L1F DISCOURSE',
-                        link:"/tools",
+                        link:"/https://l1f.discourse.group/t/brc-20-introduction-to-brc-20/72",
                         grow: true
                     }
                 ]

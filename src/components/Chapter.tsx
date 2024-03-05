@@ -1,15 +1,26 @@
+"use client"
+
 import React, { ReactNode } from "react";
+import Button from "./Button";
+import Link from "next/link";
+import links from "@/constants/links";
 
 interface Paragraph {
   text?: string;
   bullets?: string[];
   props?: string;
 }
+interface Team {
+  title?: string;
+  name?: string;
+  role?: string;
+}
 interface ChapterProps {
     heading?: string;
     subheading?: string;
     headingList?: string[];
     headingBig?: boolean;
+    column?: boolean;
     subheadingBig?: boolean;
     subsection1?: {
         title?: string;
@@ -17,8 +28,10 @@ interface ChapterProps {
         textSize?: string;
         smallText?: boolean;
         footer?: string[];
-        links?: { name: string; link?: string; grow?: boolean }[];
+        links?: { name: string; link?: string; grow?: boolean; outer?:boolean }[];
         outerLink?: { link?: string; text: string };
+        items?: string[];
+        team?: Team[]
     };
     subsection2?: {
         title?: string;
@@ -40,13 +53,13 @@ export default function Chapter({
 }) {
   if(!chapter) return <div>Chapter Not Found</div>
     return (
-    <div className="flex flex-col md:flex-row md:w-full md:justify-between">
+    <div className={`flex flex-col ${ chapter.column ? "" : "md:flex-row"} md:w-full md:justify-between px-6 md:px-10`}>
       <div className={`${half ? "md:w-3/5" : ""}`}>
         {chapter.heading ? (
          chapter.headingBig ? (
-          <h1 className={`mb-5 md:pr-16 `}>{chapter.heading}</h1>
+          <h1 className={`mb-5 md:pr-16 max-w-md`}>{chapter.heading}</h1>
         ) : (
-          <h6 className="text-smoke50 mb-5 font-mono">{chapter.heading}</h6>
+          <h6 className="text-smoke60 mb-5 font-mono">{chapter.heading}</h6>
         )
         ) : null }
         {chapter.subheading ? (
@@ -55,7 +68,7 @@ export default function Chapter({
                     {chapter.subheading}
                 </h1>
             ) : (
-          <h6 className={`text-smoke50 mb-8 mt-20 font-mono md:max-w-72`}>
+          <h6 className={`text-smoke60 mb-8 mt-20 font-mono md:max-w-72`}>
             {chapter.subheading}
           </h6>
             )
@@ -76,7 +89,7 @@ export default function Chapter({
       {chapter.subsection1 ? (
         <div className={`flex flex-col ${half ? "md:w-2/5" : "md:w-2/3"}`}>
           {chapter.subsection1.title ? (
-            <h6 className="text-smoke50 mb-8 font-mono">
+            <h6 className="text-smoke60 mb-8 font-mono">
               {chapter.subsection1.title}
             </h6>
           ) : null}
@@ -119,9 +132,9 @@ export default function Chapter({
               })}
             </ul>
             { chapter.subsection1.outerLink ? (
-                <div className="border-b w-full flex justify-between md:items-center h-6 md:ml-16">
-                    <a href={chapter.subsection1.outerLink.link} className="font-mono">{chapter.subsection1.outerLink.text}</a>
-                    <img src="/arrow-top-right.svg"/>
+                <div className="border-b w-full flex justify-between md:items-center h-6 ">
+                    <Link href={chapter.subsection1.outerLink.link ? chapter.subsection1.outerLink.link : "/"} className="font-mono">{chapter.subsection1.outerLink.text}</Link>
+                    <img src="/icons/arrow-top-right.svg"/>
                 </div>
                 ) : null }
             </div>
@@ -144,7 +157,7 @@ export default function Chapter({
                 return (
                   <h3 key={i} className="text-smoke40 mb-8 font-suisse">
                     {p}
-                    <a href="/" className="text-smoke70 text-xl">
+                    <a target="_blank" href={links.gitbook} className="text-smoke70 text-xl">
                       {" "}
                       click here
                     </a>
@@ -156,32 +169,70 @@ export default function Chapter({
             <div className="w-full flex justify-start space-x-2">
               {chapter.subsection1.links.map((l, i) => {
                   return (
-                    <a
-                      key={i}
-                      href={l.link}
-                      className={`text-dark h-10 flex items-center border-2 border-dark rounded-full justify-between py-3 space-x-2 hover:bg-black hover:text-light  ${
-                        l.grow ? "flex-grow md:flex-grow-0" : null
-                      } `}
-                    >
-                      <img className="pl-2" src="/fan-left.svg" />
-                      <p
-                        className="mb-0 flex justify-center"
-                        style={{ fontSize: "12px" }}
-                      >
-                        {l.name}
-                      </p>
-                      <img className="pr-2" src="/fan-right.svg" />
-                    </a>
+                    <div key={i}>
+                    <Button text={l.name} link={l.link} grow={l.grow} outer={l.outer}/>
+                    </div>
                   );
                 }
               )}
             </div>
           ) : null}
+          {chapter.subsection1.team ? (
+            <div className="md:flex flex-grow">
+            <ul
+              className={`${
+                chapter.subsection1.textSize
+                  ? `text-${chapter.subsection1.textSize}`
+                  : null
+              }`}
+            >
+              {chapter.subsection1.team.map((p: Team, i: number) => {
+                return (
+                  <li
+                    key={i}
+                    className={`leading-8 mb-8 font-suisse w-full`}
+                  >
+                    <h6 className="font-mono mb-6 text-smoke50">{p.title}</h6>
+                    <h3>{p.name}</h3>
+                    <h3 className="text-smoke50">{p.role}</h3>
+                    {" "}
+                  </li>
+                );
+              })}
+            </ul>
+            { chapter.subsection1.outerLink ? (
+                <div className="border-b w-full flex justify-between md:items-center h-6 md:ml-4">
+                    <Link href={chapter.subsection1.outerLink.link ? chapter.subsection1.outerLink.link : "/"} className="font-mono">{chapter.subsection1.outerLink.text}</Link>
+                    <img src="/arrow-top-right.svg"/>
+                </div>
+                ) : null }
+            </div>
+          ) : null 
+          }
+          {chapter.subsection1.items ? (
+            <div className="md:w-full bg-black">
+                <ul className="">
+                  {chapter.subsection1.items.map((i: string, j: number) => {
+                    return (
+                      <li key={j} className=" leading-8 mb-8 font-suisse">
+                        <h3
+                          className={`${
+                            j === 0 ? "text-dark" : "text-smoke40"
+                          }`}
+                        >
+                          {i}
+                        </h3>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              ) : null}
           {chapter.subsection2 ? (
-            <div>
-              <p className="text-smoke60 mb-8 font-mono">
+            <div >
+              <h6 className="text-smoke60 mb-8 font-mono">
                 {chapter.subsection2.title}
-              </p>
+              </h6>
               {chapter.subsection2.paragraphs ? (
                 <ul
                   className={`${
