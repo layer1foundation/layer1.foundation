@@ -19,10 +19,10 @@ export default function Home() {
         <Segment bg=" md:pt-2 md:pb-10">
             <Chapter chapter={copy.home.chapter0} />
         </Segment>
-        <Segment bg='bg-smoke10'>
+        <Segment bg='bg-smoke10' id="mission">
             <Chapter chapter={copy.home.chapter1}/>
         </Segment>
-        <Segment bg="pt-8" scroll={false}>
+        <Segment bg="pt-8" scroll={false} id="partners">
             <Chapter chapter={copy.home.chapter2} />
         </Segment>
         <Projects /> 

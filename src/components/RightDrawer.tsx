@@ -24,8 +24,8 @@ export default function RightDrawer({children, open, setIsOpen} : RightDrawerPro
       document.body.style.overflow = 'unset';
     };
   }, [open]);
+  if(!open) return (<></>)
   return (
-    open && (
       <div className="fixed inset-0 z-1 bg-gray-400 bg-opacity-50 w-full h-full cursor-pointer" onClick={()=>{setIsOpen(!open)}} >
         <div 
         className="fixed z-99 w-4/5 top-0 right-0 h-full py-5 flex flex-col bg-light space-y-8 overflow-auto max-w-5xl" 
@@ -40,6 +40,5 @@ export default function RightDrawer({children, open, setIsOpen} : RightDrawerPro
         {children}
         </div>
       </div>
-    )
   )
 }

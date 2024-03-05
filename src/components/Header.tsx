@@ -41,7 +41,7 @@ export default function Header() {
             </RightDrawer>
             
           </div>
-          <div className="hidden border border-dark md:flex space-x-3 px-16 py-2 items-center justify-center font-mono cursor-pointer"
+          <div className="hidden border border-dark md:flex space-x-3 px-16 py-2 items-center justify-center font-mono cursor-pointer transition duration-150 hover:bg-neutral-100"
           onClick={()=>{
             setDonateOpen(!donateOpen);
           }}>
@@ -54,20 +54,20 @@ export default function Header() {
             <Donate />
           </RightDrawer>
         </div>
-        <nav className="gap-3 space-x-14 hidden md:flex">
-          <Link href={links.home} className="font-mono">
+        <nav className="gap-3 space-x-14 hidden md:flex font-mono">
+          <Link href={links.mission} className="transition duration-150 hover:text-neutral-600">
             MISSION
           </Link>
-          <Link href={links.metaprotocols} className="font-mono">
+          <Link href={links.metaprotocols} className="transition duration-150 hover:text-neutral-600">
             METAPROTOCOLS
           </Link>
-          <Link href={links.tools} className="font-mono">
+          <Link href={links.tools} className="transition duration-150 hover:text-neutral-600">
             TOOLS
           </Link>
-          <Link href={links.partners} className="font-mono">
+          <Link href={links.partners} className="transition duration-150 hover:text-neutral-600">
             PARTNERS
           </Link>
-          {/* <Link href="/blog" className="font-mono">
+          {/* <Link href="/blog" className="transition duration-150 hover:text-neutral-600">
             BLOG
           </Link> */}
         </nav>

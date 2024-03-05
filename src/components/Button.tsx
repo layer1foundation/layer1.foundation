@@ -13,12 +13,12 @@ export default function Button({ text, link, grow, outer=false }: ButtonProps) {
         !outer ? (
         <Link
             href={ link ? link : "/"}
-            className={`flex items-center bg-smoke50 hover:bg-black rounded-full p-0.5 cursor-pointer ${
+            className={`flex items-center bg-smoke50 hover:bg-black rounded-full p-0.5 cursor-pointer transition duration-150 ${
                 grow ? "flex-grow md:flex-grow-0" : null
             } `}
         >
             <div
-                className={`bg-light text-dark h-9 flex justify-between w-full items-center space-x-2 rounded-full hover:bg-black hover:text-light ${
+                className={`bg-light text-dark h-9 flex justify-between w-full items-center space-x-2 rounded-full hover:bg-black hover:text-light transition duration-150 ${
                     grow ? "flex-grow md:flex-grow-0" : null
                 } `} >
                 <img className="pl-2" src="/icons/fan-left.svg" />
@@ -35,11 +35,11 @@ export default function Button({ text, link, grow, outer=false }: ButtonProps) {
         <a
             target="_blank"
             href={link}
-            className={`flex items-center bg-smoke50 hover:bg-black rounded-full p-0.5 cursor-pointer ${
+            className={`flex items-center bg-smoke50 hover:bg-black rounded-full p-0.5 cursor-pointer transition duration-150 ${
                 grow ? "flex-grow md:flex-grow-0" : null
             } `}>
             <div
-                className={`bg-light text-dark h-9 flex justify-between w-full items-center space-x-2 rounded-full hover:bg-black hover:text-light ${
+                className={`bg-light text-dark h-9 flex justify-between w-full items-center space-x-2 rounded-full hover:bg-black hover:text-light transition duration-150 ${
                     grow ? "flex-grow md:flex-grow-0" : null
                 } `} >
                 <img className="pl-2" src="/icons/fan-left.svg" />

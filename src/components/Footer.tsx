@@ -9,43 +9,43 @@ export default function Footer() {
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono'>PARTNERS</p>
         <ul className="text-sm">
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.bestinslot}>BESTINSLOT</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.domo}>DOMO</ a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.okx}>OKX</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.ordinalswallet} >ORDINALS WALLET</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.oyl}>OYL</a></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.bestinslot}>BESTINSLOT</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.domo}>DOMO</ Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.okx}>OKX</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.ordinalswallet} >ORDINALS WALLET</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.oyl}>OYL</Link></li>
         </ul>
       </div>
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono'>RESOURCES</p>
         <ul>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.documentation}>DOCUMENTATION</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.bitcoinwhitepaper}>BITCOIN WHITEPAPER</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><Link target="_blank" href={links.metaprotocols}>BRC-20</Link></li>
-          <li className=' text-smoke50 font-mono mb-4'><Link target="_blank" href={links.tools}>TOOLS</Link></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.forum}>FORUM</a></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.documentation}>DOCUMENTATION</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.bitcoinwhitepaper}>BITCOIN WHITEPAPER</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.metaprotocols}>BRC-20</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.tools}>TOOLS</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.forum}>FORUM</Link></li>
         </ul>
       </div>
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono md:mr-10'>SOCIAL</p>
         <ul>
-          <li className=' text-smoke50 font-mono mb-4'><Link href={links.twitter}>X.COM</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link href={links.twitter}>X.COM</Link></li>
         </ul>
       </div>
       <div className='mb-20'>
         <p className='mb-8 text-lg font-mono'>GET STARTED</p>
         <ul>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.opi}>OPI</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.metashrew}>METASHREW</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.ordinalsbot}>ORDINALSBOT</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.ordio}>ORD.IO</a></li>
-          <li className=' text-smoke50 font-mono mb-4'><a target="_blank" href={links.ordiscan}>ORDISCAN</a></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.opi}>OPI</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.metashrew}>METASHREW</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.ordinalsbot}>ORDINALSBOT</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.ordio}>ORD.IO</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link target="_blank" href={links.ordiscan}>ORDISCAN</Link></li>
         </ul>
       </div>
       <div className='mb-32'>
         <p className='mb-8 text-lg font-mono'>CONTACT</p>
         <ul>
-          <li className=' text-smoke50 font-mono mb-4'><Link href="">INFO@L1F.XYZ</Link></li>
+          <li className=' text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600'><Link href="">INFO@L1F.XYZ</Link></li>
         </ul>
       </div>
       </div>

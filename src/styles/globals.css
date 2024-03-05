@@ -55,9 +55,15 @@
   }
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground-hex);
-  background: var(--background-hex)
+  background: var(--background-hex);
+  scroll-behavior: smooth;
+
 }
 
 /* @layer utilities {

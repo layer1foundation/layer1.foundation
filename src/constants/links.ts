@@ -1,8 +1,8 @@
 
 
-const links = {
+const LINKS = {
     home: "/",
-    mission: "/mission",
+    mission: "/#mission",
     metaprotocols: "/metaprotocols",
     tools: "/tools",
     donate: "/donate",
@@ -14,7 +14,7 @@ const links = {
     oyl: "https://www.oyl.io/",
     gitbook: "https://layer1.gitbook.io/layer1-foundation/foundation/purpose",
     forum: "https://l1f.discourse.group/latest",
-    partners: "/",
+    partners: "/#partners",
     bitcoinwhitepaper: "https://domo-2.gitbook.io/brc-20-experiment/",
     twitter: "https://twitter.com/L1Fxyz",
     opi: "https://opi.network/",
@@ -25,4 +25,4 @@ const links = {
     email: "mailto:"
 }
 
-export default links;
+export default LINKS;
