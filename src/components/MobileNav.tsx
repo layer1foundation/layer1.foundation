@@ -6,20 +6,20 @@ import LINKS from "@/constants/links";
 
 export default function MobileNav() {
     return (
-        <nav className="flex flex-col text-left pl-4 space-y-4">
-            <Link href={LINKS.mission} className="font-mono text-xl">
+        <nav className="flex flex-col text-left pl-4 space-y-3 !mt-0">
+            <Link href={LINKS.mission} className="font-mono text-xl w-fit p-1">
                 MISSION
             </Link>
-            <Link href={LINKS.metaprotocols} className="font-mono text-xl">
+            <Link href={LINKS.metaprotocols} className="font-mono text-xl w-fit p-1">
                 METAPROTOCOLS
             </Link>
-            <Link href={LINKS.tools} className="font-mono text-xl">
+            <Link href={LINKS.tools} className="font-mono text-xl w-fit p-1">
                 TOOLS
             </Link>
-            <Link href={LINKS.partners} className="font-mono text-xl">
+            <Link href={LINKS.partners} className="font-mono text-xl w-fit p-1">
                 PARTNERS
             </Link>
-            {/* <Link href="/blog" className="font-mono text-xl">
+            {/* <Link href="/blog" className="font-mono text-xl w-fit p-1">
         BLOG
       </Link> */}
             <div>
@@ -45,7 +45,7 @@ export default function MobileNav() {
                         width={400}
                         height={200}
                         src="/img/l1f-logo-default.svg"
-                    ></Image>
+                    />
                 </div>
             </div>
         </nav>
