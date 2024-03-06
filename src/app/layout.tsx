@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../styles/globals.css";
 import { sharedMetadata } from "@/constants/metadata";
-import Wrapper from "@/components/Background";
+import Background from "@/components/Background";
 
 export const metadata: Metadata = sharedMetadata;
 
@@ -15,15 +15,15 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <Wrapper>
+                <Background>
                     <Header />
-                </Wrapper>
+                </Background>
 
                 <main className="py-3 md:py-4">{children}</main>
 
-                <Wrapper>
+                <Background>
                     <Footer />
-                </Wrapper>
+                </Background>
             </body>
         </html>
     );
