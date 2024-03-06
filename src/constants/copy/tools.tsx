@@ -25,7 +25,7 @@ const copy = {
             },
         },
         chapter1: {
-            heading: <>Lifecycle Support for <em className="font-melior text-[52px]">Metaprotocols</em></>,
+            heading: <>Lifecycle Support for <em className="font-melior  text-[46px] md:text-[52px]">Metaprotocols</em></>,
             headingBig: true,
             subsection1: {
                 title: "",
