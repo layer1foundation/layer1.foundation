@@ -16,7 +16,7 @@ interface Team {
     role?: string;
 }
 interface ChapterProps {
-    heading?: string;
+    heading?: string | ReactNode;
     subheading?: string;
     headingList?: {
         text: string;
