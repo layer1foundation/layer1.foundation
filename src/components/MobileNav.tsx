@@ -23,7 +23,7 @@ export default function MobileNav() {
         BLOG
       </Link> */}
             <div>
-                <div className="mt-16 mb-10">
+                <div className="mt-16 mb-10 pl-1">
                     <p className="mb-4 text-lg font-mono md:mr-10">SOCIAL</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4">
@@ -31,7 +31,7 @@ export default function MobileNav() {
                         </li>
                     </ul>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 pl-1">
                     <p className="mb-4 text-lg font-mono">CONTACT</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4">
@@ -39,7 +39,7 @@ export default function MobileNav() {
                         </li>
                     </ul>
                 </div>
-                <div className="w-52 mt-16 md:mt-0 md:mr-12">
+                <div className="w-52 mt-16 md:mt-0 md:mr-12 pl-1">
                     <Image
                         alt="L1F logo"
                         width={400}

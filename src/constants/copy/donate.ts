@@ -4,13 +4,13 @@ const copy = {
             heading: "Donate to the Layer 1 Foundation",
             headingBig: true,
             subheading:
-                "LAYER 1 FOUNDATION IS A REGISTERED NONPROFIT CURRENTLY UNDER REVIEW FOR 501C6 STATUS IN THE UNITED STATES. CONTRIBUTIONS MADE TO L1F ARE NOT TAX DEDUCTIBLE BUT MAY QUALIFY AS BUSINESS EXPENSES PENDING YOUR JURISDICTION.",
+                "Layer 1 Foundation has filed an application for recognition of tax-exempt status under Section 501(c)(6) with the IRS.",
             subsection1: {
                 title: "WHY DONATE",
                 smallText: true,
                 paragraphs: [
                     {
-                        text: "Initially, your donations will go towards supporting contractors that keep our foundation running and ensure we’re able to advocate for free and decentralized technologies built on top of Bitcoin and Ordinals—including but not limited to BRC20. Additionally, we may use funds to support specific open-source projects that are not corporately funded and that we believe provide high value to users of these technologies.  ",
+                        text: "Initially, your donations will go towards supporting contractors that keep our foundation running and ensure we’re able to advocate for free and decentralized technologies built on top of Bitcoin and Ordinals—including but not limited to BRC20. Additionally, we may use funds to support specific open-source projects that are not corporately funded and that we believe provide high value to users of these technologies.",
                     },
                 ],
             },
@@ -21,6 +21,9 @@ const copy = {
                     {
                         text: "At the moment, we’re only able to accept donations in BTC. To make a donation, please send Bitcoin in any amount to: [insert addy]",
                     },
+                    {
+                        text: "This address is supported by a multisignature wallet with various L1F team members acting as signers. No individual member will have unilateral access to this wallet."
+                    }
                 ],
             },
         },
