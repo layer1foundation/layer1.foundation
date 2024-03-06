@@ -12,22 +12,26 @@ interface GlossaryProps {
 const GLOSSARY_ITEMS = [
     {
         text: "00 / OVERVIEW",
-        link: LINKS.overview,
+        link: "/#overview",
     },
     {
         text: "01 / MISSION",
-        link: LINKS.mission,
+        link: "/#mission",
     },
     {
-        text: "02 / PROTOCOL GOVERNANCE",
-        link: LINKS.governance,
+        text: "02 / PARTNERS",
+        link: "/#partners",
     },
     {
-        text: "03 / PUBLIC TOOLING FOR DEVELOPERS",
+        text: "03 / PROTOCOL GOVERNANCE",
+        link: "/#governance",
+    },
+    {
+        text: "04 / PUBLIC TOOLING FOR DEVELOPERS",
         link: "/#tools",
     },
     {
-        text: "04 / DEVELOPMENT DISCOURSE FORUM",
+        text: "05 / DEVELOPMENT DISCOURSE FORUM",
         link: "/#forum",
     },
 ];

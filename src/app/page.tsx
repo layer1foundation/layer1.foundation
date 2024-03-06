@@ -34,7 +34,7 @@ export default function Home() {
                 </div>
                 <h1 className="font-suisse advancing border-b pb-8 mb-6 md:max-w-5xl text-4xl">
                     Advancing the development of{" "}
-                    <em className="metaprotocols font-sans">Metaprotocols</em>{" "}
+                    <em className="metaprotocols font-melior text-[68px]">Metaprotocols</em>{" "}
                     on Bitcoin.
                 </h1>
                 <Glossary />

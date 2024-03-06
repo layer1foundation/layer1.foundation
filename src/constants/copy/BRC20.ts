@@ -1,7 +1,7 @@
 const copy = {
     BRC20: {
         chapter0: {
-            heading: "[ 00 / Overview]",
+            heading: "[ 00 / Overview ]",
             subsection1: {
                 title: "PROTOCOL GOVERNANCE WITH INDUSTRY LEADERS",
                 paragraphs: [
@@ -26,7 +26,7 @@ const copy = {
             },
         },
         chapterTeam: {
-            heading: "[ 00 / TEAM]",
+            heading: "[ 00 / TEAM ]",
             subsection1: {
                 team: [
                     {
@@ -78,7 +78,7 @@ const copy = {
             },
         },
         chapter2: {
-            heading: "[ 01 / GOVERNANCE]",
+            heading: "[ 01 / GOVERNANCE ]",
             subheading: "Governance Resolution",
             subheadingBig: true,
             subsection1: {
@@ -100,7 +100,7 @@ const copy = {
             },
         },
         chapter3: {
-            heading: "[ 02 / STANDARDS OF PROCEDURE]",
+            heading: "[ 02 / STANDARDS OF PROCEDURE ]",
             subheading: "Standards Of Procedure",
             subheadingBig: true,
             subsection1: {
@@ -122,7 +122,7 @@ const copy = {
             },
         },
         chapter4: {
-            heading: "[ 03 / PARTNERS]",
+            heading: "[ 03 / PARTNERS ]",
             subheading: "Our Partners",
             subheadingBig: true,
             subsection1: {

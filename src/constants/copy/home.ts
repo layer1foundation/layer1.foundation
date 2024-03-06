@@ -26,7 +26,7 @@ const copy = {
             },
         },
         chapter1: {
-            heading: "[ 01 / MISSION]",
+            heading: "[ 01 / MISSION ]",
             subsection1: {
                 title: "CORE PRINCIPLE",
                 paragraphs: [
@@ -50,7 +50,7 @@ const copy = {
             },
         },
         chapter2: {
-            heading: "[ 02 / PARTNERS]",
+            heading: "[ 02 / PARTNERS ]",
             subsection1: {
                 title: "CORE PRINCIPLE",
                 paragraphs: [
@@ -67,7 +67,7 @@ const copy = {
             },
         },
         chapter3: {
-            heading: "[ 02 / PROTOCOL GOVERNANCE]",
+            heading: "[ 03 / PROTOCOL GOVERNANCE ]",
             subsection1: {
                 title: "PROTOCOL GOVERNANCE FOR BRC20",
                 paragraphs: [
@@ -88,7 +88,7 @@ const copy = {
             },
         },
         chapter4: {
-            heading: "[ 03 / TOOLS]",
+            heading: "[ 04 / TOOLS ]",
             subsection1: {
                 title: "PUBLIC TOOLING FOR DEVELOPERS",
                 paragraphs: [
@@ -109,7 +109,7 @@ const copy = {
             },
         },
         chapter5: {
-            heading: "[ 04 / FORUM]",
+            heading: "[ 05 / FORUM ]",
             subsection1: {
                 title: "PROTOCOL GOVERNANCE FOR BRC20",
                 paragraphs: [

@@ -13,7 +13,7 @@ export default function Header() {
     const [donateOpen, setDonateOpen] = useState(false);
 
     return (
-        <header className="pt-3 pb-6 px-6 md:px-10 md:pt-4 md:pb-2 w-full">
+        <header className="pt-3 pb-6 px-4 md:px-10 md:pt-4 md:pb-2 w-full">
             <div className="d-fex flex-col ">
                 <div className="flex flex-col md:flex-row justify-between">
                     <div className="">

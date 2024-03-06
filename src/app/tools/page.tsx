@@ -44,8 +44,8 @@ export default function Tools() {
                         </h6>
                         <h1 className="font-suisse advancing pb-8 mb-6 md:max-w-lg mt-8">
                             Public Tooling For{" "}
-                            <em className="metaprotocols">Users &</em>{" "}
-                            <em>Builders</em>
+                            <em className="metaprotocols font-melior text-[52px]">Users &</em>{" "}
+                            <em className="font-melior text-[52px]">Builders</em>
                         </h1>
                     </div>
 
