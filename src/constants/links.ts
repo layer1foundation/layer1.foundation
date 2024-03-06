@@ -23,7 +23,8 @@ const LINKS = {
     ordio: "https://www.ord.io/",
     ordiscan: "https://ordiscan.com/",
     email: "mailto:",
-    governance: "/#governance"
+    governance: "/#governance",
+    strapi: "https://cms.l1f.xyz",
 };
 
 export default LINKS;

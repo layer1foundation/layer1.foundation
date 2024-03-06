@@ -6,7 +6,7 @@ import Post from "@/components/Post";
 import Segemnt from "@/components/Segment";
 import Chapter from "@/components/Chapter";
 import copy from "@/constants/copy/BRC20";
-import Wrapper from "@/components/Wrapper";
+import Wrapper from "@/components/Background";
 
 export default function BlogPage() {
     const [blogs, setBlogs] = useState<IBlog[]>([]);
@@ -16,9 +16,16 @@ export default function BlogPage() {
     }, []);
 
     return (
-        <div className="flex flex-col items-center min-w-[350px]">
-            {Array.isArray(blogs) &&
-                blogs.map((blog, i) => <Post key={`blog-post-${i}`} post={blog.attributes}></Post>)}
+        <div className="flex flex-col items-center">
+            <Wrapper>
+                {Array.isArray(blogs) &&
+                    blogs.map(blog => (
+                        <Post
+                            key={`blog-post-${blog.id}`}
+                            post={blog.attributes}
+                        ></Post>
+                    ))}
+            </Wrapper>
             <Segemnt scroll={false} className="pt-10">
                 <Chapter chapter={copy.BRC20.chapter2}></Chapter>
             </Segemnt>

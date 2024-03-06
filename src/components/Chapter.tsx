@@ -18,7 +18,10 @@ interface Team {
 interface ChapterProps {
     heading?: string;
     subheading?: string;
-    headingList?: string[];
+    headingList?: {
+        text: string;
+        link?: string;
+    }[];
     headingBig?: boolean;
     column?: boolean;
     subheadingBig?: boolean;
@@ -88,15 +91,28 @@ export default function Chapter({
                 ) : null}
                 {chapter.headingList ? (
                     <div className="hidden md:flex md:flex-col">
-                        {chapter.headingList.map((h: string, i: number) => {
-                            return (
-                                <h6
-                                    key={i}
-                                    className="text-smoke50 mb-2 font-mono"
-                                >
-                                    {h}
-                                </h6>
-                            );
+                        {chapter.headingList.map((h, i: number) => {
+                            if (h?.link) {
+                                return (
+                                    <Link href={h.link}>
+                                        <h6
+                                            key={i}
+                                            className="text-smoke50 mb-2 font-mono transition duration-150 hover:text-smoke60"
+                                        >
+                                            {h.text}
+                                        </h6>
+                                    </Link>
+                                );
+                            } else {
+                                return (
+                                    <h6
+                                        key={i}
+                                        className="text-smoke50 mb-2 font-mono"
+                                    >
+                                        {h.text}
+                                    </h6>
+                                );
+                            }
                         })}
                     </div>
                 ) : null}
@@ -183,15 +199,28 @@ export default function Chapter({
                     ) : null}
                     {chapter.headingList ? (
                         <div className=" md:hidden md:flex-col">
-                            {chapter.headingList.map((h: string, i: number) => {
-                                return (
-                                    <h6
-                                        key={i}
-                                        className="text-smoke50 mb-2 font-mono"
-                                    >
-                                        {h}
-                                    </h6>
-                                );
+                            {chapter.headingList.map((h, i: number) => {
+                                if (h?.link) {
+                                    return (
+                                        <Link href={h.link}>
+                                            <h6
+                                                key={i}
+                                                className="text-smoke50 mb-2 font-mono transition duration-150 hover:text-smoke60"
+                                            >
+                                                {h.text}
+                                            </h6>
+                                        </Link>
+                                    );
+                                } else {
+                                    return (
+                                        <h6
+                                            key={i}
+                                            className="text-smoke50 mb-2 font-mono"
+                                        >
+                                            {h.text}
+                                        </h6>
+                                    );
+                                }
                             })}
                         </div>
                     ) : null}

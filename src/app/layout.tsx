@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../styles/globals.css";
 import { sharedMetadata } from "@/constants/metadata";
-import Wrapper from "@/components/Wrapper";
+import Wrapper from "@/components/Background";
 
 export const metadata: Metadata = sharedMetadata;
 

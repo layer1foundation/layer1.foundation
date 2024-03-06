@@ -5,7 +5,7 @@ import Chapter from "@/components/Chapter";
 import copy from "@/constants/copy/home";
 import Projects from "@/components/Projects";
 import Image from "next/image";
-import Wrapper from "@/components/Wrapper";
+import Wrapper from "@/components/Background";
 
 export default function Home() {
     return (

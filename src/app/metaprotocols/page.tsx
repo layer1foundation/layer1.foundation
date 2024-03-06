@@ -7,6 +7,7 @@ import Chapter from "@/components/Chapter";
 import Projects from "@/components/Projects";
 import copy from "@/constants/copy/BRC20";
 import Image from "next/image";
+import Background from "@/components/Background";
 
 export default function BRC20() {
     const glossContent = {
@@ -24,29 +25,33 @@ export default function BRC20() {
                 height={300}
                 alt="Layer 1 Foundations Tools"
                 src="/img/BRC20-dt.png"
-            ></Image>
+            />
             <Image
                 className="sm:hidden px-4 md:px-10"
                 width={800}
                 height={200}
                 alt="Layer 1 Foundation Tools"
                 src="/img/BRC20-mobi.png"
-            ></Image>
-            <div className="w-full px-6 md:px-10">
-                <div className="mt-2 mb-8 font-mono text-2xl leading-8 border-b">
-                    <h6 className="font-mono leading-6">
-                        METAPROTOCOLS{" "}
-                        <code className="opacity-50">IN BITCOIN</code>
-                    </h6>
-                    <h1 className="font-suisse advancing pb-8 mb-6 md:max-w-lg mt-8">
-                        Protocol Governance For BRC20
-                    </h1>
+            />
+
+            <Background>
+                <div className="w-full px-6 md:px-10">
+                    <div className="mt-2 mb-8 font-mono text-2xl leading-8 border-b">
+                        <h6 className="font-mono leading-6">
+                            METAPROTOCOLS{" "}
+                            <code className="opacity-50">IN BITCOIN</code>
+                        </h6>
+                        <h1 className="font-suisse advancing pb-8 mb-6 md:max-w-lg mt-8">
+                            Protocol Governance For BRC20
+                        </h1>
+                    </div>
+                    <Glossary
+                        content={glossContent}
+                        showChapters={false}
+                    ></Glossary>
                 </div>
-                <Glossary
-                    content={glossContent}
-                    showChapters={false}
-                ></Glossary>
-            </div>
+            </Background>
+
             <Segment className={"mb-20"}>
                 <Chapter chapter={copy.BRC20.chapter0}></Chapter>
             </Segment>

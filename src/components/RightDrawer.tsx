@@ -31,14 +31,18 @@ export default function RightDrawer({
     if (!open) return <></>;
     return (
         <div
-            className="fixed inset-0 z-1 bg-gray-400 bg-opacity-50 w-full h-full cursor-pointer"
+            className="fixed inset-0 z-10 bg-gray-400 bg-opacity-50 w-full h-full cursor-pointer"
             onClick={() => {
                 setIsOpen(!open);
             }}
         >
             <div
                 className="fixed z-99 w-4/5 top-0 right-0 h-full py-5 flex flex-col bg-light space-y-8 overflow-auto max-w-5xl"
-                style={open ? { animation: "slide-left 500ms" } : {}}
+                style={
+                    open
+                        ? { animation: "slide-left 300ms" }
+                        : { animation: "slide-right 200ms" }
+                }
                 onClick={stopPropagation}
             >
                 <div

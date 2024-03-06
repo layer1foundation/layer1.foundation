@@ -12,25 +12,25 @@ interface GlossaryProps {
 const GLOSSARY_ITEMS = [
     {
         text: "00 / OVERVIEW",
-        link: LINKS.overview
+        link: LINKS.overview,
     },
     {
         text: "01 / MISSION",
-        link: LINKS.mission
+        link: LINKS.mission,
     },
     {
         text: "02 / PROTOCOL GOVERNANCE",
-        link: LINKS.governance
+        link: LINKS.governance,
     },
     {
         text: "03 / PUBLIC TOOLING FOR DEVELOPERS",
-        link: "/#tools"
+        link: "/#tools",
     },
     {
         text: "04 / DEVELOPMENT DISCOURSE FORUM",
-        link: "/#forum"
+        link: "/#forum",
     },
-]
+];
 
 export default function Glossary({
     content,
@@ -58,25 +58,32 @@ export default function Glossary({
                 ) : showChapters ? (
                     <div>
                         {GLOSSARY_ITEMS.map((g, i) => (
-                            <Link href={g.link} key={`glossary-item-${i}`}><h6 className="md:text-xs transition duration-150 hover:text-neutral-500">{g.text}</h6></Link>
+                            <Link href={g.link} key={`glossary-item-${i}`}>
+                                <h6 className="md:text-xs transition duration-150 hover:text-neutral-500">
+                                    {g.text}
+                                </h6>
+                            </Link>
                         ))}
                     </div>
                 ) : null}
             </div>
             <div className="md:w-1/3 space-y-3">
                 <Link
-                    href="https://layer1.gitbook.io/layer1-foundation/foundation/purpose"
+                    href={LINKS.gitbook}
                     className="flex justify-between font-mono"
                 >
                     GITHUB
                     <img src="/icons/arrow-top-right.svg" />
                 </Link>
-                <Link href="/tools" className="flex justify-between font-mono">
+                <Link
+                    href={LINKS.tools}
+                    className="flex justify-between font-mono"
+                >
                     TOOLS
                     <img src="/icons/arrow-top-right.svg" />
                 </Link>
                 <Link
-                    href="https://l1f.discourse.group/latest"
+                    href={LINKS.forum}
                     className="flex justify-between font-mono"
                 >
                     FORUM

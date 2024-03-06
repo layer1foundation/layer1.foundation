@@ -1,7 +1,9 @@
+import LINKS from "../links";
+
 const copy = {
     tools: {
         chapter0: {
-            heading: "[ 00 / OVERVIEW]",
+            heading: "[ 00 / OVERVIEW ]",
             subsection1: {
                 title: "CORE PRINCIPLE",
                 smallText: true,
@@ -31,13 +33,34 @@ const copy = {
         },
         chapter2: {
             headingList: [
-                " 00 / OPI",
-                " 01 / METASHREW",
-                " 02 / FORUM",
-                " 03 / CHISEL",
-                " 04 / ORIDINALSBOT",
-                " 05 / ORDISCAN",
-                " 06 / ORD.IO",
+                {
+                    text: " 00 / OPI ",
+                    link: "/tools#tools-opi",
+                },
+                {
+                    text: " 01 / METASHREW ",
+                    link: "/tools#tools-metashrew",
+                },
+                {
+                    text: " 02 / FORUM ",
+                    link: LINKS.forum,
+                },
+                {
+                    text: " 03 / CHISEL ",
+                    link: "/tools#tools-chisel",
+                },
+                {
+                    text: " 04 / ORIDINALSBOT ",
+                    link: "/tools#tools-ordinalsbot",
+                },
+                {
+                    text: " 05 / ORDISCAN ",
+                    link: "/tools#tools-ordiscan",
+                },
+                {
+                    text: " 06 / ORD.IO ",
+                    link: "/tools#tools-ordio",
+                },
             ],
             subsection1: {
                 title: "RESOURCES THAT ARE BEING BUILT ON L1F",
@@ -54,7 +77,7 @@ const copy = {
             text: "Development platforms that foster the creation of metaprotocol logic, including pseudologic, for conceptualization and design phases.",
         },
         chapterMeta: {
-            heading: "[ 01 / METASHREW]",
+            heading: "[ 01 / METASHREW ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -70,7 +93,7 @@ const copy = {
             },
         },
         chapterSand: {
-            heading: "[ 02 / SANDSHREW]",
+            heading: "[ 02 / SANDSHREW ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -91,7 +114,7 @@ const copy = {
             text: "Tools for building robust indexes and facilitating interactions, crucial for developing and scaling protocols.",
         },
         chapterOpi: {
-            heading: "[ 01 / OPI]",
+            heading: "[ 01 / OPI ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -112,7 +135,7 @@ const copy = {
             text: "Inscribe on Bitcoin—tokens, JPEGs, and more",
         },
         chapterChisel: {
-            heading: "[ 04 / CHISEL]",
+            heading: "[ 04 / CHISEL ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -128,7 +151,7 @@ const copy = {
             },
         },
         chapterOrdinalsBot: {
-            heading: "[ 05 / ORIDINALSBOT]",
+            heading: "[ 05 / ORIDINALSBOT ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -149,7 +172,7 @@ const copy = {
             text: "For monitoring protocol activities, enhancing transparency and operational efficiency",
         },
         chapterScan: {
-            heading: "[ 06 / ORDISCAN]",
+            heading: "[ 06 / ORDISCAN ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -165,7 +188,7 @@ const copy = {
             },
         },
         chapterOrdIo: {
-            heading: "[ 07 / ORD.IO]",
+            heading: "[ 07 / ORD.IO ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -186,7 +209,7 @@ const copy = {
             text: "PSBT, wallets, and API tooling to provide the necessary infrastructure for seamless protocol operation, transfer of assets, and user interaction.",
         },
         chapterOYL: {
-            heading: "[ 08 / OYL]",
+            heading: "[ 08 / OYL ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [

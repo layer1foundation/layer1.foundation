@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import LINKS from "@/constants/links";
+import { IBlogPostAttributes } from "@/actions/fetchBlogs";
 
-export default function Post({ post }: { post: any }) {
-    const imageUrl = `https://cms.l1f.xyz${post.cover.data.attributes.formats.small.url}`;
+export default function Post({ post }: { post: IBlogPostAttributes }) {
+    const imageUrl = `${LINKS.strapi}${post.cover.data.attributes.formats.large.url}`;
     return (
         <div className="w-full  md:px-10 ">
             <div className="w-full">

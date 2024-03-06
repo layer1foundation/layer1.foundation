@@ -12,7 +12,10 @@ export default function Donate() {
                     <QR />
                 </Chapter>
             </Segment>
-            <Segment scroll={false} className="md:pl-16 md:pr-8 pt-16 bg-smoke10 h-96">
+            <Segment
+                scroll={false}
+                className="md:pl-16 md:pr-8 pt-16 bg-smoke10 h-96"
+            >
                 <Chapter chapter={copy.donate.chapter1} half={true}></Chapter>
             </Segment>
         </div>
