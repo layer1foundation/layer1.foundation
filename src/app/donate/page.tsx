@@ -1,13 +1,12 @@
-"use client"
+"use client";
 
-import React from 'react'
-import Donate from '@/components/Donate'
-
+import React from "react";
+import Donate from "@/components/Donate";
 
 export default function DonatePage() {
-  return (
-    <div>
-        <Donate />
-    </div>
-  )
+    return (
+        <div>
+            <Donate />
+        </div>
+    );
 }

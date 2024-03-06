@@ -1,12 +1,12 @@
-
-
 const LINKS = {
     home: "/",
+    overview: "/#overview",
     mission: "/#mission",
     metaprotocols: "/metaprotocols",
     tools: "/tools",
     donate: "/donate",
-    documentation: "https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation",
+    documentation:
+        "https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation",
     bestinslot: "https://bestinslot.xyz/",
     domo: "https://www.domo.com/",
     okx: "https://www.okx.com/",
@@ -22,7 +22,9 @@ const LINKS = {
     ordinalsbot: "https://ordinalsbot.com/",
     ordio: "https://www.ord.io/",
     ordiscan: "https://ordiscan.com/",
-    email: "mailto:"
-}
+    email: "mailto:",
+    governance: "/#governance",
+    strapi: "https://cms.l1f.xyz",
+};
 
 export default LINKS;
