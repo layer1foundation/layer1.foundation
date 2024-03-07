@@ -31,32 +31,44 @@ const copy = {
         chapter2: {
             headingList: [
                 {
-                    text: " 00 / OPI ",
-                    link: INTERNAL_LINKS.tools.opi,
-                },
-                {
                     text: " 01 / METASHREW ",
                     link: INTERNAL_LINKS.tools.metashrew,
                 },
                 {
-                    text: " 02 / FORUM ",
-                    link: EXTERNAL_LINKS.forum,
+                    text: " 02 / SANDSHREW ",
+                    link: INTERNAL_LINKS.tools.sandshrew,
                 },
                 {
-                    text: " 03 / CHISEL ",
+                    text: " 03 / OPI ",
+                    link: INTERNAL_LINKS.tools.opi,
+                },
+                {
+                    text: " 04 / UNISAT ",
+                    link: INTERNAL_LINKS.tools.unisat,
+                },
+                {
+                    text: " 05 / CHISEL ",
                     link: INTERNAL_LINKS.tools.chisel,
                 },
                 {
-                    text: " 04 / ORIDINALSBOT ",
+                    text: " 06 / ORIDINALSBOT ",
                     link: INTERNAL_LINKS.tools.ordinalsbot,
                 },
                 {
-                    text: " 05 / ORDISCAN ",
+                    text: " 07 / ORDISCAN ",
                     link: INTERNAL_LINKS.tools.ordiscan,
                 },
                 {
-                    text: " 06 / ORD.IO ",
+                    text: " 08 / ORD.IO ",
                     link: INTERNAL_LINKS.tools.ordio,
+                },
+                {
+                    text: " 09 / UNISAT ",
+                    link: INTERNAL_LINKS.tools.unisatwallet,
+                },
+                {
+                    text: " 10 / Xverse ",
+                    link: INTERNAL_LINKS.tools.xverse,
                 },
             ],
             subsection1: {
@@ -111,7 +123,7 @@ const copy = {
             text: "Tools for building robust indexes and facilitating interactions, crucial for developing and scaling protocols.",
         },
         chapterOpi: {
-            heading: "[ 01 / OPI ]",
+            heading: "[ 03 / OPI ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -126,13 +138,29 @@ const copy = {
                 },
             },
         },
+        chapterUnisat: {
+            heading: "[ 04 / UNISAT ]",
+            subsection1: {
+                smallText: true,
+                paragraphs: [
+                    {
+                        text: "Unisat offers a full suite of developer tooling—starting with a BRC20 indexer API that can be used for building any BRC20-based applications. Unisat created the original BRC20 indexer with Domo and is co-lead-maintainer of the BRC20 protocol with Best In Slot.",
+                        props: "text-smoke40 pr-8",
+                    },
+                ],
+                outerLink: {
+                    text: "EXPLORE UNISAT",
+                    link: EXTERNAL_LINKS.unisatapilink,
+                },
+            },
+        },
         tool3: {
             subheading: "LIFECYCLE SUPPORT",
             heading: "Inscriber",
             text: "Inscribe on Bitcoin—tokens, JPEGs, and more",
         },
         chapterChisel: {
-            heading: "[ 04 / CHISEL ]",
+            heading: "[ 05 / CHISEL ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -148,7 +176,7 @@ const copy = {
             },
         },
         chapterOrdinalsBot: {
-            heading: "[ 05 / ORIDINALSBOT ]",
+            heading: "[ 06 / ORIDINALSBOT ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -169,7 +197,7 @@ const copy = {
             text: "For monitoring protocol activities, enhancing transparency and operational efficiency",
         },
         chapterScan: {
-            heading: "[ 06 / ORDISCAN ]",
+            heading: "[ 07 / ORDISCAN ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -185,7 +213,7 @@ const copy = {
             },
         },
         chapterOrdIo: {
-            heading: "[ 07 / ORD.IO ]",
+            heading: "[ 08 / ORD.IO ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -205,19 +233,51 @@ const copy = {
             heading: "Wallet",
             text: "PSBT, wallets, and API tooling to provide the necessary infrastructure for seamless protocol operation, transfer of assets, and user interaction.",
         },
-        chapterOYL: {
-            heading: "[ 08 / OYL ]",
+                // chapterOYL: {
+        //     heading: "[ 08 / OYL ]",
+        //     subsection1: {
+        //         smallText: true,
+        //         paragraphs: [
+        //             {
+        //                 text: "PSBT, wallets, and API tooling to provide the necessary infrastructure for seamless protocol operation, transfer of assets, and user interaction.",
+        //                 props: "text-smoke40 pr-8",
+        //             },
+        //         ],
+        //         outerLink: {
+        //             text: "EXPLORE OYL",
+        //             link: EXTERNAL_LINKS.oyl,
+        //         },
+        //     },
+        // },
+        chapterUnisatWallet: {
+            heading: "[ 09 / UNISAT ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
                     {
-                        text: "PSBT, wallets, and API tooling to provide the necessary infrastructure for seamless protocol operation, transfer of assets, and user interaction.",
+                        text: "Unisat wallet is a browser extension wallet enabling the transfer of Ordinals, BRC20, and other Bitcoin-native tokens. Unisat is a single account wallet (i.e. your Bitcoin and Ordinals are easily transferred with one address) and enables the hosting of multiple accounts / keys within the browser. ",
                         props: "text-smoke40 pr-8",
                     },
                 ],
                 outerLink: {
-                    text: "EXPLORE OYL",
-                    link: EXTERNAL_LINKS.oyl,
+                    text: "EXPLORE UNISAT",
+                    link: EXTERNAL_LINKS.unisat,
+                },
+            },
+        },
+        chapterXverse: {
+            heading: "[ 10 / Xverse ]",
+            subsection1: {
+                smallText: true,
+                paragraphs: [
+                    {
+                        text: "Xverse Wallet is a browser extension and mobile wallet for Bitcoin, Ordinals and BRC20 tokens. Xverse is easy to use and beginner friendly - separating Bitcoin and Ordinals addresses.",
+                        props: "text-smoke40 pr-8",
+                    },
+                ],
+                outerLink: {
+                    text: "EXPLORE Xverse",
+                    link: EXTERNAL_LINKS.xverse,
                 },
             },
         },

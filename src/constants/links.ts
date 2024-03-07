@@ -23,6 +23,8 @@ export const EXTERNAL_LINKS = {
     unisat: "https://unisat.io/",
     utxo: "https://www.utxo.management/",
     alex: "https://alexgo.io/",
+    unisatapilink: "https://docs.unisat.io/dev/unisat-developer-service",
+    xverse: "https://www.xverse.app/"
 };
 
 export const INTERNAL_LINKS = {
@@ -48,6 +50,9 @@ export const INTERNAL_LINKS = {
         ordio: "/tools#ordio",
         sandshrew: "/tools#sandshrew",
         oyl: "/tools#oyl",
+        unisat: "/tools#unisat",
+        unisatwallet: "/tools#unisat-wallet",
+        xverse: "/tools#xverse"
     },
     donate: {
         page: "/donate",
