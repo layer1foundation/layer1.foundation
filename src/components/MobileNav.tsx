@@ -11,7 +11,11 @@ export default function MobileNav({
     return (
         <nav className="flex flex-col text-left pl-4 space-y-3 !mt-0">
             {items.map((l, i) => (
-                <Link key={`mobile-nav-${i}`} href={l.link} className="font-mono text-xl w-fit p-1">
+                <Link
+                    key={`mobile-nav-${i}`}
+                    href={l.link}
+                    className="font-mono text-xl w-fit p-1"
+                >
                     {l.text}
                 </Link>
             ))}

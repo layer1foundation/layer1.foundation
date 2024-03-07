@@ -62,8 +62,35 @@ export const INTERNAL_LINKS = {
         page: "/sop",
     },
     letter: {
-        page: "/letter"
-    }
+        page: "/letter",
+    },
+};
+
+export const IMAGES = {
+    home: {
+        desktop: "https://i.ibb.co/svqH16j/l1f-image-1.png",
+        mobile: "https://i.ibb.co/gPk33zJ/l1f-image-1-mobi.png",
+    },
+    tools: {
+        desktop: "https://i.ibb.co/f9krWTk/tools-dt.png",
+        mobile: "https://i.ibb.co/sRLKKf7/tools-mobi.png",
+    },
+    letter: {
+        desktop: "https://i.ibb.co/gSPk1Gt/letter-dt.png",
+        mobile: "https://i.ibb.co/XWwf21d/letter-mb.png",
+    },
+    governance: {
+        desktop: "https://i.ibb.co/5GyN3x7/governance-dt.png",
+        mobile: "https://i.ibb.co/ZXHBgYR/governance-mb.png",
+    },
+    sop: {
+        desktop: "https://i.ibb.co/jkSDBH0/sop-dt.png",
+        mobile: "https://i.ibb.co/ZVtwYSG/sop-mb.png",
+    },
+    brc20: {
+        desktop: "https://i.ibb.co/sQ5W7SB/BRC20-dt.png",
+        mobile: "https://i.ibb.co/FzBhxHH/BRC20-mobi.png",
+    },
 };
 
 export const getIdFromLink = (link: string) => link.split("#")[1];

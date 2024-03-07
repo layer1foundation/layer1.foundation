@@ -19,13 +19,13 @@ const NAV_LINKS = [
     },
     {
         text: "TOOLS",
-        link: INTERNAL_LINKS.tools.page
+        link: INTERNAL_LINKS.tools.page,
     },
     {
         text: "PARTNERS",
-        link: INTERNAL_LINKS.home.partners
-    }
-]
+        link: INTERNAL_LINKS.home.partners,
+    },
+];
 
 export default function Header() {
     const [navOpen, setNavOpen] = useState(false);

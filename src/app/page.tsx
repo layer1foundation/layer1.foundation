@@ -6,7 +6,7 @@ import copy from "@/constants/copy/home";
 import Projects from "@/components/Projects";
 import Image from "next/image";
 import Wrapper from "@/components/Background";
-import { getIdFromLink, INTERNAL_LINKS } from "@/constants/links";
+import { getIdFromLink, IMAGES, INTERNAL_LINKS } from "@/constants/links";
 
 export default function Home() {
     return (
@@ -16,14 +16,14 @@ export default function Home() {
                 width={1300}
                 height={300}
                 alt="Computer in a bed of flowers"
-                src="/img/l1f-image-1.png"
+                src={IMAGES.home.desktop}
             ></Image>
             <Image
                 className="md:hidden w-full px-6 md:px-10"
                 width={400}
                 height={300}
                 alt="Computer in a bed of flowers"
-                src="/img/l1f-image-1-mobi.png"
+                src={IMAGES.home.mobile}
             ></Image>
             <Wrapper className="w-full px-6 md:px-10">
                 <div className="mt-2 mb-12 font-mono text-2xl leading-8">

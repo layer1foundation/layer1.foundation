@@ -6,7 +6,7 @@ import Tool from "@/components/Tool";
 import copy from "@/constants/copy/tools";
 import Image from "next/image";
 import Background from "@/components/Background";
-import { getIdFromLink, INTERNAL_LINKS } from "@/constants/links";
+import { getIdFromLink, IMAGES, INTERNAL_LINKS } from "@/constants/links";
 
 export default function Tools() {
     const glossContent = {
@@ -24,14 +24,16 @@ export default function Tools() {
                 width={1300}
                 height={300}
                 alt="Layer 1 Foundations Tools"
-                src="/img/tools-dt.png"
+                // src="/img/tools-dt.png"
+                src={IMAGES.tools.desktop}
             />
             <Image
                 className="md:hidden px-4 md:px-10"
                 width={400}
                 height={300}
                 alt="Layer 1 Foundation Tools"
-                src="/img/tools-mobi.png"
+                // src="/img/tools-mobi.png"
+                src={IMAGES.tools.mobile}
             />
 
             <Background>

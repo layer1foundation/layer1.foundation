@@ -57,9 +57,11 @@ export interface IBlog {
     attributes: IBlogPostAttributes;
 }
 
-type IEndpointTypes = 'blogs' | 'sop' | 'governance-resolution';
+type IEndpointTypes = "blogs" | "sop" | "governance-resolution";
 
-export async function fetchCMS(endpoint: IEndpointTypes): Promise<IBlog[] | IBlog> {
+export async function fetchCMS(
+    endpoint: IEndpointTypes
+): Promise<IBlog[] | IBlog> {
     try {
         const res = await fetch(
             `${EXTERNAL_LINKS.strapi}/api/${endpoint}?populate=*`

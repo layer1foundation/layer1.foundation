@@ -63,7 +63,7 @@ export async function fetchBlogs(): Promise<IBlog[]> {
             `${EXTERNAL_LINKS.strapi}/api/blogs?populate=*`
         );
         const { data } = await res.json();
-        console.log(data);
+        // console.log(data);
         return data;
     } catch (error) {
         console.error("Failed to fetch blogs:", error);
