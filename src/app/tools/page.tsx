@@ -154,7 +154,7 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id={"xverse"}
+                id={getIdFromLink(INTERNAL_LINKS.tools.xverse)}
             >
                 <Chapter chapter={copy.tools.chapterXverse} />
             </Segment>

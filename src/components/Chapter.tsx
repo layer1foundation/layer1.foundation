@@ -100,7 +100,7 @@ export default function Chapter({
                                         target={
                                             h.link.includes("https://")
                                                 ? "_blank"
-                                                : "_self"
+                                                : undefined
                                         }
                                     >
                                         <h6
