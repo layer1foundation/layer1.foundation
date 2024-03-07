@@ -32,7 +32,7 @@ export default function RightDrawer({
     if (!open) return <></>;
     return (
         <div
-            className="fixed inset-0 z-10 bg-gray-400 bg-opacity-50 w-full h-full cursor-pointer"
+            className="fixed inset-0 z-10 bg-gray-400 bg-opacity-50 w-full h-full"
             onClick={() => {
                 setIsOpen(!open);
             }}

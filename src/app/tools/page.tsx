@@ -6,6 +6,7 @@ import Tool from "@/components/Tool";
 import copy from "@/constants/copy/tools";
 import Image from "next/image";
 import Background from "@/components/Background";
+import { getIdFromLink, INTERNAL_LINKS } from "@/constants/links";
 
 export default function Tools() {
     const glossContent = {
@@ -79,7 +80,7 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id="tools-metashrew"
+                id={getIdFromLink(INTERNAL_LINKS.tools.metashrew)}
             >
                 <Tool tool={copy.tools.tool1}></Tool>
                 <Chapter chapter={copy.tools.chapterMeta}></Chapter>
@@ -87,14 +88,14 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id="tools-sandshrew"
+                id={getIdFromLink(INTERNAL_LINKS.tools.sandshrew)}
             >
                 <Chapter chapter={copy.tools.chapterSand}></Chapter>
             </Segment>
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id="tools-opi"
+                id={getIdFromLink(INTERNAL_LINKS.tools.opi)}
             >
                 <Tool tool={copy.tools.tool2}></Tool>
                 <Chapter chapter={copy.tools.chapterOpi}></Chapter>
@@ -102,7 +103,7 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id="tools-chisel"
+                id={getIdFromLink(INTERNAL_LINKS.tools.chisel)}
             >
                 <Tool tool={copy.tools.tool3}></Tool>
                 <Chapter chapter={copy.tools.chapterChisel}></Chapter>
@@ -110,14 +111,14 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id="tools-ordinalsbot"
+                id={getIdFromLink(INTERNAL_LINKS.tools.ordinalsbot)}
             >
                 <Chapter chapter={copy.tools.chapterOrdinalsBot}></Chapter>
             </Segment>
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb:0"
-                id="tools-ordiscan"
+                id={getIdFromLink(INTERNAL_LINKS.tools.ordiscan)}
             >
                 <Tool tool={copy.tools.tool4}></Tool>
                 <Chapter chapter={copy.tools.chapterScan}></Chapter>
@@ -125,14 +126,14 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id="tools-ordio"
+                id={getIdFromLink(INTERNAL_LINKS.tools.ordio)}
             >
                 <Chapter chapter={copy.tools.chapterOrdIo}></Chapter>
             </Segment>
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id="tools-oyl"
+                id={getIdFromLink(INTERNAL_LINKS.tools.oyl)}
             >
                 <Tool tool={copy.tools.tool5}></Tool>
                 <Chapter chapter={copy.tools.chapterOYL} />

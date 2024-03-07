@@ -38,8 +38,8 @@ export default function BRC20() {
                 <div className="w-full px-6 md:px-10">
                     <div className="mt-2 mb-8 font-mono text-2xl leading-8 border-b">
                         <h6 className="font-mono leading-6">
-                            METAPROTOCOLS{" "}
-                            <code className="opacity-50">IN BITCOIN</code>
+                            BRC20 Protocol{" "}
+                            <code className="opacity-50">Governance</code>
                         </h6>
                         <h1 className="font-suisse advancing pb-8 mb-6 md:max-w-lg mt-8">
                             Protocol Governance For BRC20

@@ -6,6 +6,7 @@ import copy from "@/constants/copy/home";
 import Projects from "@/components/Projects";
 import Image from "next/image";
 import Wrapper from "@/components/Background";
+import { getIdFromLink, INTERNAL_LINKS } from "@/constants/links";
 
 export default function Home() {
     return (
@@ -39,29 +40,29 @@ export default function Home() {
                 </h1>
                 <Glossary />
             </Wrapper>
-            <Segment className="md:pt-2 md:pb-10" id="overview">
+            <Segment className="md:pt-2 md:pb-10" id={getIdFromLink(INTERNAL_LINKS.home.overview)}>
                 <Chapter chapter={copy.home.chapter0} />
             </Segment>
-            <Segment bg="bg-smoke10" id="mission">
+            <Segment bg="bg-smoke10" id={getIdFromLink(INTERNAL_LINKS.home.mission)}>
                 <Chapter chapter={copy.home.chapter1} />
             </Segment>
-            <Segment className="pt-8" scroll={false} id="partners">
+            <Segment className="pt-8" scroll={false} id={getIdFromLink(INTERNAL_LINKS.home.partners)}>
                 <Chapter chapter={copy.home.chapter2} />
             </Segment>
-            <Wrapper id="projects">
+            <Wrapper id={getIdFromLink(INTERNAL_LINKS.home.partners)}>
                 <Projects />
             </Wrapper>
             <Segment
                 scroll={false}
                 title="THE FOLLOWING PROJECTS ARE KEY PRIORITIES FOR L1F IN 2024 AND BEYOND:"
-                id="governance"
+                id={getIdFromLink(INTERNAL_LINKS.home.governance)}
             >
                 <Chapter chapter={copy.home.chapter3} />
             </Segment>
-            <Segment className="" scroll={false} id="tools">
+            <Segment className="" scroll={false} id={getIdFromLink(INTERNAL_LINKS.home.tools)}>
                 <Chapter chapter={copy.home.chapter4} />
             </Segment>
-            <Segment className="md:pb-32" scroll={false} id="forum">
+            <Segment className="md:pb-32" scroll={false} id={getIdFromLink(INTERNAL_LINKS.home.forum)}>
                 <Chapter chapter={copy.home.chapter5} />
             </Segment>
         </div>

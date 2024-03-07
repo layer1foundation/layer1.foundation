@@ -1,4 +1,4 @@
-import LINKS from "../links";
+import { INTERNAL_LINKS, EXTERNAL_LINKS } from "../links";
 
 const copy = {
     tools: {
@@ -10,16 +10,6 @@ const copy = {
                 paragraphs: [
                     {
                         text: "We curate tools, technologies, and information for users and developers working with metaprotocols on Bitcoin. This effort includes the aggregation of open-source tooling and resources that we believe will drive the ecosystem forward.",
-                    },
-                ],
-                links: [
-                    {
-                        name: "DONATE",
-                        href: "/donate",
-                    },
-                    {
-                        name: "READ DOCUMENTATION",
-                        href: "https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation",
                     },
                 ],
             },
@@ -35,31 +25,31 @@ const copy = {
             headingList: [
                 {
                     text: " 00 / OPI ",
-                    link: "/tools#tools-opi",
+                    link: INTERNAL_LINKS.tools.opi,
                 },
                 {
                     text: " 01 / METASHREW ",
-                    link: "/tools#tools-metashrew",
+                    link: INTERNAL_LINKS.tools.metashrew,
                 },
                 {
                     text: " 02 / FORUM ",
-                    link: LINKS.forum,
+                    link: EXTERNAL_LINKS.forum,
                 },
                 {
                     text: " 03 / CHISEL ",
-                    link: "/tools#tools-chisel",
+                    link: INTERNAL_LINKS.tools.chisel,
                 },
                 {
                     text: " 04 / ORIDINALSBOT ",
-                    link: "/tools#tools-ordinalsbot",
+                    link: INTERNAL_LINKS.tools.ordinalsbot,
                 },
                 {
                     text: " 05 / ORDISCAN ",
-                    link: "/tools#tools-ordiscan",
+                    link: INTERNAL_LINKS.tools.ordiscan,
                 },
                 {
                     text: " 06 / ORD.IO ",
-                    link: "/tools#tools-ordio",
+                    link: INTERNAL_LINKS.tools.ordio,
                 },
             ],
             subsection1: {
@@ -88,7 +78,7 @@ const copy = {
                 ],
                 outerLink: {
                     text: "EXPLORE METASHREW",
-                    link: "https://www.sandshrew.io/",
+                    link: EXTERNAL_LINKS.metashrew,
                 },
             },
         },
@@ -104,7 +94,7 @@ const copy = {
                 ],
                 outerLink: {
                     text: "EXPLORE SANDSHREW",
-                    link: "https://www.sandshrew.io/",
+                    link: EXTERNAL_LINKS.sandshrew,
                 },
             },
         },
@@ -125,7 +115,7 @@ const copy = {
                 ],
                 outerLink: {
                     text: "EXPLORE OPI",
-                    link: "https://opi.network/",
+                    link: EXTERNAL_LINKS.opi,
                 },
             },
         },
@@ -146,7 +136,7 @@ const copy = {
                 ],
                 outerLink: {
                     text: "EXPLORE CHISEL",
-                    link: "https://www.ordinalsbot.com/",
+                    link: EXTERNAL_LINKS.chisel,
                 },
             },
         },
@@ -162,7 +152,7 @@ const copy = {
                 ],
                 outerLink: {
                     text: "EXPLORE ORIDINALSBOT",
-                    link: "https://www.ordinalsbot.com/",
+                    link: EXTERNAL_LINKS.ordinalsbot,
                 },
             },
         },
@@ -183,7 +173,7 @@ const copy = {
                 ],
                 outerLink: {
                     text: "EXPLORE ORDISCAN",
-                    link: "https://ordiscan.com/",
+                    link: EXTERNAL_LINKS.ordiscan,
                 },
             },
         },
@@ -199,7 +189,7 @@ const copy = {
                 ],
                 outerLink: {
                     text: "EXPLORE ORD.IO",
-                    link: "https://www.ord.io/",
+                    link: EXTERNAL_LINKS.ordio,
                 },
             },
         },
@@ -220,7 +210,7 @@ const copy = {
                 ],
                 outerLink: {
                     text: "EXPLORE OYL",
-                    link: "https://www.oyl.io/",
+                    link: EXTERNAL_LINKS.oyl,
                 },
             },
         },

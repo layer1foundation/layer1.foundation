@@ -3,7 +3,8 @@
 import React, { ReactNode } from "react";
 import Button from "./Button";
 import Link from "next/link";
-import links from "@/constants/links";
+import { INTERNAL_LINKS } from "@/constants/links";
+import Image from "next/image";
 
 interface Paragraph {
     text?: string;
@@ -94,7 +95,10 @@ export default function Chapter({
                         {chapter.headingList.map((h, i: number) => {
                             if (h?.link) {
                                 return (
-                                    <Link href={h.link}>
+                                    <Link 
+                                        href={h.link}
+                                        target={h.link.includes("https://") ? "_blank" : "_self"}
+                                    >
                                         <h6
                                             key={i}
                                             className="text-smoke50 mb-2 font-mono transition duration-150 hover:text-smoke60"
@@ -121,13 +125,13 @@ export default function Chapter({
                 <div
                     className={`flex flex-col ${half ? "md:w-2/5" : "md:w-2/3"}`}
                 >
-                    {chapter.subsection1.title ? (
+                    {chapter.subsection1.title && (
                         <h6 className="text-smoke60 mb-8 font-mono">
                             {chapter.subsection1.title}
                         </h6>
-                    ) : null}
-                    {chapter.subsection1.paragraphs ? (
-                        <div className="md:flex">
+                    )}
+                    {chapter.subsection1.paragraphs && (
+                        <div className="md:flex md:gap-4">
                             <ul
                                 className={`${
                                     chapter.subsection1.textSize
@@ -179,30 +183,31 @@ export default function Chapter({
                                     }
                                 )}
                             </ul>
-                            {chapter.subsection1.outerLink ? (
-                                <div className="border-b w-full flex justify-between md:items-center h-6 ">
+                            {chapter.subsection1.outerLink && (
+                                <div className="border-b flex justify-between md:items-center h-6 gap-2 transition duration-150 hover:opacity-70 w-[-webkit-fill-available] max-w-fit">
                                     <Link
                                         href={
                                             chapter.subsection1.outerLink.link
                                                 ? chapter.subsection1.outerLink
                                                       .link
-                                                : "/"
+                                                : "#"
                                         }
+                                        target={chapter?.subsection1?.outerLink?.link?.includes("https://") ? "_blank" : "_self"}
                                         className="font-mono"
                                     >
                                         {chapter.subsection1.outerLink.text}
                                     </Link>
-                                    <img src="/icons/arrow-top-right.svg" />
+                                    <Image src="/icons/arrow-top-right.svg" width={20} height={20} className="border-b pb-1" />
                                 </div>
-                            ) : null}
+                            )}
                         </div>
-                    ) : null}
+                    )}
                     {chapter.headingList ? (
                         <div className=" md:hidden md:flex-col">
                             {chapter.headingList.map((h, i: number) => {
                                 if (h?.link) {
                                     return (
-                                        <Link href={h.link}>
+                                        <Link href={h.link} target={h.link.includes("https://") ? "_blank" : "_self"}>
                                             <h6
                                                 key={i}
                                                 className="text-smoke50 mb-2 font-mono transition duration-150 hover:text-smoke60"
@@ -233,14 +238,13 @@ export default function Chapter({
                                           className="text-smoke40 mb-8 font-suisse"
                                       >
                                           {p}
-                                          <a
-                                              target="_blank"
-                                              href={links.gitbook}
+                                          <Link
+                                              href={INTERNAL_LINKS.tools.page}
                                               className="text-smoke70 text-xl"
                                           >
                                               {" "}
                                               click here
-                                          </a>
+                                          </Link>
                                       </h3>
                                   );
                               }
@@ -297,8 +301,9 @@ export default function Chapter({
                                             chapter.subsection1.outerLink.link
                                                 ? chapter.subsection1.outerLink
                                                       .link
-                                                : "/"
+                                                : "#"
                                         }
+                                        target={chapter?.subsection1?.outerLink?.link?.includes("https://") ? "_blank" : "_self"}
                                         className="font-mono"
                                     >
                                         {chapter.subsection1.outerLink.text}

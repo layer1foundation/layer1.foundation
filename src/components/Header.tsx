@@ -5,7 +5,7 @@ import Link from "next/link";
 import RightDrawer from "./RightDrawer";
 import MobileNav from "./MobileNav";
 import Donate from "./Donate";
-import links from "../constants/links";
+import { INTERNAL_LINKS } from "../constants/links";
 import Image from "next/image";
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
                 <div className="flex flex-col md:flex-row justify-between">
                     <div className="">
                         <div className=" flex justify-between md:block">
-                            <Link href={links.home}>
+                            <Link href={INTERNAL_LINKS.home.page}>
                                 <img
                                     src="/img/l1f-logo-default.svg"
                                     width="176"
@@ -55,7 +55,7 @@ export default function Header() {
                         <h6>DONATE</h6>
                     </div>
                     <Link
-                        href={links.donate}
+                        href={INTERNAL_LINKS.donate.page}
                         className="md:hidden border border-dark flex space-x-3 px-16 py-2 items-center justify-center font-mono cursor-pointer"
                     >
                         <Image
@@ -73,25 +73,25 @@ export default function Header() {
                 </div>
                 <nav className="gap-3 space-x-14 hidden md:flex font-mono">
                     <Link
-                        href={links.mission}
+                        href={INTERNAL_LINKS.home.mission}
                         className="transition duration-150 hover:text-neutral-600"
                     >
                         MISSION
                     </Link>
                     <Link
-                        href={links.metaprotocols}
+                        href={INTERNAL_LINKS.brc20.page}
                         className="transition duration-150 hover:text-neutral-600"
                     >
-                        METAPROTOCOLS
+                        BRC20
                     </Link>
                     <Link
-                        href={links.tools}
+                        href={INTERNAL_LINKS.tools.page}
                         className="transition duration-150 hover:text-neutral-600"
                     >
                         TOOLS
                     </Link>
                     <Link
-                        href={links.partners}
+                        href={INTERNAL_LINKS.home.partners}
                         className="transition duration-150 hover:text-neutral-600"
                     >
                         PARTNERS

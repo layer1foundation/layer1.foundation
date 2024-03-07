@@ -6,7 +6,7 @@ export default function QR() {
     const copyToClipboard = async () => {
         try {
             await navigator.clipboard.writeText(textToCopy);
-            alert("Text copied to clipboard");
+            alert("Wallet Address copied to clipboard.");
         } catch (error) {
             console.error(error);
         }
@@ -16,13 +16,13 @@ export default function QR() {
             <div>
                 <img src="/img/QR.svg" />
             </div>
-            <p className="font-mono">bc1qpq6600v0kua...rjhz83qk0s7fk32</p>
-            <div
-                className="border-2 border-dark px-10 py-3 w-3/4 text-center mx-3"
+            <p className="font-mono">bc1qpqua...r0s7fk32</p>
+            <button
+                className="border-2 border-dark px-10 py-3 w-3/4 text-center mx-3 transition hover:bg-neutral-100"
                 onClick={copyToClipboard}
             >
                 <p className="font-mono">COPY TO ClIPBOARD</p>
-            </div>
+            </button>
         </div>
     );
 }

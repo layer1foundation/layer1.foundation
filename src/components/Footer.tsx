@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import links from "@/constants/links";
+import { EXTERNAL_LINKS, INTERNAL_LINKS } from "@/constants/links";
 
 export default function Footer() {
     return (
@@ -10,27 +10,27 @@ export default function Footer() {
                     <p className="mb-8 text-lg font-mono">PARTNERS</p>
                     <ul className="text-sm">
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.bestinslot}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.bestinslot}>
                                 BESTINSLOT
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.domo}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.domo}>
                                 DOMO
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.okx}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.okx}>
                                 OKX
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.ordinalswallet}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.ordinalswallet}>
                                 ORDINALS WALLET
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.oyl}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.oyl}>
                                 OYL
                             </Link>
                         </li>
@@ -40,30 +40,30 @@ export default function Footer() {
                     <p className="mb-8 text-lg font-mono">RESOURCES</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.documentation}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.documentation}>
                                 DOCUMENTATION
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
                             <Link
                                 target="_blank"
-                                href={links.bitcoinwhitepaper}
+                                href={EXTERNAL_LINKS.bitcoinwhitepaper}
                             >
                                 BITCOIN WHITEPAPER
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.metaprotocols}>
+                            <Link target="_blank" href={INTERNAL_LINKS.brc20.page}>
                                 BRC-20
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.tools}>
+                            <Link target="_blank" href={INTERNAL_LINKS.tools.page}>
                                 TOOLS
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.forum}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.forum}>
                                 FORUM
                             </Link>
                         </li>
@@ -73,7 +73,7 @@ export default function Footer() {
                     <p className="mb-8 text-lg font-mono md:mr-10">SOCIAL</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link href={links.twitter}>X.COM</Link>
+                            <Link href={EXTERNAL_LINKS.twitter}>X.COM</Link>
                         </li>
                     </ul>
                 </div>
@@ -81,27 +81,27 @@ export default function Footer() {
                     <p className="mb-8 text-lg font-mono">GET STARTED</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.opi}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.opi}>
                                 OPI
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.metashrew}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.metashrew}>
                                 METASHREW
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.ordinalsbot}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.ordinalsbot}>
                                 ORDINALSBOT
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.ordio}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.ordio}>
                                 ORD.IO
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={links.ordiscan}>
+                            <Link target="_blank" href={EXTERNAL_LINKS.ordiscan}>
                                 ORDISCAN
                             </Link>
                         </li>
@@ -111,7 +111,7 @@ export default function Footer() {
                     <p className="mb-8 text-lg font-mono">CONTACT</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link href="">INFO@L1F.XYZ</Link>
+                            <Link href="mailto:info@l1f.xyz">INFO@L1F.XYZ</Link>
                         </li>
                     </ul>
                 </div>
@@ -123,16 +123,16 @@ export default function Footer() {
                     </div>
                     <ul className="mt-16 mb-16 md:flex md:my-0 md:items-center md:space-x-8">
                         <li className=" text-smoke50 font-mono mb-4 md:mb-0">
-                            <Link href="/">Media kit</Link>
+                            <Link href="#">Media kit</Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 md:mb-0">
-                            <Link href="">Terms of use</Link>
+                            <Link href="#">Terms of use</Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 md:mb-0">
-                            <Link href="">Privacy Policy</Link>
+                            <Link href="#">Privacy Policy</Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 md:mb-0">
-                            <Link href="">Cookie Policy</Link>
+                            <Link href="#">Cookie Policy</Link>
                         </li>
                     </ul>
                 </div>

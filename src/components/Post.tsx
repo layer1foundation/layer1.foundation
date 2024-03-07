@@ -1,10 +1,9 @@
 import React from "react";
-import Image from "next/image";
-import LINKS from "@/constants/links";
+import { EXTERNAL_LINKS } from "@/constants/links";
 import { IBlogPostAttributes } from "@/actions/fetchBlogs";
 
 export default function Post({ post }: { post: IBlogPostAttributes }) {
-    const imageUrl = `${LINKS.strapi}${post.cover.data.attributes.formats.large.url}`;
+    const imageUrl = `${EXTERNAL_LINKS.strapi}${post.cover.data.attributes.formats.large.url}`;
     return (
         <div className="w-full  md:px-10 ">
             <div className="w-full">
