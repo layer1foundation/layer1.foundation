@@ -35,18 +35,30 @@ export default function Home() {
                 </div>
                 <h1 className="font-suisse advancing border-b pb-8 mb-6 md:max-w-5xl text-4xl">
                     Advancing the development of{" "}
-                    <em className="metaprotocols font-melior text-[46px] md:text-[68px]">Metaprotocols</em>{" "}
+                    <em className="metaprotocols font-melior text-[46px] md:text-[68px]">
+                        Metaprotocols
+                    </em>{" "}
                     on Bitcoin.
                 </h1>
                 <Glossary />
             </Wrapper>
-            <Segment className="md:pt-2 md:pb-10" id={getIdFromLink(INTERNAL_LINKS.home.overview)}>
+            <Segment
+                className="md:pt-2 md:pb-10"
+                id={getIdFromLink(INTERNAL_LINKS.home.overview)}
+            >
                 <Chapter chapter={copy.home.chapter0} />
             </Segment>
-            <Segment bg="bg-smoke10" id={getIdFromLink(INTERNAL_LINKS.home.mission)}>
+            <Segment
+                bg="bg-smoke10"
+                id={getIdFromLink(INTERNAL_LINKS.home.mission)}
+            >
                 <Chapter chapter={copy.home.chapter1} />
             </Segment>
-            <Segment className="pt-8" scroll={false} id={getIdFromLink(INTERNAL_LINKS.home.partners)}>
+            <Segment
+                className="pt-8"
+                scroll={false}
+                id={getIdFromLink(INTERNAL_LINKS.home.partners)}
+            >
                 <Chapter chapter={copy.home.chapter2} />
             </Segment>
             <Wrapper id={getIdFromLink(INTERNAL_LINKS.home.partners)}>
@@ -59,10 +71,18 @@ export default function Home() {
             >
                 <Chapter chapter={copy.home.chapter3} />
             </Segment>
-            <Segment className="" scroll={false} id={getIdFromLink(INTERNAL_LINKS.home.tools)}>
+            <Segment
+                className=""
+                scroll={false}
+                id={getIdFromLink(INTERNAL_LINKS.home.tools)}
+            >
                 <Chapter chapter={copy.home.chapter4} />
             </Segment>
-            <Segment className="md:pb-32" scroll={false} id={getIdFromLink(INTERNAL_LINKS.home.forum)}>
+            <Segment
+                className="md:pb-32"
+                scroll={false}
+                id={getIdFromLink(INTERNAL_LINKS.home.forum)}
+            >
                 <Chapter chapter={copy.home.chapter5} />
             </Segment>
         </div>

@@ -3,7 +3,11 @@ import Link from "next/link";
 import { EXTERNAL_LINKS } from "@/constants/links";
 import Image from "next/image";
 
-export default function MobileNav({ items }: { items: { text: string; link: string }[] }) {
+export default function MobileNav({
+    items,
+}: {
+    items: { text: string; link: string }[];
+}) {
     return (
         <nav className="flex flex-col text-left pl-4 space-y-3 !mt-0">
             {items.map((l, i) => (
@@ -24,7 +28,9 @@ export default function MobileNav({ items }: { items: { text: string; link: stri
                     <p className="mb-4 text-lg font-mono">CONTACT</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4">
-                            <Link href={"mailto:info@l1f.xyz"}>INFO@L1F.XYZ</Link>
+                            <Link href={"mailto:info@l1f.xyz"}>
+                                INFO@L1F.XYZ
+                            </Link>
                         </li>
                     </ul>
                 </div>

@@ -1,6 +1,6 @@
 export const EXTERNAL_LINKS = {
     documentation:
-    "https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation",
+        "https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation",
     bestinslot: "https://bestinslot.xyz/",
     domo: "https://twitter.com/domodata",
     okx: "https://www.okx.com/",
@@ -22,8 +22,8 @@ export const EXTERNAL_LINKS = {
     hiro: "https://www.hiro.so/",
     unisat: "https://unisat.io/",
     utxo: "https://www.utxo.management/",
-    alex: "https://alexgo.io/"
-}
+    alex: "https://alexgo.io/",
+};
 
 export const INTERNAL_LINKS = {
     home: {
@@ -36,7 +36,7 @@ export const INTERNAL_LINKS = {
         forum: "/#forum",
     },
     brc20: {
-        page: "/brc20"
+        page: "/brc20",
     },
     tools: {
         page: "/tools",
@@ -47,20 +47,20 @@ export const INTERNAL_LINKS = {
         ordiscan: "/tools#ordiscan",
         ordio: "/tools#ordio",
         sandshrew: "/tools#sandshrew",
-        oyl: "/tools#oyl"
+        oyl: "/tools#oyl",
     },
     donate: {
-        page: "/donate"
+        page: "/donate",
     },
     blog: {
-        page: "/blog"
+        page: "/blog",
     },
     resolution: {
-        page: "/resolution"
+        page: "/resolution",
     },
     sop: {
-        page: "/sop"
+        page: "/sop",
     },
-}
+};
 
 export const getIdFromLink = (link: string) => link.split("#")[1];

@@ -53,7 +53,12 @@ export default function RightDrawer({
                     }}
                 >
                     <div className="pl-3">
-                    <Image src="/icons/close.svg" alt="close button" width={28} height={28} />
+                        <Image
+                            src="/icons/close.svg"
+                            alt="close button"
+                            width={28}
+                            height={28}
+                        />
                     </div>
                 </button>
                 {children}

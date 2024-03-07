@@ -95,9 +95,13 @@ export default function Chapter({
                         {chapter.headingList.map((h, i: number) => {
                             if (h?.link) {
                                 return (
-                                    <Link 
+                                    <Link
                                         href={h.link}
-                                        target={h.link.includes("https://") ? "_blank" : "_self"}
+                                        target={
+                                            h.link.includes("https://")
+                                                ? "_blank"
+                                                : "_self"
+                                        }
                                     >
                                         <h6
                                             key={i}
@@ -192,12 +196,23 @@ export default function Chapter({
                                                       .link
                                                 : "#"
                                         }
-                                        target={chapter?.subsection1?.outerLink?.link?.includes("https://") ? "_blank" : "_self"}
+                                        target={
+                                            chapter?.subsection1?.outerLink?.link?.includes(
+                                                "https://"
+                                            )
+                                                ? "_blank"
+                                                : "_self"
+                                        }
                                         className="font-mono"
                                     >
                                         {chapter.subsection1.outerLink.text}
                                     </Link>
-                                    <Image src="/icons/arrow-top-right.svg" width={20} height={20} className="border-b pb-1" />
+                                    <Image
+                                        src="/icons/arrow-top-right.svg"
+                                        width={20}
+                                        height={20}
+                                        className="border-b pb-1"
+                                    />
                                 </div>
                             )}
                         </div>
@@ -207,7 +222,14 @@ export default function Chapter({
                             {chapter.headingList.map((h, i: number) => {
                                 if (h?.link) {
                                     return (
-                                        <Link href={h.link} target={h.link.includes("https://") ? "_blank" : "_self"}>
+                                        <Link
+                                            href={h.link}
+                                            target={
+                                                h.link.includes("https://")
+                                                    ? "_blank"
+                                                    : "_self"
+                                            }
+                                        >
                                             <h6
                                                 key={i}
                                                 className="text-smoke50 mb-2 font-mono transition duration-150 hover:text-smoke60"
@@ -303,7 +325,13 @@ export default function Chapter({
                                                       .link
                                                 : "#"
                                         }
-                                        target={chapter?.subsection1?.outerLink?.link?.includes("https://") ? "_blank" : "_self"}
+                                        target={
+                                            chapter?.subsection1?.outerLink?.link?.includes(
+                                                "https://"
+                                            )
+                                                ? "_blank"
+                                                : "_self"
+                                        }
                                         className="font-mono"
                                     >
                                         {chapter.subsection1.outerLink.text}

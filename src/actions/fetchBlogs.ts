@@ -59,7 +59,9 @@ export interface IBlog {
 
 export async function fetchBlogs(): Promise<IBlog[]> {
     try {
-        const res = await fetch(`${EXTERNAL_LINKS.strapi}/api/blogs?populate=*`);
+        const res = await fetch(
+            `${EXTERNAL_LINKS.strapi}/api/blogs?populate=*`
+        );
         const { data } = await res.json();
         console.log(data);
         return data;

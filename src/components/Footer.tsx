@@ -10,7 +10,10 @@ export default function Footer() {
                     <p className="mb-8 text-lg font-mono">PARTNERS</p>
                     <ul className="text-sm">
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={EXTERNAL_LINKS.bestinslot}>
+                            <Link
+                                target="_blank"
+                                href={EXTERNAL_LINKS.bestinslot}
+                            >
                                 BESTINSLOT
                             </Link>
                         </li>
@@ -25,7 +28,10 @@ export default function Footer() {
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={EXTERNAL_LINKS.ordinalswallet}>
+                            <Link
+                                target="_blank"
+                                href={EXTERNAL_LINKS.ordinalswallet}
+                            >
                                 ORDINALS WALLET
                             </Link>
                         </li>
@@ -40,7 +46,10 @@ export default function Footer() {
                     <p className="mb-8 text-lg font-mono">RESOURCES</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={EXTERNAL_LINKS.documentation}>
+                            <Link
+                                target="_blank"
+                                href={EXTERNAL_LINKS.documentation}
+                            >
                                 DOCUMENTATION
                             </Link>
                         </li>
@@ -53,12 +62,18 @@ export default function Footer() {
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={INTERNAL_LINKS.brc20.page}>
+                            <Link
+                                target="_blank"
+                                href={INTERNAL_LINKS.brc20.page}
+                            >
                                 BRC-20
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={INTERNAL_LINKS.tools.page}>
+                            <Link
+                                target="_blank"
+                                href={INTERNAL_LINKS.tools.page}
+                            >
                                 TOOLS
                             </Link>
                         </li>
@@ -86,12 +101,18 @@ export default function Footer() {
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={EXTERNAL_LINKS.metashrew}>
+                            <Link
+                                target="_blank"
+                                href={EXTERNAL_LINKS.metashrew}
+                            >
                                 METASHREW
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={EXTERNAL_LINKS.ordinalsbot}>
+                            <Link
+                                target="_blank"
+                                href={EXTERNAL_LINKS.ordinalsbot}
+                            >
                                 ORDINALSBOT
                             </Link>
                         </li>
@@ -101,7 +122,10 @@ export default function Footer() {
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={EXTERNAL_LINKS.ordiscan}>
+                            <Link
+                                target="_blank"
+                                href={EXTERNAL_LINKS.ordiscan}
+                            >
                                 ORDISCAN
                             </Link>
                         </li>

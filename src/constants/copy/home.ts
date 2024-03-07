@@ -95,9 +95,7 @@ const copy = {
                         text: "To support builders in this space, L1F aims to review, aggregate and share resources that may be useful to developers of metaprotocol technologies or technologies built on such protocols. Additionally, we aim to educate users about protocol updates, proposals and tooling that we believe pushes this ecosystem forward. In our aggregation of such technologies, we prioritize the promotion of tooling that is open-source and permissionless—and pursues decentralization when appropriate (e.g. for technologies that dictate value).",
                     },
                 ],
-                footer: [
-                    "To review these resources in more detail,",
-                ],
+                footer: ["To review these resources in more detail,"],
                 links: [
                     {
                         name: "PUBLIC TOOLING",
