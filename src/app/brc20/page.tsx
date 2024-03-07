@@ -58,7 +58,7 @@ export default function BRC20() {
             <Segment scroll={false} className="w-full">
                 <Chapter chapter={copy.BRC20.chapterTeam}></Chapter>
             </Segment>
-            <Segment scroll={false} bg={"bg-smoke10"}>
+            <Segment scroll={false} bg={"bg-smoke10 py-6"}>
                 <Chapter chapter={copy.BRC20.chapter1}></Chapter>
             </Segment>
             <Segment>
