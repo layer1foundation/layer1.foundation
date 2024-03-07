@@ -22,11 +22,11 @@ export default function Footer() {
                                 DOMO
                             </Link>
                         </li>
-                        <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
+                        {/* <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
                             <Link target="_blank" href={EXTERNAL_LINKS.okx}>
                                 OKX
                             </Link>
-                        </li>
+                        </li> */}
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
                             <Link
                                 target="_blank"
@@ -146,7 +146,7 @@ export default function Footer() {
                         <img src="/img/l1f-logo-default.svg"></img>
                     </div>
                     <ul className="mt-16 mb-16 md:flex md:my-0 md:items-center md:space-x-8">
-                        <li className=" text-smoke50 font-mono mb-4 md:mb-0">
+                        {/* <li className=" text-smoke50 font-mono mb-4 md:mb-0">
                             <Link href="#">Media kit</Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 md:mb-0">
@@ -157,7 +157,7 @@ export default function Footer() {
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 md:mb-0">
                             <Link href="#">Cookie Policy</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <p className="font-mono text-sm md:pb-0 pb-8">
