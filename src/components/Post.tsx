@@ -5,7 +5,7 @@ import { IBlogPostAttributes } from "@/actions/fetchBlogs";
 export default function Post({ post }: { post: IBlogPostAttributes }) {
     const imageUrl = `${EXTERNAL_LINKS.strapi}${post.cover.data.attributes.formats.large.url}`;
     return (
-        <div className="w-full  md:px-10 ">
+        <div className="w-full px-6 md:px-10">
             <div className="w-full">
                 <div className="w-full h-64 md:h-96 overflow-hidden relative">
                     <img

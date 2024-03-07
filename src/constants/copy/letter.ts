@@ -8,11 +8,11 @@ const copy = {
         description:
             "Creator of the BRC20 Protocol and President of the Layer 1 Foundation",
     },
-    date: "March 6, 2024",
+    date: "March 7, 2024",
     readtime: "5 min",
     image: IMAGES.letter.desktop,
     description: `Dear Community,
-    
+
     It has been an incredible year since launching my 'worthless' experiment and its success is entirely due to the community's dedication to embracing Bitcoin's fair, open, and experimental ethos. I am immensely grateful for this support.
   
   As we move forward, the potential of the Bitcoin metaprotocol space is more exciting than ever. L1F is positioned as a leading hub, catering to both experienced protocol creators and new users. Our collective goal is to ensure that L1F meets the needs of users and developers regardless of their stage in the metaprotocol journey.`,

@@ -7,7 +7,7 @@ const copy = {
         name: "L1F",
         description: "Guiding pillars for brc20 protocol development",
     },
-    date: "March 7, 2024",
+    date: "March 6, 2024",
     readtime: "5 min",
     image: IMAGES.governance.desktop,
 
