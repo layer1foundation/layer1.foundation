@@ -61,6 +61,9 @@ export const INTERNAL_LINKS = {
     sop: {
         page: "/sop",
     },
+    letter: {
+        page: "/letter"
+    }
 };
 
 export const getIdFromLink = (link: string) => link.split("#")[1];

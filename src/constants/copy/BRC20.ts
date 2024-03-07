@@ -1,3 +1,5 @@
+import { INTERNAL_LINKS } from "../links";
+
 const copy = {
     BRC20: {
         chapter0: {
@@ -71,7 +73,7 @@ const copy = {
                 links: [
                     {
                         name: "READ MORE",
-                        link: "/blog",
+                        link: INTERNAL_LINKS.letter.page,
                         grow: true,
                     },
                 ],
