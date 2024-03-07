@@ -23,7 +23,7 @@ export default function BlogPage() {
                         <Post
                             key={`blog-post-${blog.id}`}
                             post={blog.attributes}
-                        ></Post>
+                        />
                     ))}
             </Wrapper>
             <Segemnt scroll={false} className="pt-10">

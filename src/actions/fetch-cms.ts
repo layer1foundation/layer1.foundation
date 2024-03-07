@@ -57,16 +57,20 @@ export interface IBlog {
     attributes: IBlogPostAttributes;
 }
 
-export async function fetchBlogs(): Promise<IBlog[]> {
+type IEndpointTypes = "blogs" | "sop" | "governance-resolution";
+
+export async function fetchCMS(
+    endpoint: IEndpointTypes
+): Promise<IBlog[] | IBlog> {
     try {
         const res = await fetch(
-            `${EXTERNAL_LINKS.strapi}/api/blogs?populate=*`
+            `${EXTERNAL_LINKS.strapi}/api/${endpoint}?populate=*`
         );
         const { data } = await res.json();
-        // console.log(data);
+        console.log("Strapi CMS Data:", data);
         return data;
     } catch (error) {
-        console.error("Failed to fetch blogs:", error);
+        console.error("Failed to fetch CMS:", error);
         return [];
     }
 }

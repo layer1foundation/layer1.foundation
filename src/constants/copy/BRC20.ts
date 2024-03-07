@@ -1,3 +1,5 @@
+import { INTERNAL_LINKS } from "../links";
+
 const copy = {
     BRC20: {
         chapter0: {
@@ -8,19 +10,19 @@ const copy = {
                     {
                         text: "Layer 1 Foundation is proud to work with industry leaders to maintain a standard of governance for BRC20 that supports project development and technical innovation while protecting users and independent developers.",
                     },
-                    {
-                        text: "We imagine the realization of a decentralized economy on Bitcoin—and will support that vision through the development of governance standards, public developer tooling, and the promotion of builder education and discourse.",
-                        props: "text-smoke50",
-                    },
+                    // {
+                    //     text: "We imagine the realization of a decentralized economy on Bitcoin—and will support that vision through the development of governance standards, public developer tooling, and the promotion of builder education and discourse.",
+                    //     props: "text-smoke50",
+                    // },
                 ],
                 links: [
                     {
-                        name: "DONATE",
-                        link: "/donate",
+                        name: "GOVERNANCE RESOLUTION",
+                        link: "/resolution",
                     },
                     {
-                        name: "READ DOCUMENTATION",
-                        link: "https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation",
+                        name: "STANDARD PROCEDURE",
+                        link: "/sop",
                     },
                 ],
             },
@@ -31,8 +33,8 @@ const copy = {
                 team: [
                     {
                         title: "LEAD MAINTAINERS OF BRC20:",
-                        name: "CSarp and Name?",
-                        role: "BiS and Unisat",
+                        name: "Best in Slot & Unisat",
+                        role: "BRC20 Lead Maintainers",
                     },
                     {
                         title: "L1F PRESIDENT:",
@@ -40,20 +42,20 @@ const copy = {
                         role: "Creator of BRC20",
                     },
                     {
-                        title: "L1F (TITLE TBD)",
+                        title: "L1F VICE PRESIDENT:",
                         name: "Isabel Foxen Duke",
-                        role: "GP Unbroken Chain",
+                        role: "Ordinals Communications",
                     },
                     {
-                        title: "L1F PRODUCT",
+                        title: "L1F PRODUCT:",
                         name: "Oyl Dynamics",
-                        role: "Led by Cole Jorissen",
+                        role: "by Cole Jorissen",
                     },
                 ],
             },
         },
         chapter1: {
-            heading: "Move The Needle Forward",
+            heading: "A Letter from Domo",
             headingBig: true,
             column: true,
             subsection1: {
@@ -62,16 +64,16 @@ const copy = {
                         text: "Dear Community,",
                     },
                     {
-                        text: "As the initiator and creator of BRC-20, I am thrilled to extend my warmest greetings to each of you who have joined us on this remarkable journey. Today marks not just the launch of a new technology but the beginning of a transformative chapter in how we envision, interact with, and innovate within the blockchain space.",
+                        text: "It has been an incredible year since launching my 'worthless' experiment and its success is entirely due to the community's dedication to embracing Bitcoin's fair, open, and experimental ethos. I am immensely grateful for this support.",
                     },
                     {
-                        text: "BRC-20 represents more than a technical standard; it is the embodiment of our collective aspiration to create a more accessible, secure, and inclusive digital future. This initiative stems from a belief that the true potential of blockchain can only be realized when we come together as a community to build, innovate, and share knowledge.",
+                        text: "As we move forward, the potential of the Bitcoin metaprotocol space is more exciting than ever. L1F is positioned as a leading hub, catering to both experienced protocol creators and new users. Our collective goal is to ensure that L1F meets the needs of users and developers regardless of their stage in the metaprotocol journey.",
                     },
                 ],
                 links: [
                     {
                         name: "READ MORE",
-                        link: "/blog",
+                        link: INTERNAL_LINKS.letter.page,
                         grow: true,
                     },
                 ],
@@ -84,17 +86,17 @@ const copy = {
             subsection1: {
                 paragraphs: [
                     {
-                        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis varius maximus. Nulla facilisi. Vivamus in mauris ac velit bibendum auctor. Fusce sed libero eget nunc fringilla condimentum.",
+                        text: "The Layer 1 Foundation and its partners recognize the critical importance of fostering a collaborative approach in the ongoing development and maintenance of the BRC20 protocol.",
                     },
                     {
-                        text: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sit amet lacus quis ipsum commodo aliquam.",
+                        text: "To achieve this, the Layer 1 Foundation and its partners put forth the following resolution as an outline of key principles we aim to pursue as collective maintainers of this technology.",
                         props: "text-smoke50",
                     },
                 ],
                 links: [
                     {
                         name: "READ MORE",
-                        link: "/blog",
+                        link: "/governance",
                     },
                 ],
             },
@@ -106,17 +108,17 @@ const copy = {
             subsection1: {
                 paragraphs: [
                     {
-                        text: "The BRC20 protocol is a standard for the creation of digital assets on the Bitcoin blockchain. It is a technical standard that defines a set of rules and behaviors for the creation of digital assets. The protocol is designed to be a decentralized and open standard, and it is intended to be a foundation for the development of a wide range of digital assets.",
+                        text: "BRC20 Protocol Maintenance: Standard Operating Procedure",
                     },
                     {
-                        text: "The BRC20 protocol is a standard for the creation of digital assets on the Bitcoin blockchain. It is a technical standard that defines a set of rules and behaviors for the creation of digital assets. The protocol is designed to be a decentralized and open standard, and it is intended to be a foundation for the development of a wide range of digital assets.",
+                        text: "To establish clear and effective operational structures within BRC-20 by distinctly assigning roles and responsibilities, ensuring smooth collaboration and decision-making processes.",
                         props: "text-smoke50",
                     },
                 ],
                 links: [
                     {
                         name: "READ MORE",
-                        link: "/blog",
+                        link: "/sop",
                     },
                 ],
             },
@@ -128,15 +130,19 @@ const copy = {
             subsection1: {
                 paragraphs: [
                     {
-                        text: "We’re proud to work closely with the following industry leaders to support the ongoing development and maintenance of the BRC20 protocol. To learn more about our governance resolution and standards of procedure, click here [links to anchor].",
+                        text: "We’re proud to work closely with the following industry leaders to support the ongoing development and maintenance of the BRC20 protocol.",
                     },
-                ],
-                links: [
                     {
-                        name: "BECOME A PARTNER",
-                        link: "/donate",
+                        text: "The following partners are committed to these standards.",
+                        props: "text-smoke50",
                     },
                 ],
+                // links: [
+                //     {
+                //         name: "BECOME A PARTNER",
+                //         link: "/donate",
+                //     },
+                // ],
             },
         },
     },

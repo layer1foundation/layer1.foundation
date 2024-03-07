@@ -8,6 +8,7 @@ import Projects from "@/components/Projects";
 import copy from "@/constants/copy/BRC20";
 import Image from "next/image";
 import Background from "@/components/Background";
+import { IMAGES } from "@/constants/links";
 
 export default function BRC20() {
     const glossContent = {
@@ -24,22 +25,24 @@ export default function BRC20() {
                 width={1300}
                 height={300}
                 alt="Layer 1 Foundations Tools"
-                src="/img/BRC20-dt.png"
+                // src="/img/BRC20-dt.png"
+                src={IMAGES.brc20.desktop}
             />
             <Image
                 className="sm:hidden px-4 md:px-10"
                 width={800}
                 height={200}
                 alt="Layer 1 Foundation Tools"
-                src="/img/BRC20-mobi.png"
+                // src="/img/BRC20-mobi.png"
+                src={IMAGES.brc20.mobile}
             />
 
             <Background>
                 <div className="w-full px-6 md:px-10">
                     <div className="mt-2 mb-8 font-mono text-2xl leading-8 border-b">
                         <h6 className="font-mono leading-6">
-                            METAPROTOCOLS{" "}
-                            <code className="opacity-50">IN BITCOIN</code>
+                            BRC20 Protocol{" "}
+                            <code className="opacity-50">Governance</code>
                         </h6>
                         <h1 className="font-suisse advancing pb-8 mb-6 md:max-w-lg mt-8">
                             Protocol Governance For BRC20
@@ -58,7 +61,7 @@ export default function BRC20() {
             <Segment scroll={false} className="w-full">
                 <Chapter chapter={copy.BRC20.chapterTeam}></Chapter>
             </Segment>
-            <Segment scroll={false} bg={"bg-smoke10"}>
+            <Segment scroll={false} bg={"bg-smoke10 py-6"}>
                 <Chapter chapter={copy.BRC20.chapter1}></Chapter>
             </Segment>
             <Segment>

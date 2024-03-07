@@ -1,6 +1,7 @@
 "use client";
 
 import React, { ReactNode, useEffect } from "react";
+import Image from "next/image";
 
 interface RightDrawerProps {
     children: ReactNode;
@@ -31,7 +32,7 @@ export default function RightDrawer({
     if (!open) return <></>;
     return (
         <div
-            className="fixed inset-0 z-10 bg-gray-400 bg-opacity-50 w-full h-full cursor-pointer"
+            className="fixed inset-0 z-10 bg-gray-400 bg-opacity-50 w-full h-full"
             onClick={() => {
                 setIsOpen(!open);
             }}
@@ -45,14 +46,21 @@ export default function RightDrawer({
                 }
                 onClick={stopPropagation}
             >
-                <div
-                    className="w-full flex pl-3 "
+                <button
+                    className="w-full flex pl-3 absolute justify-end right-4 p-1"
                     onClick={() => {
                         setIsOpen(!open);
                     }}
                 >
-                    <img src="/icons/close.svg" />
-                </div>
+                    <div className="pl-3">
+                        <Image
+                            src="/icons/close.svg"
+                            alt="close button"
+                            width={28}
+                            height={28}
+                        />
+                    </div>
+                </button>
                 {children}
             </div>
         </div>

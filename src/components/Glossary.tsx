@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import LINKS from "@/constants/links";
+import { INTERNAL_LINKS, EXTERNAL_LINKS } from "@/constants/links";
 
 interface GlossaryProps {
     content?: any;
@@ -12,27 +12,27 @@ interface GlossaryProps {
 const GLOSSARY_ITEMS = [
     {
         text: "00 / OVERVIEW",
-        link: "/#overview",
+        link: INTERNAL_LINKS.home.overview,
     },
     {
         text: "01 / MISSION",
-        link: "/#mission",
+        link: INTERNAL_LINKS.home.mission,
     },
     {
         text: "02 / PARTNERS",
-        link: "/#partners",
+        link: INTERNAL_LINKS.home.partners,
     },
     {
         text: "03 / PROTOCOL GOVERNANCE",
-        link: "/#governance",
+        link: INTERNAL_LINKS.home.governance,
     },
     {
         text: "04 / PUBLIC TOOLING FOR DEVELOPERS",
-        link: "/#tools",
+        link: INTERNAL_LINKS.home.tools,
     },
     {
         text: "05 / DEVELOPMENT DISCOURSE FORUM",
-        link: "/#forum",
+        link: INTERNAL_LINKS.home.forum,
     },
 ];
 
@@ -73,21 +73,21 @@ export default function Glossary({
             </div>
             <div className="md:w-1/3 space-y-3">
                 <Link
-                    href={LINKS.gitbook}
+                    href={EXTERNAL_LINKS.gitbook}
                     className="flex justify-between font-mono"
                 >
                     GITHUB
                     <img src="/icons/arrow-top-right.svg" />
                 </Link>
                 <Link
-                    href={LINKS.tools}
+                    href={INTERNAL_LINKS.tools.page}
                     className="flex justify-between font-mono"
                 >
                     TOOLS
                     <img src="/icons/arrow-top-right.svg" />
                 </Link>
                 <Link
-                    href={LINKS.forum}
+                    href={EXTERNAL_LINKS.forum}
                     className="flex justify-between font-mono"
                 >
                     FORUM

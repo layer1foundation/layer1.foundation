@@ -6,6 +6,7 @@ import copy from "@/constants/copy/home";
 import Projects from "@/components/Projects";
 import Image from "next/image";
 import Wrapper from "@/components/Background";
+import { getIdFromLink, IMAGES, INTERNAL_LINKS } from "@/constants/links";
 
 export default function Home() {
     return (
@@ -15,14 +16,14 @@ export default function Home() {
                 width={1300}
                 height={300}
                 alt="Computer in a bed of flowers"
-                src="/img/l1f-image-1.png"
+                src={IMAGES.home.desktop}
             ></Image>
             <Image
                 className="md:hidden w-full px-6 md:px-10"
                 width={400}
                 height={300}
                 alt="Computer in a bed of flowers"
-                src="/img/l1f-image-1-mobi.png"
+                src={IMAGES.home.mobile}
             ></Image>
             <Wrapper className="w-full px-6 md:px-10">
                 <div className="mt-2 mb-12 font-mono text-2xl leading-8">
@@ -34,34 +35,54 @@ export default function Home() {
                 </div>
                 <h1 className="font-suisse advancing border-b pb-8 mb-6 md:max-w-5xl text-4xl">
                     Advancing the development of{" "}
-                    <em className="metaprotocols font-melior text-[46px] md:text-[68px]">Metaprotocols</em>{" "}
+                    <em className="metaprotocols font-melior text-[46px] md:text-[68px]">
+                        Metaprotocols
+                    </em>{" "}
                     on Bitcoin.
                 </h1>
                 <Glossary />
             </Wrapper>
-            <Segment className="md:pt-2 md:pb-10" id="overview">
+            <Segment
+                className="md:pt-2 md:pb-10"
+                id={getIdFromLink(INTERNAL_LINKS.home.overview)}
+            >
                 <Chapter chapter={copy.home.chapter0} />
             </Segment>
-            <Segment bg="bg-smoke10" id="mission">
+            <Segment
+                bg="bg-smoke10"
+                id={getIdFromLink(INTERNAL_LINKS.home.mission)}
+            >
                 <Chapter chapter={copy.home.chapter1} />
             </Segment>
-            <Segment className="pt-8" scroll={false} id="partners">
+            <Segment
+                className="pt-8"
+                scroll={false}
+                id={getIdFromLink(INTERNAL_LINKS.home.partners)}
+            >
                 <Chapter chapter={copy.home.chapter2} />
             </Segment>
-            <Wrapper id="projects">
+            <Wrapper id={getIdFromLink(INTERNAL_LINKS.home.partners)}>
                 <Projects />
             </Wrapper>
             <Segment
                 scroll={false}
                 title="THE FOLLOWING PROJECTS ARE KEY PRIORITIES FOR L1F IN 2024 AND BEYOND:"
-                id="governance"
+                id={getIdFromLink(INTERNAL_LINKS.home.governance)}
             >
                 <Chapter chapter={copy.home.chapter3} />
             </Segment>
-            <Segment className="" scroll={false} id="tools">
+            <Segment
+                className=""
+                scroll={false}
+                id={getIdFromLink(INTERNAL_LINKS.home.tools)}
+            >
                 <Chapter chapter={copy.home.chapter4} />
             </Segment>
-            <Segment className="md:pb-32" scroll={false} id="forum">
+            <Segment
+                className="md:pb-32"
+                scroll={false}
+                id={getIdFromLink(INTERNAL_LINKS.home.forum)}
+            >
                 <Chapter chapter={copy.home.chapter5} />
             </Segment>
         </div>

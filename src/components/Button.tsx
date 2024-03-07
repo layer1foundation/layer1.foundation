@@ -16,7 +16,8 @@ export default function Button({
 }: ButtonProps) {
     return !outer ? (
         <Link
-            href={link ? link : "/"}
+            href={link ? link : "#"}
+            target={link?.includes("https://") ? "_blank" : "_self"}
             className={`flex items-center bg-smoke50 hover:bg-black rounded-full p-0.5 cursor-pointer transition duration-150 ${
                 grow ? "flex-grow md:flex-grow-0" : null
             } `}
@@ -38,7 +39,7 @@ export default function Button({
         </Link>
     ) : (
         <a
-            target="_blank"
+            target={link?.includes("https://") ? "_blank" : "_self"}
             href={link}
             className={`flex items-center bg-smoke50 hover:bg-black rounded-full p-0.5 cursor-pointer transition duration-150 ${
                 grow ? "flex-grow md:flex-grow-0" : null

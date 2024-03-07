@@ -1,3 +1,5 @@
+import { EXTERNAL_LINKS, INTERNAL_LINKS } from "../links";
+
 const copy = {
     home: {
         chapter0: {
@@ -16,11 +18,11 @@ const copy = {
                 links: [
                     {
                         name: "DONATE",
-                        link: "/donate",
+                        link: INTERNAL_LINKS.donate.page,
                     },
                     {
                         name: "READ DOCUMENTATION",
-                        link: "https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/documentation",
+                        link: EXTERNAL_LINKS.gitbook,
                     },
                 ],
             },
@@ -55,15 +57,15 @@ const copy = {
                 title: "CORE PRINCIPLE",
                 paragraphs: [
                     {
-                        text: "As a key part of strategy we have partnered with the following organizations to support the maintenance of the BRC20 token protocol and other open source projects on Bitcoin:",
+                        text: "As a key part of strategy we have partnered with the following organizations to support the maintenance of the BRC20 token protocol and other open source projects on Bitcoin.",
                     },
                 ],
-                links: [
-                    {
-                        name: "BECOME A PARTNER",
-                        link: "/",
-                    },
-                ],
+                // links: [
+                //     {
+                //         name: "BECOME A PARTNER",
+                //         link: "/",
+                //     },
+                // ],
             },
         },
         chapter3: {
@@ -75,13 +77,10 @@ const copy = {
                         text: "As a first order of business, L1F and its partners are defining standards of governance for the development and maintenance of the BRC20 protocol. It is critical for the health and safety of both users and businesses that there is clear transparent consensus around how this protocol, and its indexers, are maintained. We are thrilled to announce that L1F has partnered with the leading indexers in the space to create a resolution for governance for the protection and benefit of BRC20’s collective user base. ",
                     },
                 ],
-                footer: [
-                    "To review these resources in more detail, visit our Layer 1 Foundation public tooling,",
-                ],
                 links: [
                     {
-                        name: "STANDARDS OF OPERATION",
-                        link: "https://layer1.gitbook.io/layer1-foundation/protocols/brc-20/indexing",
+                        name: "GOVERNANCE RESOLUTION",
+                        link: INTERNAL_LINKS.resolution.page,
                         grow: true,
                     },
                 ],
@@ -96,13 +95,11 @@ const copy = {
                         text: "To support builders in this space, L1F aims to review, aggregate and share resources that may be useful to developers of metaprotocol technologies or technologies built on such protocols. Additionally, we aim to educate users about protocol updates, proposals and tooling that we believe pushes this ecosystem forward. In our aggregation of such technologies, we prioritize the promotion of tooling that is open-source and permissionless—and pursues decentralization when appropriate (e.g. for technologies that dictate value).",
                     },
                 ],
-                footer: [
-                    "To review these resources in more detail, visit our Layer 1 Foundation public tooling,",
-                ],
+                footer: ["To review these resources in more detail,"],
                 links: [
                     {
-                        name: "TOOLS",
-                        link: "/tools",
+                        name: "PUBLIC TOOLING",
+                        link: INTERNAL_LINKS.tools.page,
                         grow: true,
                     },
                 ],
@@ -111,7 +108,7 @@ const copy = {
         chapter5: {
             heading: "[ 05 / FORUM ]",
             subsection1: {
-                title: "PROTOCOL GOVERNANCE FOR BRC20",
+                title: "Public Forum & Repository Resources",
                 paragraphs: [
                     {
                         text: "L1F supports ongoing public discourse related to both macro-level protocol development, as well as for the collaboration of development on independent projects built on these technologies. We hope to foster an environment where collaboration and discussion about these topics is easy and productive, and as such, have developed:",
@@ -129,7 +126,7 @@ const copy = {
                 links: [
                     {
                         name: "L1F DISCOURSE",
-                        link: "/https://l1f.discourse.group/t/brc-20-introduction-to-brc-20/72",
+                        link: EXTERNAL_LINKS.forum,
                         grow: true,
                     },
                 ],
