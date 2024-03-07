@@ -63,11 +63,19 @@ const copy = {
                     link: INTERNAL_LINKS.tools.ordio,
                 },
                 {
-                    text: " 09 / UNISAT ",
+                    text: " 09 / BEST IN SLOT ",
+                    link: INTERNAL_LINKS.tools.bestinslot,
+                },
+                {
+                    text: " 10 / OYL ",
+                    link: INTERNAL_LINKS.tools.oyl,
+                },
+                {
+                    text: " 11 / UNISAT ",
                     link: INTERNAL_LINKS.tools.unisatwallet,
                 },
                 {
-                    text: " 10 / Xverse ",
+                    text: " 12 / Xverse ",
                     link: INTERNAL_LINKS.tools.xverse,
                 },
             ],
@@ -128,7 +136,7 @@ const copy = {
                 smallText: true,
                 paragraphs: [
                     {
-                        text: "OPI stands for “Open Protocol Indexer” and is a protocol for decentralized indexing of BRC20. One of the biggest challenges faced by BRC20 is centralized control of its indexers—OPI is attempting to solve for this challenge by creating a standard of decentralized verification of indexers.",
+                        text: "Open Protocol Indexer is the most adopted open-source indexing client for BRC-20. OPI progressively decentralizes “indexing” and provides reliable infrastructure for builders. It supports BRC-20 Swap-Module, BRC-20 Programmable Module, Runes, SNS and comes with built-in API support.",
                         props: "text-smoke40 pr-8",
                     },
                 ],
@@ -228,29 +236,45 @@ const copy = {
                 },
             },
         },
+        chapterBestinslot: {
+            heading: "[ 09 / Best in Slot ]",
+            subsection1: {
+                smallText: true,
+                paragraphs: [
+                    {
+                        text: "Best in Slot is an explorer & aggregator for Bitcoin native assets. It supports Ordinals, BRC-20, Runes and provides advanced tooling for traders, builders and collections. BIS also provides infrastructure services, powering hundreds of teams building on Bitcoin, including wallets, marketplaces, funds and dapps.",
+                        props: "text-smoke40 pr-8",
+                    },
+                ],
+                outerLink: {
+                    text: "EXPLORE Best In Slot",
+                    link: EXTERNAL_LINKS.bestinslot,
+                },
+            },
+        },
         tool5: {
             subheading: "LIFECYCLE SUPPORT",
             heading: "Wallet",
             text: "PSBT, wallets, and API tooling to provide the necessary infrastructure for seamless protocol operation, transfer of assets, and user interaction.",
         },
-                // chapterOYL: {
-        //     heading: "[ 08 / OYL ]",
-        //     subsection1: {
-        //         smallText: true,
-        //         paragraphs: [
-        //             {
-        //                 text: "PSBT, wallets, and API tooling to provide the necessary infrastructure for seamless protocol operation, transfer of assets, and user interaction.",
-        //                 props: "text-smoke40 pr-8",
-        //             },
-        //         ],
-        //         outerLink: {
-        //             text: "EXPLORE OYL",
-        //             link: EXTERNAL_LINKS.oyl,
-        //         },
-        //     },
-        // },
+                chapterOYL: {
+            heading: "[ 10 / OYL ]",
+            subsection1: {
+                smallText: true,
+                paragraphs: [
+                    {
+                        text: "Oyl Wallet is the first Bitcoin wallet to offer “in-wallet” trading. With  built-in marketplace aggregation, Oyl allows tradeing of Ordinals, BRC20, and other Bitcoin-native assets straight from within your wallet. Oyl Wallet is currently in testnet. Sign up for access as soon as Oyl hits mainnet.",
+                        props: "text-smoke40 pr-8",
+                    },
+                ],
+                outerLink: {
+                    text: "EXPLORE OYL",
+                    link: EXTERNAL_LINKS.oyl,
+                },
+            },
+        },
         chapterUnisatWallet: {
-            heading: "[ 09 / UNISAT ]",
+            heading: "[ 11 / UNISAT ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -266,7 +290,7 @@ const copy = {
             },
         },
         chapterXverse: {
-            heading: "[ 10 / Xverse ]",
+            heading: "[ 12 / Xverse ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [

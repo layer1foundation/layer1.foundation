@@ -146,9 +146,23 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id={getIdFromLink(INTERNAL_LINKS.tools.unisatwallet)}
+                id={getIdFromLink(INTERNAL_LINKS.tools.bestinslot)}
+            >
+                <Chapter chapter={copy.tools.chapterBestinslot}></Chapter>
+            </Segment>
+            <Segment
+                scroll={false}
+                className="border-b mb-20 md:mb-0"
+                id={getIdFromLink(INTERNAL_LINKS.tools.oyl)}
             >
                 <Tool tool={copy.tools.tool5}></Tool>
+                <Chapter chapter={copy.tools.chapterOYL} />
+            </Segment>
+            <Segment
+                scroll={false}
+                className="border-b mb-20 md:mb-0"
+                id={getIdFromLink(INTERNAL_LINKS.tools.unisatwallet)}
+            >
                 <Chapter chapter={copy.tools.chapterUnisatWallet} />
             </Segment>
             <Segment

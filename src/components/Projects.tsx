@@ -51,7 +51,7 @@ export default function Projects() {
                     <div className="flex justify-start items-center px-3 ">
                         <Image
                             className="pr-6"
-                            alt="small best in slot"
+                            alt="small oyl"
                             width={70}
                             height={70}
                             src="/partners/oyl.svg"
@@ -69,7 +69,7 @@ export default function Projects() {
                     // className="m-auto group-hover:hidden"
                     width={100}
                     height={100}
-                    alt="best in slot"
+                    alt="oyl"
                     src="/partners/oyl.svg"
                 />
                 {/* <div className="hidden absolute bottom-0 left-0 pb-3 pl-3 group-hover:block">
@@ -100,13 +100,15 @@ export default function Projects() {
                         height={30}
                     />
                 </div> */}
-                <Image
+                {/* <Image
                     // className="m-auto group-hover:hidden"
                     width={100}
                     height={100}
                     alt="best in slot"
                     src="/partners/chest.jpg"
-                />
+                /> */}
+                                <h4 className=" text-smoke50 text-2xl">[ Best in Slot ]</h4>
+
                 {/* <div className="hidden absolute bottom-0 left-0 pb-3 group-hover:block pl-3">
                     <p className="font-mono">THE BEST ORDINALS [AGGREGATOR]</p>
                     <p className="font-mono w-52 pt-4">

@@ -52,7 +52,8 @@ export const INTERNAL_LINKS = {
         oyl: "/tools#oyl",
         unisat: "/tools#unisat",
         unisatwallet: "/tools#unisat-wallet",
-        xverse: "/tools#xverse"
+        xverse: "/tools#xverse",
+        bestinslot: "/tools#bestinslot"
     },
     donate: {
         page: "/donate",
