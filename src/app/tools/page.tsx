@@ -109,6 +109,13 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
+                id={getIdFromLink(INTERNAL_LINKS.tools.unisat)}
+            >
+                <Chapter chapter={copy.tools.chapterUnisat}></Chapter>
+            </Segment>
+            <Segment
+                scroll={false}
+                className="border-b mb-20 md:mb-0"
                 id={getIdFromLink(INTERNAL_LINKS.tools.chisel)}
             >
                 <Tool tool={copy.tools.tool3}></Tool>
@@ -139,10 +146,17 @@ export default function Tools() {
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
-                id={getIdFromLink(INTERNAL_LINKS.tools.oyl)}
+                id={getIdFromLink(INTERNAL_LINKS.tools.unisatwallet)}
             >
                 <Tool tool={copy.tools.tool5}></Tool>
-                <Chapter chapter={copy.tools.chapterOYL} />
+                <Chapter chapter={copy.tools.chapterUnisatWallet} />
+            </Segment>
+            <Segment
+                scroll={false}
+                className="border-b mb-20 md:mb-0"
+                id={getIdFromLink(INTERNAL_LINKS.tools.xverse)}
+            >
+                <Chapter chapter={copy.tools.chapterXverse} />
             </Segment>
         </div>
     );
