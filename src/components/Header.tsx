@@ -5,7 +5,7 @@ import Link from "next/link";
 import RightDrawer from "./RightDrawer";
 import MobileNav from "./MobileNav";
 import Donate from "./Donate";
-import { INTERNAL_LINKS } from "../constants/links";
+import { EXTERNAL_LINKS, INTERNAL_LINKS } from "../constants/links";
 import Image from "next/image";
 
 const NAV_LINKS = [
@@ -25,6 +25,10 @@ const NAV_LINKS = [
         text: "PARTNERS",
         link: INTERNAL_LINKS.home.partners,
     },
+    {
+        text: "DOCS",
+        link: EXTERNAL_LINKS.gitbook,
+    },
 ];
 
 export default function Header() {
@@ -35,14 +39,13 @@ export default function Header() {
         <header className="pt-3 pb-6 px-4 md:px-10 md:pt-4 md:pb-2 w-full">
             <div className="d-fex flex-col ">
                 <div className="flex flex-col md:flex-row justify-between">
-                    <div className="">
+                    <div className="mb-6 md:mb-0">
                         <div className=" flex justify-between md:block">
                             <Link href={INTERNAL_LINKS.home.page}>
                                 <img
                                     src="/img/l1f-logo-default.svg"
                                     width="176"
                                     height="24"
-                                    className="pb-6 md:pb-0"
                                 ></img>
                             </Link>
                             <div

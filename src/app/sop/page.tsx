@@ -8,8 +8,7 @@ import brc20copy from "@/constants/copy/BRC20";
 import { Author } from "@/components/Author";
 
 export default function SOPPage() {
-    const { title, image, author, date, readtime, phases } =
-        sopcopy;
+    const { title, image, author, date, readtime, phases } = sopcopy;
 
     return (
         <div className="flex flex-col items-center">
@@ -35,21 +34,33 @@ export default function SOPPage() {
                                 />
                             </div>
                             {phases.map((p, i) => (
-                            <div key={`sop-phase-${i}`} className="pt-8 flex flex-col gap-4 font-suisse">
-                            <h4 className="">{p.title}</h4>
-                            <div>
-                            <h4 className="">Purpose:</h4>
-                            <h4 className="text-smoke40">{p.purpose}</h4>
-                            </div>
-                            <div>
-                            <h4 className="font-suisse">Actions:</h4>
-                            <ul className="list-disc text-smoke40 pl-4 md:pl-6">
-                                {p.actions.map((a, j) => (
-                                <li key={`sop-phase-${i}-action-${j}`} className="list-item">{a}</li>
-                                ))}
-                            </ul>
-                            </div>
-                        </div>
+                                <div
+                                    key={`sop-phase-${i}`}
+                                    className="pt-8 flex flex-col gap-4 font-suisse"
+                                >
+                                    <h4 className="">{p.title}</h4>
+                                    <div>
+                                        <h4 className="">Purpose:</h4>
+                                        <h4 className="text-smoke40">
+                                            {p.purpose}
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-suisse">
+                                            Actions:
+                                        </h4>
+                                        <ul className="list-disc text-smoke40 pl-4 md:pl-6">
+                                            {p.actions.map((a, j) => (
+                                                <li
+                                                    key={`sop-phase-${i}-action-${j}`}
+                                                    className="list-item"
+                                                >
+                                                    {a}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
                             ))}
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import { IMAGES } from "../links";
+import { IMAGES, INTERNAL_LINKS } from "../links";
 
 const copy = {
     title: "Commitment to Priniples",

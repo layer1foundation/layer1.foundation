@@ -31,52 +31,24 @@ const copy = {
         chapter2: {
             headingList: [
                 {
-                    text: " 01 / METASHREW ",
-                    link: INTERNAL_LINKS.tools.metashrew,
+                    text: " 01 / LOGIC ",
+                    link: INTERNAL_LINKS.tools.logic,
                 },
                 {
-                    text: " 02 / SANDSHREW ",
-                    link: INTERNAL_LINKS.tools.sandshrew,
+                    text: " 02 / INDEXER ",
+                    link: INTERNAL_LINKS.tools.indexer,
                 },
                 {
-                    text: " 03 / OPI ",
-                    link: INTERNAL_LINKS.tools.opi,
+                    text: " 03 / INSCRIBER ",
+                    link: INTERNAL_LINKS.tools.inscriber,
                 },
                 {
-                    text: " 04 / UNISAT ",
-                    link: INTERNAL_LINKS.tools.unisat,
+                    text: " 04 / EXPLORER ",
+                    link: INTERNAL_LINKS.tools.explorer,
                 },
                 {
-                    text: " 05 / CHISEL ",
-                    link: INTERNAL_LINKS.tools.chisel,
-                },
-                {
-                    text: " 06 / ORIDINALSBOT ",
-                    link: INTERNAL_LINKS.tools.ordinalsbot,
-                },
-                {
-                    text: " 07 / ORDISCAN ",
-                    link: INTERNAL_LINKS.tools.ordiscan,
-                },
-                {
-                    text: " 08 / ORD.IO ",
-                    link: INTERNAL_LINKS.tools.ordio,
-                },
-                {
-                    text: " 09 / BEST IN SLOT ",
-                    link: INTERNAL_LINKS.tools.bestinslot,
-                },
-                {
-                    text: " 10 / OYL ",
-                    link: INTERNAL_LINKS.tools.oyl,
-                },
-                {
-                    text: " 11 / UNISAT ",
-                    link: INTERNAL_LINKS.tools.unisatwallet,
-                },
-                {
-                    text: " 12 / Xverse ",
-                    link: INTERNAL_LINKS.tools.xverse,
+                    text: " 05 / WALLET ",
+                    link: INTERNAL_LINKS.tools.wallet,
                 },
             ],
             subsection1: {
@@ -94,7 +66,7 @@ const copy = {
             text: "Development platforms that foster the creation of metaprotocol logic, including pseudologic, for conceptualization and design phases.",
         },
         chapterMeta: {
-            heading: "[ 01 / METASHREW ]",
+            heading: "[ 00 / METASHREW ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -110,7 +82,7 @@ const copy = {
             },
         },
         chapterSand: {
-            heading: "[ 02 / SANDSHREW ]",
+            heading: "[ 01 / SANDSHREW ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -131,7 +103,7 @@ const copy = {
             text: "Tools for building robust indexes and facilitating interactions, crucial for developing and scaling protocols.",
         },
         chapterOpi: {
-            heading: "[ 03 / OPI ]",
+            heading: "[ 00 / OPI ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -147,7 +119,7 @@ const copy = {
             },
         },
         chapterUnisat: {
-            heading: "[ 04 / UNISAT ]",
+            heading: "[ 01 / UNISAT ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -168,7 +140,7 @@ const copy = {
             text: "Inscribe on Bitcoin—tokens, JPEGs, and more",
         },
         chapterChisel: {
-            heading: "[ 05 / CHISEL ]",
+            heading: "[ 00 / CHISEL ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -184,7 +156,7 @@ const copy = {
             },
         },
         chapterOrdinalsBot: {
-            heading: "[ 06 / ORIDINALSBOT ]",
+            heading: "[ 01 / ORIDINALSBOT ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -205,7 +177,7 @@ const copy = {
             text: "For monitoring protocol activities, enhancing transparency and operational efficiency",
         },
         chapterScan: {
-            heading: "[ 07 / ORDISCAN ]",
+            heading: "[ 00 / ORDISCAN ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -221,7 +193,7 @@ const copy = {
             },
         },
         chapterOrdIo: {
-            heading: "[ 08 / ORD.IO ]",
+            heading: "[ 01 / ORD.IO ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -237,7 +209,7 @@ const copy = {
             },
         },
         chapterBestinslot: {
-            heading: "[ 09 / Best in Slot ]",
+            heading: "[ 02 / Best in Slot ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -257,8 +229,8 @@ const copy = {
             heading: "Wallet",
             text: "PSBT, wallets, and API tooling to provide the necessary infrastructure for seamless protocol operation, transfer of assets, and user interaction.",
         },
-                chapterOYL: {
-            heading: "[ 10 / OYL ]",
+        chapterOYL: {
+            heading: "[ 00 / OYL ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -274,7 +246,7 @@ const copy = {
             },
         },
         chapterUnisatWallet: {
-            heading: "[ 11 / UNISAT ]",
+            heading: "[ 01 / UNISAT ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [
@@ -290,7 +262,7 @@ const copy = {
             },
         },
         chapterXverse: {
-            heading: "[ 12 / Xverse ]",
+            heading: "[ 02 / Xverse ]",
             subsection1: {
                 smallText: true,
                 paragraphs: [

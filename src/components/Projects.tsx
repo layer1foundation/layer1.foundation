@@ -107,7 +107,7 @@ export default function Projects() {
                     alt="best in slot"
                     src="/partners/chest.jpg"
                 /> */}
-                                <h4 className=" text-smoke50 text-2xl">[ Best in Slot ]</h4>
+                <h4 className=" text-smoke50 text-2xl">[ Best in Slot ]</h4>
 
                 {/* <div className="hidden absolute bottom-0 left-0 pb-3 group-hover:block pl-3">
                     <p className="font-mono">THE BEST ORDINALS [AGGREGATOR]</p>

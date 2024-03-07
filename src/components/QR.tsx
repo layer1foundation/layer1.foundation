@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function QR() {
+type IQr = {
+    qrOnly?: boolean;
+};
+
+export default function QR({ qrOnly }: IQr) {
     const textToCopy = "bc1qpq6600v0kua...rjhz83qk0s7fk32";
 
     const copyToClipboard = async () => {

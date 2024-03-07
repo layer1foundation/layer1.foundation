@@ -83,6 +83,9 @@ export default function Tools() {
             <Segment scroll={false} bg="bg-smoke10" className="lg:py-8">
                 <Chapter chapter={copy.tools.chapter2}></Chapter>
             </Segment>
+
+            {/* Logic */}
+            <div id={getIdFromLink(INTERNAL_LINKS.tools.logic)} />
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
@@ -98,6 +101,9 @@ export default function Tools() {
             >
                 <Chapter chapter={copy.tools.chapterSand}></Chapter>
             </Segment>
+
+            {/* Indexer */}
+            <div id={getIdFromLink(INTERNAL_LINKS.tools.indexer)} />
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
@@ -113,6 +119,9 @@ export default function Tools() {
             >
                 <Chapter chapter={copy.tools.chapterUnisat}></Chapter>
             </Segment>
+
+            {/* Inscriber */}
+            <div id={getIdFromLink(INTERNAL_LINKS.tools.inscriber)} />
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"
@@ -128,6 +137,9 @@ export default function Tools() {
             >
                 <Chapter chapter={copy.tools.chapterOrdinalsBot}></Chapter>
             </Segment>
+
+            {/* Explorer */}
+            <div id={getIdFromLink(INTERNAL_LINKS.tools.explorer)} />
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb:0"
@@ -150,6 +162,9 @@ export default function Tools() {
             >
                 <Chapter chapter={copy.tools.chapterBestinslot}></Chapter>
             </Segment>
+
+            {/* Wallet */}
+            <div id={getIdFromLink(INTERNAL_LINKS.tools.wallet)} />
             <Segment
                 scroll={false}
                 className="border-b mb-20 md:mb-0"

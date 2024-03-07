@@ -1,8 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { INTERNAL_LINKS, EXTERNAL_LINKS } from "@/constants/links";
+import QR from "./QR";
+import Donate from "./Donate";
+import RightDrawer from "./RightDrawer";
 
 interface GlossaryProps {
     content?: any;
@@ -40,6 +43,7 @@ export default function Glossary({
     content,
     showChapters = true,
 }: GlossaryProps) {
+    const [donateOpen, setDonateOpen] = useState(false);
     return (
         <div className="flex flex-col w-full md:flex-row justify-between md:justify-start ">
             {content?.heading ? (
