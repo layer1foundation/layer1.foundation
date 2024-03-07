@@ -8,6 +8,7 @@ import Projects from "@/components/Projects";
 import copy from "@/constants/copy/BRC20";
 import Image from "next/image";
 import Background from "@/components/Background";
+import { IMAGES } from "@/constants/links";
 
 export default function BRC20() {
     const glossContent = {
@@ -24,14 +25,16 @@ export default function BRC20() {
                 width={1300}
                 height={300}
                 alt="Layer 1 Foundations Tools"
-                src="/img/BRC20-dt.png"
+                // src="/img/BRC20-dt.png"
+                src={IMAGES.brc20.desktop}
             />
             <Image
                 className="sm:hidden px-4 md:px-10"
                 width={800}
                 height={200}
                 alt="Layer 1 Foundation Tools"
-                src="/img/BRC20-mobi.png"
+                // src="/img/BRC20-mobi.png"
+                src={IMAGES.brc20.mobile}
             />
 
             <Background>
