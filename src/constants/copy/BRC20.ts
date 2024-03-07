@@ -96,7 +96,7 @@ const copy = {
                 links: [
                     {
                         name: "READ MORE",
-                        link: "/governance",
+                        link: INTERNAL_LINKS.resolution.page,
                     },
                 ],
             },
@@ -118,7 +118,7 @@ const copy = {
                 links: [
                     {
                         name: "READ MORE",
-                        link: "/sop",
+                        link: INTERNAL_LINKS.sop.page,
                     },
                 ],
             },
