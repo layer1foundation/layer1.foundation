@@ -17,12 +17,8 @@ const copy = {
                 ],
                 links: [
                     {
-                        name: "DONATE",
+                        name: "DONATE TO THE LAYER 1 FOUNDATION",
                         link: INTERNAL_LINKS.donate.page,
-                    },
-                    {
-                        name: "READ DOCUMENTATION",
-                        link: EXTERNAL_LINKS.gitbook,
                     },
                 ],
             },
