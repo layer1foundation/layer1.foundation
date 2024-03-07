@@ -6,6 +6,8 @@ import Wrapper from "@/components/Background";
 import resolutioncopy from "@/constants/copy/resolution";
 import brc20copy from "@/constants/copy/BRC20";
 import { Author } from "@/components/Author";
+import Link from "next/link";
+import { INTERNAL_LINKS } from "@/constants/links";
 
 export default function ResolutionPage() {
     const { title, image, description, content, author, date, readtime, list } =
@@ -61,7 +63,7 @@ export default function ResolutionPage() {
                             </h4>
                             <br />
                             <h4 className="font-suisse">
-                                {content
+                                {/* {content
                                     .split("\n")
                                     .map((line: any, i: number) => (
                                         <React.Fragment key={i}>
@@ -69,7 +71,38 @@ export default function ResolutionPage() {
                                             {console.log("line", line)}
                                             <br />
                                         </React.Fragment>
-                                    ))}
+                                    ))} */}
+                                By prioritizing these pillars, we strive to
+                                create a resilient and user-friendly
+                                ecosystem—fostering trust within the broader
+                                Bitcoin community. Users must always come first,
+                                and through this resolution, we aim to ensure
+                                that the BRC20 protocol remains reliable and
+                                inclusive.
+                                <br />
+                                <br />
+                                Additionally, partners will refer to the
+                                following{" "}
+                                <Link
+                                    href={INTERNAL_LINKS.sop.page}
+                                    className="font-suisse text-[18px] font-[500] leading-[28px] underline transition duration-150 hover:opacity-70"
+                                >
+                                    Standard Operating Procedure
+                                </Link>{" "}
+                                for specific suggestions on how we may embody
+                                these principles as we co-develop this
+                                technology.
+                                <br />
+                                <br />
+                                Together, we affirm our steadfast dedication to
+                                safeguarding the well-being of BRC20
+                                users—nurturing innovation while respecting user
+                                sovereignty, safety, and usability.
+                                <br />
+                                <br />
+                                Our current signatory parties include: Layer 1
+                                Foundation, Domo, Unisat, Best In Slot, Oyl
+                                Dynamics, ALEX, UTXO Management, Allium & Hiro
                             </h4>
                         </div>
                     </div>

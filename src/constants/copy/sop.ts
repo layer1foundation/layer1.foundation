@@ -9,7 +9,7 @@ const copy = {
     },
     date: "March 6, 2024",
     readtime: "5 min",
-    image: IMAGES.governance.desktop,
+    image: IMAGES.sop.desktop,
 
     phases: [
         {
