@@ -211,6 +211,7 @@ export default function Chapter({
                                         src="/icons/arrow-top-right.svg"
                                         width={20}
                                         height={20}
+                                        alt="Arrow pointing to top right"
                                         className="border-b pb-1"
                                     />
                                 </div>

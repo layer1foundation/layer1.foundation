@@ -8,6 +8,25 @@ import Donate from "./Donate";
 import { INTERNAL_LINKS } from "../constants/links";
 import Image from "next/image";
 
+const NAV_LINKS = [
+    {
+        text: "MISSION",
+        link: INTERNAL_LINKS.home.mission,
+    },
+    {
+        text: "BRC20",
+        link: INTERNAL_LINKS.brc20.page,
+    },
+    {
+        text: "TOOLS",
+        link: INTERNAL_LINKS.tools.page
+    },
+    {
+        text: "PARTNERS",
+        link: INTERNAL_LINKS.home.partners
+    }
+]
+
 export default function Header() {
     const [navOpen, setNavOpen] = useState(false);
     const [donateOpen, setDonateOpen] = useState(false);
@@ -36,7 +55,7 @@ export default function Header() {
                             </div>
                         </div>
                         <RightDrawer open={navOpen} setIsOpen={setNavOpen}>
-                            <MobileNav />
+                            <MobileNav items={NAV_LINKS} />
                         </RightDrawer>
                     </div>
                     <div
@@ -72,33 +91,15 @@ export default function Header() {
                     </RightDrawer>
                 </div>
                 <nav className="gap-3 space-x-14 hidden md:flex font-mono">
-                    <Link
-                        href={INTERNAL_LINKS.home.mission}
-                        className="transition duration-150 hover:text-neutral-600"
-                    >
-                        MISSION
-                    </Link>
-                    <Link
-                        href={INTERNAL_LINKS.brc20.page}
-                        className="transition duration-150 hover:text-neutral-600"
-                    >
-                        BRC20
-                    </Link>
-                    <Link
-                        href={INTERNAL_LINKS.tools.page}
-                        className="transition duration-150 hover:text-neutral-600"
-                    >
-                        TOOLS
-                    </Link>
-                    <Link
-                        href={INTERNAL_LINKS.home.partners}
-                        className="transition duration-150 hover:text-neutral-600"
-                    >
-                        PARTNERS
-                    </Link>
-                    {/* <Link href="/blog" className="transition duration-150 hover:text-neutral-600">
-            BLOG
-          </Link> */}
+                    {NAV_LINKS.map((l, i) => (
+                        <Link
+                            key={`desktop-nav-${i}`}
+                            href={l.link}
+                            className="transition duration-150 hover:text-neutral-600"
+                        >
+                            {l.text}
+                        </Link>
+                    ))}
                 </nav>
             </div>
         </header>
