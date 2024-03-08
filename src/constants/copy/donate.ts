@@ -35,7 +35,7 @@ const copy = {
                 smallText: true,
                 paragraphs: [
                     {
-                        text: "For inquiries related to press, fundraising, or other L1F administrative matters—we can be reached at info@L1F.xyz",
+                        text: "For inquiries related to press, fundraising, or other L1F administrative matters—we can be reached at info@layer1.foundation",
                     },
                 ],
             },

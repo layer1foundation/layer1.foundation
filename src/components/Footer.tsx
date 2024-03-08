@@ -160,7 +160,7 @@ export default function Footer() {
                     <p className="mb-8 text-lg font-mono">CONTACT</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link href="mailto:info@l1f.xyz">INFO@L1F.XYZ</Link>
+                            <Link href="mailto:info@layer1.foundation">info@layer1.foundation</Link>
                         </li>
                     </ul>
                 </div>

@@ -32,8 +32,8 @@ export default function MobileNav({
                     <p className="mb-4 text-lg font-mono">CONTACT</p>
                     <ul>
                         <li className=" text-smoke50 font-mono mb-4">
-                            <Link href={"mailto:info@l1f.xyz"}>
-                                INFO@L1F.XYZ
+                            <Link href={"mailto:info@layer1.foundation"}>
+                                info@layer1.foundation
                             </Link>
                         </li>
                     </ul>
