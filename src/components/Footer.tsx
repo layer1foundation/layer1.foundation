@@ -9,6 +9,16 @@ export default function Footer() {
                 <div className="mb-20">
                     <p className="mb-8 text-lg font-mono">PARTNERS</p>
                     <ul className="text-sm">
+                    <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
+                            <Link target="_blank" href={EXTERNAL_LINKS.domo}>
+                                DOMO
+                            </Link>
+                        </li>
+                        <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
+                            <Link target="_blank" href={EXTERNAL_LINKS.oyl}>
+                                OYL
+                            </Link>
+                        </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
                             <Link
                                 target="_blank"
@@ -18,8 +28,28 @@ export default function Footer() {
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={EXTERNAL_LINKS.domo}>
-                                DOMO
+                            <Link target="_blank" href={EXTERNAL_LINKS.allium}>
+                                Allium
+                            </Link>
+                        </li>
+                        <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
+                            <Link target="_blank" href={EXTERNAL_LINKS.hiro}>
+                                Hiro
+                            </Link>
+                        </li>
+                        <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
+                            <Link target="_blank" href={EXTERNAL_LINKS.unisat}>
+                                Unisat
+                            </Link>
+                        </li>
+                        <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
+                            <Link target="_blank" href={EXTERNAL_LINKS.utxo}>
+                                UTXO
+                            </Link>
+                        </li>
+                        <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
+                            <Link target="_blank" href={EXTERNAL_LINKS.alex}>
+                                ALEX
                             </Link>
                         </li>
                         {/* <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
@@ -35,11 +65,6 @@ export default function Footer() {
                                 ORDINALS WALLET
                             </Link>
                         </li> */}
-                        <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
-                            <Link target="_blank" href={EXTERNAL_LINKS.oyl}>
-                                OYL
-                            </Link>
-                        </li>
                     </ul>
                 </div>
                 <div className="mb-20">
