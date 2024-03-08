@@ -83,7 +83,7 @@ export default function Footer() {
                                 target="_blank"
                                 href={EXTERNAL_LINKS.bitcoinwhitepaper}
                             >
-                                BITCOIN WHITEPAPER
+                                BRC20 WHITEPAPER
                             </Link>
                         </li>
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
