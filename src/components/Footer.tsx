@@ -27,14 +27,14 @@ export default function Footer() {
                                 OKX
                             </Link>
                         </li> */}
-                        <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
+                        {/* <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
                             <Link
                                 target="_blank"
                                 href={EXTERNAL_LINKS.ordinalswallet}
                             >
                                 ORDINALS WALLET
                             </Link>
-                        </li>
+                        </li> */}
                         <li className=" text-smoke50 font-mono mb-4 transition duration-150 hover:text-neutral-600">
                             <Link target="_blank" href={EXTERNAL_LINKS.oyl}>
                                 OYL
