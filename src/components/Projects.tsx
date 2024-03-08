@@ -6,9 +6,9 @@ import { EXTERNAL_LINKS } from "@/constants/links";
 export default function Projects() {
     return (
         <div className="grid grid-cols-1 w-full py-12 md:grid-cols-4 ipad:grid-cols-2 px-6 md:px-10">
-            <a
-                target="_blank"
-                href={EXTERNAL_LINKS.domo}
+            <div
+                // target="_blank"
+                // href={EXTERNAL_LINKS.domo}
                 className="flex flex-col h-72 items-center justify-center border relative hover:border-2 hover:border-dark group transition duration-150"
             >
                 {/* <div className="hidden absolute top-0 group-hover:flex justify-between w-full pr-2 pt-3">
@@ -40,11 +40,11 @@ export default function Projects() {
                     <p className="font-mono">Text for OKX</p>
                     <p className="font-mono w-52 pt-4">More text for OKX</p>
                 </div> */}
-            </a>
+            </div>
 
-            <a
-                target="_blank"
-                href={EXTERNAL_LINKS.oyl}
+            <div
+                // target="_blank"
+                // href={EXTERNAL_LINKS.oyl}
                 className="flex flex-col h-72 items-center justify-center border relative hover:border-2 hover:border-dark group transition duration-150"
             >
                 {/* <div className="hidden absolute top-0 group-hover:flex justify-between w-full pr-2 pt-3">
@@ -76,10 +76,10 @@ export default function Projects() {
                     <p className="font-mono">Text for OYL</p>
                     <p className="font-mono w-52 pt-4">More Text for OYL</p>
                 </div> */}
-            </a>
-            <a
-                target="_blank"
-                href={EXTERNAL_LINKS.bestinslot}
+            </div>
+            <div
+                // target="_blank"
+                // href={EXTERNAL_LINKS.bestinslot}
                 className="flex flex-col h-72 items-center justify-center border relative hover:border-2 hover:border-dark group transition duration-150"
             >
                 {/* <div className="hidden absolute top-0 group-hover:flex justify-between w-full pr-2 pt-3">
@@ -115,11 +115,11 @@ export default function Projects() {
                         BUILDING WEB3 ON BITCOIN ONE PSBT* AT A TIME
                     </p>
                 </div> */}
-            </a>
+            </div>
 
-            <a
-                target="_blank"
-                href={EXTERNAL_LINKS.allium}
+            <div
+                // target="_blank"
+                // href={EXTERNAL_LINKS.allium}
                 className="flex flex-col h-72 items-center justify-center border relative hover:border-2 hover:border-dark group transition duration-150"
             >
                 {/* <div className="hidden absolute top-0 group-hover:flex justify-between w-full pr-2 pt-3">
@@ -151,10 +151,10 @@ export default function Projects() {
                     <p className="font-mono">Text for Allium</p>
                     <p className="font-mono w-52 pt-4">More text for Allium</p>
                 </div> */}
-            </a>
-            <a
-                target="_blank"
-                href={EXTERNAL_LINKS.hiro}
+            </div>
+            <div
+                // target="_blank"
+                // href={EXTERNAL_LINKS.hiro}
                 className="flex flex-col h-72 items-center justify-center border relative hover:border-2 hover:border-dark group transition duration-150"
             >
                 {/* <div className="hidden absolute top-0 left-0 group-hover:flex justify-between w-full pr-2 pt-3">
@@ -186,10 +186,10 @@ export default function Projects() {
                     <p className="font-mono">Text for Hiro</p>
                     <p className="font-mono w-52 pt-4">More text for Hiro</p>
                 </div> */}
-            </a>
-            <a
-                target="_blank"
-                href={EXTERNAL_LINKS.unisat}
+            </div>
+            <div
+                // target="_blank"
+                // href={EXTERNAL_LINKS.unisat}
                 className="flex flex-col h-72 items-center justify-center border relative hover:border-2 hover:border-dark group transition duration-150"
             >
                 {/* <div className="hidden absolute top-0 group-hover:flex justify-between w-full pr-2 pt-3">
@@ -221,10 +221,10 @@ export default function Projects() {
                     <p className="font-mono">Text for Unisat</p>
                     <p className="font-mono w-52 pt-4">More text for Unisat</p>
                 </div> */}
-            </a>
-            <a
-                target="_blank"
-                href={EXTERNAL_LINKS.utxo}
+            </div>
+            <div
+                // target="_blank"
+                // href={EXTERNAL_LINKS.utxo}
                 className="flex flex-col h-72 items-center justify-center border relative hover:border-2 hover:border-dark group transition duration-150"
             >
                 {/* <div className="hidden absolute top-0 group-hover:flex justify-between w-full pr-2 pt-3">
@@ -252,10 +252,10 @@ export default function Projects() {
                     <p className="font-mono">Text for UTXO</p>
                     <p className="font-mono w-52 pt-4">More text for UTXO</p>
                 </div> */}
-            </a>
-            <a
-                target="_blank"
-                href={EXTERNAL_LINKS.alex}
+            </div>
+            <div
+                // target="_blank"
+                // href={EXTERNAL_LINKS.alex}
                 className="flex flex-col h-72 items-center justify-center border relative hover:border-2 hover:border-dark group transition duration-150"
             >
                 {/* <div className="hidden absolute top-0 group-hover:flex justify-between w-full pr-2 pt-3">
@@ -277,7 +277,7 @@ export default function Projects() {
                     <p className="font-mono">Text for Alex</p>
                     <p className="font-mono w-52 pt-4">More text for Alex</p>
                 </div> */}
-            </a>
+            </div>
         </div>
     );
 }

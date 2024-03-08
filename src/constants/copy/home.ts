@@ -53,7 +53,7 @@ const copy = {
                 title: "CORE PRINCIPLE",
                 paragraphs: [
                     {
-                        text: "As a key part of strategy we have partnered with the following organizations to support the maintenance of the BRC20 token protocol and other open source projects on Bitcoin.",
+                        text: "As a key part of this strategy we have partnered with the following organizations to support the maintenance of the BRC20 token protocol and other open source projects on Bitcoin.",
                     },
                 ],
                 // links: [
