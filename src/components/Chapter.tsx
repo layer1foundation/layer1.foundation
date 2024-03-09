@@ -135,7 +135,7 @@ export default function Chapter({
                         </h6>
                     )}
                     {chapter.subsection1.paragraphs && (
-                        <div className="md:flex md:gap-4">
+                        <div className="md:flex md:gap-4 md:justify-between">
                             <ul
                                 className={`${
                                     chapter.subsection1.textSize
@@ -155,9 +155,11 @@ export default function Chapter({
                                                 {chapter.subsection1 &&
                                                 chapter.subsection1
                                                     .smallText ? (
+                                                        <div className="max-w-[500px]">
                                                     <h4 className="font-sans">
                                                         {p.text}
                                                     </h4>
+                                                    </div>
                                                 ) : (
                                                     <h3>{p.text}</h3>
                                                 )}{" "}
