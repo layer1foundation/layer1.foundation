@@ -155,10 +155,10 @@ export default function Chapter({
                                                 {chapter.subsection1 &&
                                                 chapter.subsection1
                                                     .smallText ? (
-                                                        <div className="max-w-[500px]">
-                                                    <h4 className="font-sans">
-                                                        {p.text}
-                                                    </h4>
+                                                    <div className="max-w-[500px]">
+                                                        <h3 className="font-sans">
+                                                            {p.text}
+                                                        </h3>
                                                     </div>
                                                 ) : (
                                                     <h3>{p.text}</h3>
@@ -395,9 +395,9 @@ export default function Chapter({
                                                     {chapter.subsection2 &&
                                                     chapter.subsection2
                                                         .smallText ? (
-                                                        <h4 className="font-sans">
+                                                        <h3 className="font-sans">
                                                             {p.text}
-                                                        </h4>
+                                                        </h3>
                                                     ) : (
                                                         <h3>{p.text}</h3>
                                                     )}{" "}
