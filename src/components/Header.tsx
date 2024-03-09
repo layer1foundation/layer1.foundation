@@ -39,8 +39,6 @@ export default function Header() {
     const [donateOpen, setDonateOpen] = useState(false);
     const { scrollY } = useWindow();
 
-    console.log(scrollY)
-
     return (
         <Fragment>
         <header className="pt-3 pb-6 px-4 md:px-10 md:pt-4 md:pb-2 w-full">
