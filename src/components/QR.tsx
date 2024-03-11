@@ -5,7 +5,7 @@ type IQr = {
 };
 
 export default function QR({ qrOnly }: IQr) {
-    const textToCopy = "bc1qpq6600v0kua...rjhz83qk0s7fk32";
+    const textToCopy = "bc1qkcq25839gy4xcxxd502ll6vyr8murn0hxplt9ngusnupvn5ytfcs2kmyl5";
 
     const copyToClipboard = async () => {
         try {
