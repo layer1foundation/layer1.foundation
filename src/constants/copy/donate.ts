@@ -19,8 +19,7 @@ const copy = {
                 smallText: true,
                 paragraphs: [
                     {
-                        text: "At the moment, we’re not able to accept donations, but we have a great video for you.",
-                        // text: "At the moment, we’re only able to accept donations in BTC. To make a donation, please send Bitcoin in any amount to: [insert addy]",
+                        text: "We currently accept donations in Bitcoin and/or Ordi. We’re incredibly grateful for your support!",
                     },
                     // {
                     //     text: "This address is supported by a multisignature wallet with various L1F team members acting as signers. No individual member will have unilateral access to this wallet."
