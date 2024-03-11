@@ -45,7 +45,10 @@ export default function BRC20() {
                             <code className="opacity-50">Governance</code>
                         </h6>
                         <h1 className="font-suisse advancing pb-8 mb-6 md:max-w-lg mt-8">
-                            Protocol Governance For BRC20
+                            Protocol Governance{" "}
+                            <em className="font-melior  text-[46px] md:text-[52px]">
+                                For BRC20
+                            </em>
                         </h1>
                     </div>
                     <Glossary
