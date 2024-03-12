@@ -6,7 +6,6 @@ import { IBlogPostAttributes } from "@/actions/fetch-blog";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Author } from "./Author";
-import  SyntaxHighlighter  from "react-syntax-highlighter";
 
 
 export default function Post({ post }: { post: IBlogPostAttributes }) {
@@ -32,8 +31,6 @@ export default function Post({ post }: { post: IBlogPostAttributes }) {
                         <Author img={author ? author.image : '/apple-touch-icon.png'} name={author ? author : "Anon"} description={post.description ? post?.description : "L1F"} readtime={"5 min"} date={ post.publishedAt ? post.publishedAt : ""}/>
                     </div>
                     <ReactMarkdown remarkPlugins={[remarkGfm]} className="mt-10">{post?.content}</ReactMarkdown>
-                    
-                    
                 </div>
             </div>
         </div>

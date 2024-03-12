@@ -138,7 +138,7 @@ a {
     color: #9F9F9F;
     list-style: decimal;
     margin-left: 25px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .post ul li{
@@ -146,7 +146,7 @@ a {
     color: #9F9F9F;
     list-style: disc;
     margin-left: 30px;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
 }
 
 .post ul li p,
@@ -201,6 +201,22 @@ a {
 
 .post h1{
     padding-bottom: 20px;
+}
+
+.post pre {
+  
+    border: 1px solid #9F9F9F;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    display: flex;
+}
+
+.post pre code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
 }
 
 
