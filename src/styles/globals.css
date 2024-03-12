@@ -132,3 +132,75 @@ a {
 #alexgo {
     fill: blue;
 }
+
+.post ol li{
+    font-size: 20px;
+    color: #9F9F9F;
+    list-style: decimal;
+    margin-left: 25px;
+    padding-bottom: 15px;
+}
+
+.post ul li{
+    font-size: 25px;
+    color: #9F9F9F;
+    list-style: disc;
+    margin-left: 30px;
+    padding-bottom: 5px;
+}
+
+.post ul li p,
+.post ol li p{
+    font-size: 20px;
+}
+
+.post blockquote {
+    background-color: rgba(144, 144, 144, 0.606);
+    border-radius: 3px;
+    margin: 10px 0px;
+}
+
+.post blockquote p{
+    margin-left: 10px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+.post p a {
+    border-bottom: 1px solid rgb(67, 67, 67);
+}
+
+.post p{
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #9F9F9F;;
+}
+
+.post h6{
+    padding-bottom: 20px;
+}
+
+.post h5{
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: #9F9F9F;
+}
+
+.post h4{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.post h3{
+    padding-bottom: 20px;
+}   
+
+.post h2{
+    padding-bottom: 20px;
+}   
+
+.post h1{
+    padding-bottom: 20px;
+}
+
+

@@ -43,13 +43,14 @@ type IBlogImgProps = {
 
 export type IBlogPostAttributes = {
     content: string;
-    cover: IBlogImgProps;
+    cover?: IBlogImgProps;
     createdAt: Date;
-    description: string;
-    publishedAt: Date;
-    thumbnail: IBlogImgProps;
+    description?: string;
+    publishedAt?: Date;
+    thumbnail?: IBlogImgProps;
     title: string;
-    updatedAt: Date;
+    updatedAt?: Date;
+    author: any
 };
 
 export interface IBlog {
@@ -57,16 +58,11 @@ export interface IBlog {
     attributes: IBlogPostAttributes;
 }
 
-export async function fetchBlogs(): Promise<IBlog[]> {
-    try {
-        const res = await fetch(
-            `${EXTERNAL_LINKS.strapi}/api/blogs?populate=*`
-        );
-        const { data } = await res.json();
-        // console.log(data);
-        return data;
-    } catch (error) {
-        console.error("Failed to fetch blogs:", error);
-        return [];
+
+const fetchPost = async (id: string) => {
+    const response = await fetch(`https://cms.layer1.foundation/api/blogs?filters[id]=${id}&populate=*`);
+    const { data } = await response.json();
+    return data[0];
     }
-}
+
+export default fetchPost;
