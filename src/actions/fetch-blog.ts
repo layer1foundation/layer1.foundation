@@ -52,6 +52,7 @@ export type IBlogPostAttributes = {
     updatedAt?: Date;
     author?: any;
     readTime?: string;
+    author_avatar?: any;
 };
 
 export interface IBlog {
@@ -59,8 +60,23 @@ export interface IBlog {
     attributes: IBlogPostAttributes;
 }
 
+const fetchPostIdBySlug = async (slug: string) => {
+    const response = await fetch(`https://cms.layer1.foundation/api/blogs?populate=*`);
+    const { data } = await response.json();
+    const post = data.find((post: IBlog) => { 
+        let findSlug = post.attributes.title.toLowerCase().split(" ").join("-")
+       
+        if(findSlug === slug){
+            return post
+        } 
+});
+    
+    return post ? post.id : null;
+}
 
-const fetchPost = async (id: string) => {
+const fetchPost = async (slug: string) => {
+  
+    const id = await fetchPostIdBySlug(slug);
     const response = await fetch(`https://cms.layer1.foundation/api/blogs?filters[id]=${id}&populate=*`);
     const { data } = await response.json();
     return data[0];

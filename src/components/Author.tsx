@@ -4,12 +4,13 @@ type IAuthor = {
     img: string;
     name: string;
     description: string;
-    readtime: string;
+    readtime?: string;
     date: string | Date;
     preview?: boolean;
 };
 
 export const Author = ({ img, name, description, readtime, date, preview }: IAuthor) => {
+    
     typeof date === "string" ? (date = new Date(date)) : date;
     const formattedDate = date.toLocaleDateString('en-US', {
         month: 'short', // "short" for abbreviated month name (e.g., "Feb")
@@ -25,7 +26,7 @@ export const Author = ({ img, name, description, readtime, date, preview }: IAut
                 <div className="flex gap-4">
                 <img
                     src={img}
-                    alt={description}
+                    alt={"avatar"}
                     width={50}
                     height={50}
                     className=" rounded-full border border-smoke20 hidden md:flex"
@@ -45,7 +46,7 @@ export const Author = ({ img, name, description, readtime, date, preview }: IAut
             <div className="flex items-center gap-4">
                 <img
                     src={img}
-                    alt={description}
+                    alt={"avatar"}
                     width={50}
                     height={50}
                     className=" rounded-full border border-smoke20"
@@ -54,7 +55,7 @@ export const Author = ({ img, name, description, readtime, date, preview }: IAut
                     <span className="font-suisse text-[18px]">{name}</span>
                     <div className="flex items-center gap-2 text-smoke60">
                         <code className="font-mono text-sm">
-                            {readtime} Read
+                            {readtime} Min Read
                         </code>
                         <span className="text-lg leading-none">•</span>
                         <code className="font-mono text-sm">{formattedDate}</code>

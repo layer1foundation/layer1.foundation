@@ -8,6 +8,7 @@ import ReactMarkedown from 'react-markdown';
 import Button from './Button';
 import Image from 'next/image';
 import { Author } from './Author';
+import { estimateReadingTime } from '@/helpers/readtime';
 
 
 export default function Preview({ post, page, id }: { post?: IBlogPostAttributes, page?:any, id?:number}) {
@@ -16,9 +17,8 @@ export default function Preview({ post, page, id }: { post?: IBlogPostAttributes
         ? `${EXTERNAL_LINKS.strapi}${post?.cover?.data?.attributes?.formats?.large?.url}` 
         : "/apple-touch-icon.png";
     const backupImageUrl = "/apple-touch-icon.png";
-    const author = post?.author ? post.author : "Anon";
-    const avatar = author !== "Anon" ? author.image : '/apple-touch-icon.png';
-    const readtime = post?.readTime ? post.readTime : "5";
+    const author = post?.author ? post?.author : "Anon";
+    const avatar = post?.author_avatar?.data?.attributes?.url ? `${EXTERNAL_LINKS.strapi}${post.author_avatar.data.attributes.url}` : '/apple-touch-icon.png';
     let date = post?.publishedAt
     typeof date === "string" ? ( date = new Date(date)) : post?.publishedAt;
     const formattedDate = date?.toLocaleDateString('en-US', {
@@ -26,6 +26,8 @@ export default function Preview({ post, page, id }: { post?: IBlogPostAttributes
         day: 'numeric', // "numeric" for numeric day of the month
         year: 'numeric' // "numeric" for four digit year
       });
+    const slug = post?.title.toLowerCase().split(' ').join('-')
+    const readtime = post?.content ? estimateReadingTime(post?.content) : 1;
 
   return (
     post ? (
@@ -36,8 +38,8 @@ export default function Preview({ post, page, id }: { post?: IBlogPostAttributes
                 <ReactMarkedown>{post.content}</ReactMarkedown>
             </div>
             <div className="flex flex-col-reverse md:flex-row md:items-center gap-4">
-                <Button text={"READ MORE"} grow={false} className='w-32' link={`/blog/${id}`}></Button>
-                <Author img={avatar} name={author} readtime={readtime} description={""} date={post.publishedAt ? post.publishedAt : ""} preview={true}/>
+                <Button text={"READ MORE"} grow={false} className='w-32' link={`/blog/${slug}`}></Button>
+                <Author img={avatar} name={author} readtime={readtime.toString()} description={""} date={post.publishedAt ? post.publishedAt : ""} preview={true}/>
             </div>
         </div>
         <Image 

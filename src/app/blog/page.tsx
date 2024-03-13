@@ -17,7 +17,6 @@ import sopcopy from "@/constants/copy/sop";
 export default function BlogPage() {
    
     const { blogPosts } = useCMS();
-    console.log(blogPosts)
   
     return (
         <div className="flex flex-col items-center justify-center w-full">

@@ -68,7 +68,7 @@ export default function ResolutionPage() {
                                     .map((line: any, i: number) => (
                                         <React.Fragment key={i}>
                                             {line}
-                                            {console.log("line", line)}
+                                           
                                             <br />
                                         </React.Fragment>
                                     ))} */}

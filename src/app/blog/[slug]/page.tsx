@@ -10,10 +10,9 @@ import Segment from '@/components/Segment';
 import Chapter from '@/components/Chapter';
 import copy from '@/constants/copy/BRC20';
 
-export default async function page({ params }: { params: { id: string } }) {
-
+export default async function page({ params }: { params: { slug: string } }) {
     return (
-        <BlogPostProvider id={params.id}>
+        <BlogPostProvider slug={params.slug}>
             <PageContent />
             <Segment scroll={false} className="pt-10">
                 <Chapter chapter={copy.BRC20.chapter1}></Chapter>

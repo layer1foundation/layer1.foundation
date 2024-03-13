@@ -16,13 +16,12 @@ const defaultState: IPostContext = {
 
 const BlogPostContext = createContext(defaultState);
 
-export function BlogPostProvider(props: { children: ReactNode, id: string }) {
+export function BlogPostProvider(props: { children: ReactNode, slug: string }) {
   const [state, setState] = useState(defaultState);
-
   useEffect(() => {
     (
     async () => {
-        const strapi = await fetchPost(props.id);
+        const strapi = await fetchPost(props.slug);
         setState({loading: false, post: strapi});
     })().catch(e => {
         console.error(e);
