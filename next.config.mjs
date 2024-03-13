@@ -31,5 +31,6 @@ export default {
                 hostname: "i.ibb.co",
             },
         ],
+        domains: ['cms.layer1.foundation'],
     },
 };

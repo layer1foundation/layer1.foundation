@@ -5,19 +5,22 @@ import { EXTERNAL_LINKS } from "@/constants/links";
 import { IBlogPostAttributes } from "@/actions/fetch-blog";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Image from "next/image";
 import { Author } from "./Author";
 
 
 export default function Post({ post }: { post: IBlogPostAttributes }) {
 
     const author = post?.author;
-    const imageUrl = post?.cover ? `${EXTERNAL_LINKS.strapi}${post.cover.data.attributes.formats.large.url}` : "";
+    const largeFormatUrl = post?.cover?.data?.attributes?.formats?.large?.url ? true : false;
+    const imageUrl = post?.cover?.data?.attributes?.formats?.large?.url ?`${EXTERNAL_LINKS.strapi}${post?.cover?.data?.attributes?.formats?.large?.url}` : '/img/blog-img-1.png';
+    const backupImageUrl = "/img/blog-img-1.png";
     return (
         <div className="w-full px-4 md:px-10 max-w-7xl post font-suisse">
             <div className="w-full">
                     {imageUrl ? 
                     <div className="w-full h-64 md:h-96 overflow-hidden relative">
-                    <img
+                    <Image
                         src={imageUrl}
                         alt="L1F Blog Post"
                         width={1300}

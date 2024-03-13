@@ -50,7 +50,8 @@ export type IBlogPostAttributes = {
     thumbnail?: IBlogImgProps;
     title: string;
     updatedAt?: Date;
-    author: any
+    author?: any;
+    readTime?: string;
 };
 
 export interface IBlog {

@@ -11,7 +11,6 @@ import Chapter from '@/components/Chapter';
 import copy from '@/constants/copy/BRC20';
 
 export default async function page({ params }: { params: { id: string } }) {
-   
 
     return (
         <BlogPostProvider id={params.id}>
@@ -23,13 +22,11 @@ export default async function page({ params }: { params: { id: string } }) {
                 <Chapter chapter={copy.BRC20.chapter2}></Chapter>
             </Segment>
         </BlogPostProvider>
-)
-        
+    )
 }
 
 function PageContent( ){
     const { post } = useBlogPost();
-    console.log('POST IN PAGECONTENT', post)
     return (
         post ?
         <Wrapper className="flex flex-col justify-center items-center md:max-w-none bg-gradient-to-b from-light to-smoke10">

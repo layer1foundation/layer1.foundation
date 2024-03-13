@@ -21,13 +21,13 @@ export default function BlogPage() {
   
     return (
         <div className="flex flex-col items-center justify-center w-full">
-            <Wrapper className="flex flex-col justify-center items-center">
+            <Wrapper className="flex flex-col justify-center items-center px-4 md:px-10 md:pt-10">
                 {Array.isArray(blogPosts) &&
                     blogPosts.map((blog:IBlog, i:number) => (
                         <Preview key={i} post={blog.attributes} id={blog.id}/>
                     ))}
-                <Preview page={sopcopy} ></Preview>
-                <Preview page={resolutioncopy}></Preview>
+                {/* <Preview page={sopcopy} ></Preview>
+                <Preview page={resolutioncopy}></Preview> */}
             </Wrapper>
             <Segemnt scroll={false} className="pt-10">
                 <Chapter chapter={copy.BRC20.chapter2}></Chapter>

@@ -142,7 +142,7 @@ a {
 }
 
 .post ul li{
-    font-size: 25px;
+    font-size: 20px;
     color: #9F9F9F;
     list-style: disc;
     margin-left: 30px;
@@ -167,35 +167,41 @@ a {
 }
 
 .post p a {
-    border-bottom: 1px solid rgb(67, 67, 67);
+    border-bottom: 1px solid #7F7F7F;
+    font-size: 20px;
 }
 
 .post p{
     padding-bottom: 20px;
-    font-size: 14px;
-    color: #9F9F9F;;
+    font-size: 20px;
+  
 }
 
 .post h6{
-    padding-bottom: 20px;
-}
-
-.post h5{
     font-size: 20px;
     padding-bottom: 20px;
     color: #9F9F9F;
 }
 
+.post h5{
+    font-size: 24px;
+    padding-bottom: 20px;
+    color: #9F9F9F;
+}
+
 .post h4{
-    font-size: 20px;
+    font-size: 24px;
     padding-bottom: 20px;
 }
 
 .post h3{
     padding-bottom: 20px;
+    font-size: 28px;
+    color: #9F9F9F;
 }   
 
 .post h2{
+    font-size: 28px;
     padding-bottom: 20px;
 }   
 
@@ -219,4 +225,12 @@ a {
     width: 100%;
 }
 
+.preview * {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.preview img {
+    display: none;
+}
 
