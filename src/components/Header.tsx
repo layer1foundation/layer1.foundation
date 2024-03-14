@@ -32,6 +32,10 @@ const NAV_LINKS = [
         text: "DOCS",
         link: EXTERNAL_LINKS.gitbook,
     },
+    {
+        text: "BLOG",
+        link: INTERNAL_LINKS.blog.page,
+    },
 ];
 
 export default function Header() {

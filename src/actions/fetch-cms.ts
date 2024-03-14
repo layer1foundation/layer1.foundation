@@ -67,7 +67,6 @@ export async function fetchCMS(
             `${EXTERNAL_LINKS.strapi}/api/${endpoint}?populate=*`
         );
         const { data } = await res.json();
-        console.log("Strapi CMS Data:", data);
         return data;
     } catch (error) {
         console.error("Failed to fetch CMS:", error);

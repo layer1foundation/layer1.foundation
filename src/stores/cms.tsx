@@ -1,7 +1,7 @@
 "use client";
 
 import { fetchCMS } from "@/actions/fetch-cms";
-import { type IBlog } from "@/actions/fetchBlogs";
+import { type IBlog } from "@/actions/fetch-blog";
 import React, {
     createContext,
     ReactNode,
@@ -17,6 +17,7 @@ type ICmsContext = {
     blogPosts: IBlog[] | never[];
     loading: boolean;
     error: boolean;
+    post: any;
 };
 
 // Default State
@@ -24,8 +25,9 @@ const defaultState: ICmsContext = {
     governance: null,
     resolution: null,
     blogPosts: [],
-    loading: false,
+    loading: true,
     error: false,
+    post: null,
 };
 
 // Context
