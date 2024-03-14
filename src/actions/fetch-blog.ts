@@ -66,7 +66,10 @@ const fetchPostIdBySlug = async (slug: string) => {
     );
     const { data } = await response.json();
     const post = data.find((post: IBlog) => {
-        let findSlug = post.attributes.title.toLowerCase().split(" ").join("-");
+        const findSlug = post.attributes.title
+            .toLowerCase()
+            .split(" ")
+            .join("-");
 
         if (findSlug === slug) {
             return post;
