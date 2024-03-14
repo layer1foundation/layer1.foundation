@@ -66,7 +66,7 @@ export default function Post({ post, loading }: { post?: IBlogPostAttributes, lo
                             </div>
                         </div>
                         {Array.from({length: 20}).map((_, i) => (
-                            <div className={`flex  mb-4 ${(i % 3) === 0 ? "flex-col-reverse": "flex-col"}`}>
+                            <div key={i} className={`flex  mb-4 ${(i % 3) === 0 ? "flex-col-reverse": "flex-col"}`}>
                                 <div className="w-4/5 h-4 my-4 bg-smoke30 rounded-md shimmer"></div>
                                 <div className="w-2/3 h-4 my-4 bg-smoke30 rounded-md shimmer"></div>
                                 <div className="w-full h-4 my-4 bg-smoke30 rounded-md shimmer"></div>
