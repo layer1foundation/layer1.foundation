@@ -25,7 +25,7 @@ const defaultState: ICmsContext = {
     governance: null,
     resolution: null,
     blogPosts: [],
-    loading: false,
+    loading: true,
     error: false,
     post: null
     

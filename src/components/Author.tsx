@@ -23,22 +23,22 @@ export const Author = ({ img, name, description, readtime, date, preview }: IAut
                 <code className="font-mono text-sm">{description}</code>
             </div>
             {preview ? (
-                <div className="flex gap-4">
+                <div className="flex gap-4 items-center md:ml-6">
                 <img
                     src={img}
                     alt={"avatar"}
                     width={50}
                     height={50}
-                    className=" rounded-full border border-smoke20 hidden md:flex"
+                    className="rounded-full border border-smoke20 h-10 w-10 hidden md:flex"
                 />
                 <div className="flex flex-col">
-                    <span className="font-suisse text-[18px]">{name}</span>
-                    <div className="flex items-center gap-2 text-smoke60">
-                        <code className="font-mono md:text-sm text-xs">
+                    <span className="font-suisse text-xs">{name}</span>
+                    <div className="flex items-center gap-2 text-smoke60 leading-none">
+                        <code className="font-mono text-xs min-w-10">
                             {readtime} Min Read
                         </code>
-                        <span className="text-xl leading-none">•</span>
-                        <code className="font-mono md:text-sm text-xs">{formattedDate}</code>
+                        <span className="text-xl leading-none h-5">•</span>
+                        <code className="font-mono text-xs">{formattedDate}</code>
                     </div>
                 </div>
                 </div>
