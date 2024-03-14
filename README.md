@@ -4,11 +4,13 @@ Built with NextTS and TailwindCSS.
 
 ## Getting Started
 
-First, install dependencies with `pnpm install`, then run the development server:
+After cloning the repo, from the root directory, run:
 
-```bash
-pnpm dev
-```
+1. `pnpm install` to install dependencies
+
+2. `npx husky install` to prepare husky hooks
+
+3. `pnpm run dev` to run the development server
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
