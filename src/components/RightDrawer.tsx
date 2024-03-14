@@ -23,7 +23,6 @@ export default function RightDrawer({
         } else {
             document.body.style.overflow = "unset";
         }
-
         // Clean up function
         return () => {
             document.body.style.overflow = "unset";
@@ -38,7 +37,7 @@ export default function RightDrawer({
             }}
         >
             <div
-                className="fixed z-99 w-4/5 top-0 right-0 h-full py-5 flex flex-col bg-light space-y-8 overflow-auto max-w-5xl"
+                className="fixed z-99 w-4/5 top-0 right-0 h-full py-4 flex flex-col bg-light space-y-8 overflow-auto max-w-5xl"
                 style={
                     open
                         ? { animation: "slide-left 300ms" }
@@ -47,19 +46,17 @@ export default function RightDrawer({
                 onClick={stopPropagation}
             >
                 <button
-                    className="w-full flex pl-3 absolute justify-end right-4 p-1"
+                    className="w-fit flex absolute justify-end right-4 p-1.5 -translate-y-1 rounded-full transition duration-150 hover:bg-neutral-100"
                     onClick={() => {
                         setIsOpen(!open);
                     }}
                 >
-                    <div className="p-1.5 rounded-full transition duration-150 hover:bg-neutral-100">
-                        <Image
-                            src="/icons/close.svg"
-                            alt="close button"
-                            width={28}
-                            height={28}
-                        />
-                    </div>
+                    <Image
+                        src="/icons/close.svg"
+                        alt="close button"
+                        width={28}
+                        height={28}
+                    />
                 </button>
                 {children}
             </div>
