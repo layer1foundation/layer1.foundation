@@ -14,7 +14,7 @@ export default function Button({
     link,
     grow,
     outer = false,
-    className
+    className,
 }: ButtonProps) {
     return !outer ? (
         <Link

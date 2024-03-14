@@ -27,8 +27,7 @@ const defaultState: ICmsContext = {
     blogPosts: [],
     loading: true,
     error: false,
-    post: null
-    
+    post: null,
 };
 
 // Context

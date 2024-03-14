@@ -49,13 +49,13 @@
 }
 @keyframes shimmer {
     0% {
-      background-position: -468px 0;
+        background-position: -468px 0;
     }
     100% {
-      background-position: 468px 0;
+        background-position: 468px 0;
     }
-  }
-  .shimmer {
+}
+.shimmer {
     animation-duration: 2.25s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -65,7 +65,7 @@
     background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
     background-size: 800px 104px;
     position: relative;
-  }
+}
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -152,24 +152,24 @@ a {
     fill: blue;
 }
 
-.post ol li{
+.post ol li {
     font-size: 20px;
-    color: #9F9F9F;
+    color: #9f9f9f;
     list-style: decimal;
     margin-left: 25px;
     padding-bottom: 20px;
 }
 
-.post ul li{
+.post ul li {
     font-size: 20px;
-    color: #9F9F9F;
+    color: #9f9f9f;
     list-style: disc;
     margin-left: 30px;
     padding-bottom: 20px;
 }
 
 .post ul li p,
-.post ol li p{
+.post ol li p {
     font-size: 20px;
 }
 
@@ -179,58 +179,56 @@ a {
     margin: 10px 0px;
 }
 
-.post blockquote p{
+.post blockquote p {
     margin-left: 10px;
     padding-left: 10px;
     background-color: white;
 }
 
 .post p a {
-    border-bottom: 1px solid #7F7F7F;
+    border-bottom: 1px solid #7f7f7f;
     font-size: 20px;
 }
 
-.post p{
+.post p {
     padding-bottom: 20px;
     font-size: 20px;
-  
 }
 
-.post h6{
+.post h6 {
     font-size: 20px;
     padding-bottom: 20px;
-    color: #9F9F9F;
+    color: #9f9f9f;
 }
 
-.post h5{
+.post h5 {
     font-size: 24px;
     padding-bottom: 20px;
-    color: #9F9F9F;
+    color: #9f9f9f;
 }
 
-.post h4{
+.post h4 {
     font-size: 24px;
     padding-bottom: 20px;
 }
 
-.post h3{
+.post h3 {
     padding-bottom: 20px;
     font-size: 28px;
-    color: #9F9F9F;
-}   
+    color: #9f9f9f;
+}
 
-.post h2{
+.post h2 {
     font-size: 28px;
     padding-bottom: 20px;
-}   
+}
 
-.post h1{
+.post h1 {
     padding-bottom: 20px;
 }
 
 .post pre {
-  
-    border: 1px solid #9F9F9F;
+    border: 1px solid #9f9f9f;
     padding: 20px;
     border-radius: 5px;
     margin: 20px 0px;
@@ -252,4 +250,3 @@ a {
 .preview img {
     display: none;
 }
-
