@@ -52,7 +52,7 @@ export default function RightDrawer({
                         setIsOpen(!open);
                     }}
                 >
-                    <div className="pl-3">
+                    <div className="p-1.5 rounded-full transition duration-150 hover:bg-neutral-100">
                         <Image
                             src="/icons/close.svg"
                             alt="close button"

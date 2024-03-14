@@ -14,10 +14,10 @@ export default async function page({ params }: { params: { slug: string } }) {
         <BlogPostProvider slug={params.slug}>
             <PageContent />
             <Segment scroll={false} className="pt-10">
-                <Chapter chapter={copy.BRC20.chapter1}></Chapter>
+                <Chapter chapter={copy.BRC20.chapter2}></Chapter>
             </Segment>
             <Segment scroll={false} className="pt-10">
-                <Chapter chapter={copy.BRC20.chapter2}></Chapter>
+                <Chapter chapter={copy.BRC20.chapter3}></Chapter>
             </Segment>
         </BlogPostProvider>
     );

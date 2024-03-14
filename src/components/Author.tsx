@@ -49,7 +49,7 @@ export const Author = ({
                             <code className="font-mono text-xs min-w-10">
                                 {readtime} Min Read
                             </code>
-                            <span className="text-xl leading-none h-5">•</span>
+                            <span className="text-[22px]">•</span>
                             <code className="font-mono text-xs">
                                 {formattedDate}
                             </code>
