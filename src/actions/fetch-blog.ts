@@ -1,7 +1,5 @@
 "use server";
 
-import { EXTERNAL_LINKS } from "@/constants/links";
-
 type IBlogImgAttributes = {
     alternativeText: string | null;
     caption: string | null;
