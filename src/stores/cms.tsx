@@ -1,7 +1,6 @@
 "use client";
 
-import { fetchCMS } from "@/actions/fetch-cms";
-import { type IBlog } from "@/actions/fetch-blog";
+import { fetchCMS, type IBlog } from "@/lib/cms";
 import React, {
     createContext,
     ReactNode,

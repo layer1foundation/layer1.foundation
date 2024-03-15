@@ -1,6 +1,6 @@
 import React from "react";
 import { EXTERNAL_LINKS } from "@/constants/links";
-import { IBlogPostAttributes } from "@/actions/fetch-blog";
+import { IBlogPostAttributes } from "@/lib/cms";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Image from "next/image";

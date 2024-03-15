@@ -7,7 +7,7 @@ import React, {
     useState,
     ReactNode,
 } from "react";
-import fetchPost from "@/actions/fetch-blog";
+import { fetchPost } from "@/lib/cms";
 
 type IPostContext = {
     loading: boolean;
