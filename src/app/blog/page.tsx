@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { type IBlog } from "@/actions/fetch-blog";
+import { type IBlog } from "@/lib/cms";
 import Segemnt from "@/components/Segment";
 import Chapter from "@/components/Chapter";
 import copy from "@/constants/copy/BRC20";

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { IBlogPostAttributes } from "@/actions/fetch-blog";
+import { IBlogPostAttributes } from "@/lib/cms";
 import { EXTERNAL_LINKS } from "@/constants/links";
 import ReactMarkedown from "react-markdown";
 import Button from "./Button";
