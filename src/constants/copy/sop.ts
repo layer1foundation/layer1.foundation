@@ -56,7 +56,7 @@ const copy = {
             purpose:
                 "To turn approved ideas into tangible updates or features for the BRC-20 protocol, ensuring technical excellence and compatibility.",
             actions: [
-                "Development Guidelines: Set forth detailed guidelines and best practices for the development of new features or updates. Unisat/BiS/OKX, please elaborate here on any development best practices that you have.",
+                "Development Guidelines: Set forth detailed guidelines and best practices for the development of new features or updates.",
                 "Phased Development Approach: Implement innovations in small stages to manage risks and allow for iterative improvement.",
                 "Progress Communication: Regularly update the community and stakeholders about development progress, challenges, and milestones.",
                 "Open-Source Transparency: Document and release all updates and new features in an open-source format, promoting transparency and community collaboration in the BRC-20 ecosystem.",
@@ -67,7 +67,7 @@ const copy = {
             purpose:
                 "To rigorously evaluate new developments for functionality, security, and user experience.",
             actions: [
-                "Testing Strategy: Implement a multi-level testing strategy. Unisat/BiS, please elaborate here on any development best practices that you have from previous BRC-20 indexer deployments.",
+                "Testing Strategy: Implement a multi-level testing strategy.",
                 "Validation: Use block balance state hashes to provide alternative indexers to validate their implementation against the reference client. Changes must be accompanied by a validation hash to ensure integrity and traceability.",
                 'Testnet: Standup a testnet environment where new modules or features can be integrated and battle-tested. An idea could be that all modules are automatically "white" in testnet.',
                 "Feedback Integration: Utilize test phase feedback for thoughtful optimization and improvement of features, preparing for smooth full-scale deployment with oversight committee acknowledgment.",

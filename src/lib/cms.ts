@@ -1,5 +1,3 @@
-"use server";
-
 import { EXTERNAL_LINKS } from "@/constants/links";
 
 type IBlogImgAttributes = {
@@ -50,6 +48,8 @@ export type IBlogPostAttributes = {
     thumbnail: IBlogImgProps;
     title: string;
     updatedAt: Date;
+    author_avatar: IBlogImgProps;
+    author: string;
 };
 
 export interface IBlog {
@@ -57,16 +57,47 @@ export interface IBlog {
     attributes: IBlogPostAttributes;
 }
 
-export async function fetchBlogs(): Promise<IBlog[]> {
+type IEndpointTypes = "blogs" | "sop" | "governance-resolution";
+
+export async function fetchCMS(
+    endpoint: IEndpointTypes
+): Promise<IBlog[] | IBlog> {
     try {
         const res = await fetch(
-            `${EXTERNAL_LINKS.strapi}/api/blogs?populate=*`
+            `${EXTERNAL_LINKS.strapi}/api/${endpoint}?populate=*`
         );
         const { data } = await res.json();
-        // console.log(data);
         return data;
     } catch (error) {
-        console.error("Failed to fetch blogs:", error);
+        console.error("Failed to fetch CMS:", error);
         return [];
     }
 }
+
+export const fetchPostIdBySlug = async (slug: string) => {
+   
+    const response = await fetch(
+        `https://cms.layer1.foundation/api/blogs?populate=*`
+    );
+    const { data } = await response.json();
+    const post = data.find((post: IBlog) => {
+        const findSlug = post.attributes.title
+            .toLowerCase()
+            .split(" ")
+            .join("-").replace(/:/g, "%3A");
+        if (findSlug === slug) {
+            return post;
+        }
+    });
+
+    return post ? post.id : null;
+};
+
+export const fetchPost = async (slug: string) => {
+    const id = await fetchPostIdBySlug(slug);
+    const response = await fetch(
+        `https://cms.layer1.foundation/api/blogs?filters[id]=${id}&populate=*`
+    );
+    const { data } = await response.json();
+    return data[0];
+};

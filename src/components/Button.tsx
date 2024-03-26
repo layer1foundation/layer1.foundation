@@ -6,6 +6,7 @@ interface ButtonProps {
     link?: string;
     grow?: boolean;
     outer?: boolean;
+    className?: string;
 }
 
 export default function Button({
@@ -13,6 +14,7 @@ export default function Button({
     link,
     grow,
     outer = false,
+    className,
 }: ButtonProps) {
     return !outer ? (
         <Link
@@ -20,7 +22,7 @@ export default function Button({
             target={link?.includes("https://") ? "_blank" : "_self"}
             className={`flex items-center bg-smoke50 hover:bg-black rounded-full p-0.5 cursor-pointer transition duration-150 ${
                 grow ? "flex-grow md:flex-grow-0" : null
-            } `}
+            } ${className ? className : null} `}
         >
             <div
                 className={`bg-light text-dark h-9 flex justify-between w-full items-center space-x-2 rounded-full hover:bg-black hover:text-light transition duration-150 ${

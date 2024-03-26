@@ -17,7 +17,7 @@ export default function QR({ qrOnly }: IQr) {
         }
     };
     return (
-        <div className="border flex flex-col items-center space-y-8 py-8">
+        <div className="border flex flex-col items-center gap-4 py-8">
             <div>
                 <img src="/img/qr.png" />
             </div>

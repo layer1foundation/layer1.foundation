@@ -96,6 +96,7 @@ export default function Chapter({
                             if (h?.link) {
                                 return (
                                     <Link
+                                        key={`chapter-heading-${i}`}
                                         href={h.link}
                                         target={
                                             h.link.includes("https://")
@@ -226,6 +227,7 @@ export default function Chapter({
                                 if (h?.link) {
                                     return (
                                         <Link
+                                            key={`chapter-heading-link-${i}`}
                                             href={h.link}
                                             target={
                                                 h.link.includes("https://")
