@@ -75,7 +75,7 @@ export async function fetchCMS(
 }
 
 export const fetchPostIdBySlug = async (slug: string) => {
-    console.log("SLUG IN FETCH POST ID BY SLUG",slug)
+   
     const response = await fetch(
         `https://cms.layer1.foundation/api/blogs?populate=*`
     );
@@ -94,9 +94,7 @@ export const fetchPostIdBySlug = async (slug: string) => {
 };
 
 export const fetchPost = async (slug: string) => {
-    console.log("SLUG IN FETCH POST",slug)
     const id = await fetchPostIdBySlug(slug);
-    console.log("ID:", id);
     const response = await fetch(
         `https://cms.layer1.foundation/api/blogs?filters[id]=${id}&populate=*`
     );

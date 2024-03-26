@@ -22,7 +22,6 @@ const defaultState: IPostContext = {
 const BlogPostContext = createContext(defaultState);
 
 export function BlogPostProvider(props: { children: ReactNode; slug: string }) {
-    console.log("SLUG IN STORE:", props.slug);
     const [state, setState] = useState(defaultState);
     useEffect(() => {
         (async () => {

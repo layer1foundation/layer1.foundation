@@ -11,7 +11,6 @@ import Preview from "@/components/Preview";
 
 export default function BlogPage() {
     const { blogPosts, loading } = useCMS();
-    console.log(blogPosts)
     return loading ? (
         <div className="flex flex-col items-center justify-center w-full">
             <Wrapper className="flex flex-col justify-center items-center px-4 md:px-10">
