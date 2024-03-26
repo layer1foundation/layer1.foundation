@@ -18,8 +18,8 @@ export default function Preview({
     id?: string | number;
     loading?: boolean;
 }) {
-    const imageUrl = post?.cover?.data?.attributes?.formats?.large?.url
-        ? `${EXTERNAL_LINKS.strapi}${post?.cover?.data?.attributes?.formats?.large?.url}`
+    const imageUrl = post?.thumbnail?.data?.attributes?.formats?.small?.url
+        ? `${EXTERNAL_LINKS.strapi}${post?.thumbnail?.data?.attributes?.formats?.small?.url}`
         : "/apple-touch-icon.png";
     const backupImageUrl = "/apple-touch-icon.png";
     const author = post?.author ? post?.author : "Anon";
