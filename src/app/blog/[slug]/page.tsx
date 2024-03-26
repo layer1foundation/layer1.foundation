@@ -10,6 +10,7 @@ import Chapter from "@/components/Chapter";
 import copy from "@/constants/copy/BRC20";
 
 export default async function page({ params }: { params: { slug: string } }) {
+    console.log("SLUG IN COMPONENT:", params.slug)
     return (
         <BlogPostProvider slug={params.slug}>
             <PageContent />
@@ -25,6 +26,7 @@ export default async function page({ params }: { params: { slug: string } }) {
 
 function PageContent() {
     const { post, loading } = useBlogPost();
+    console.log("POST:", post, "LOADING:", loading)
     return !loading ? (
         <Wrapper className="flex flex-col justify-center items-center md:max-w-none bg-gradient-to-b from-light to-smoke10">
             <Post post={post.attributes} />
