@@ -45,7 +45,11 @@ export function CmsProvider(props: { children: ReactNode }) {
             ]);
             setCms({
                 ...cms,
-                blogPosts: strapi[0] as IBlog[],
+                blogPosts: (strapi[0] as IBlog[]).sort(
+                    (a, b) =>
+                        new Date(b.attributes.createdAt).valueOf() -
+                        new Date(a.attributes.createdAt).valueOf()
+                ),
                 // governance: strapi[1] as IBlog,
                 // resolution: strapi[2] as IBlog,
                 loading: false,
