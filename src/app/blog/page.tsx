@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React from "react";
 import { type IBlog } from "@/lib/cms";
 import Segemnt from "@/components/Segment";
 import Chapter from "@/components/Chapter";
@@ -26,15 +26,13 @@ export default function BlogPage() {
         <div className="flex flex-col items-center justify-center w-full">
             <Wrapper className="flex flex-col justify-center items-center px-4 md:px-10">
                 {Array.isArray(blogPosts) &&
-                    blogPosts
-                        .sort()
-                        .map((blog: IBlog, i: number) => (
-                            <Preview
-                                key={`blog-post-${i}`}
-                                post={blog.attributes}
-                                id={blog.id}
-                            />
-                        ))}
+                    blogPosts.map((blog: IBlog, i: number) => (
+                        <Preview
+                            key={`blog-post-${i}`}
+                            post={blog.attributes}
+                            id={blog.id}
+                        />
+                    ))}
             </Wrapper>
             <Segemnt scroll={false} className="pt-10">
                 <Chapter chapter={copy.BRC20.chapter2}></Chapter>
