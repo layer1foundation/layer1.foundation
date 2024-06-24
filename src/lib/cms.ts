@@ -64,7 +64,7 @@ export async function fetchCMS(
 ): Promise<IBlog[] | IBlog> {
     try {
         const res = await fetch(
-            `${EXTERNAL_LINKS.strapi}/api/${endpoint}?populate=*`
+            `${process.env.STRAPI_SERVER_URL}/api/${endpoint}?populate=*`
         );
         const { data } = await res.json();
         return data;
@@ -77,7 +77,7 @@ export async function fetchCMS(
 export const fetchPostIdBySlug = async (slug: string) => {
     try{
     const response = await fetch(
-        `https://cms.layer1.foundation/api/blogs?populate=*`
+        `${process.env.STRAPI_SERVER_URL}/api/blogs?populate=*`
     );
     const { data } = await response.json();
     const post = data.find((post: IBlog) => {
