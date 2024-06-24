@@ -169,12 +169,10 @@ const updateStrapiEntry = async (data: any, newCoverUrl: string, newThumbnailUrl
     updateData.cover.url = newCoverUrl;
     updateData.thumbnail.url = newThumbnailUrl;
     updateData.author_avatar.url = newAvatarUrl;
-
-    const TEST_ID = 2; // Replace with the correct ID
     
     console.log('WEBHOOK:updateData', updateData)
       try {
-        const response = await fetch(`${strapiBaseUrl}/api/blogs/${TEST_ID}`, { //**********/ Replace with the correct endpoint data.entry.id
+        const response = await fetch(`${strapiBaseUrl}/api/blogs/${data.entry.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
