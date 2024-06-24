@@ -75,7 +75,7 @@ export async function fetchCMS(
 }
 
 export const fetchPostIdBySlug = async (slug: string) => {
-   
+    try{
     const response = await fetch(
         `https://cms.layer1.foundation/api/blogs?populate=*`
     );
@@ -89,9 +89,17 @@ export const fetchPostIdBySlug = async (slug: string) => {
             return post;
         }
     });
-
     return post ? post.id : null;
+    } catch (error) {
+        console.log("Failed to fetch post by slug:", error);
+    }
+
+    
 };
+
+const fetchImagesImgbb = async (image: string) => {
+    
+}
 
 export const fetchPost = async (slug: string) => {
     const id = await fetchPostIdBySlug(slug);
