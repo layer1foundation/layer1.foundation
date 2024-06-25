@@ -19,18 +19,19 @@ export default function Preview({
     id?: string | number;
     loading?: boolean;
 }) {
+    console.log("POST in PREVIEW", post);
     const defaultImageUrl = "/apple-touch-icon.png";
     const [imageUrl, setImageUrl] = useState(
-        post?.thumbnail?.data?.attributes?.formats?.small?.url
-            ? `${EXTERNAL_LINKS.strapi}${post?.thumbnail?.data?.attributes?.formats?.small?.url}`
+        post?.thumbnail_url
+            ? `${post?.thumbnail_url}`
             : defaultImageUrl
     );
     const backupImageUrl = "/apple-touch-icon.png";
     const author = post?.author ? post?.author : "Anon";
     const defaultAvatarUrl = "/apple-touch-icon.png";
     const [avatar, setAvatar] = useState(
-    post?.author_avatar?.data?.attributes?.url
-        ? `${EXTERNAL_LINKS.strapi}${post.author_avatar.data.attributes.url}`
+    post?.author_avatar_url
+        ? `${post.author_avatar_url}`
         : "/apple-touch-icon.png"
     );
     let date = post?.publishedAt;

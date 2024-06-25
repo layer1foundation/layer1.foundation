@@ -50,6 +50,9 @@ export type IBlogPostAttributes = {
     updatedAt: Date;
     author_avatar: IBlogImgProps;
     author: string;
+    author_avatar_url: string;  
+    cover_url: string;
+    thumbnail_url: string;
 };
 
 export interface IBlog {
@@ -63,10 +66,15 @@ export async function fetchCMS(
     endpoint: IEndpointTypes
 ): Promise<IBlog[] | IBlog> {
     try {
-        const res = await fetch(
-            `${process.env.STRAPI_SERVER_URL}/api/${endpoint}?populate=*`
+        const res = await fetch(`${EXTERNAL_LINKS.strapi}/api/${endpoint}?populate=*`,{
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            }
+        }
         );
         const { data } = await res.json();
+        console.log("CMS data", data)
         return data;
     } catch (error) {
         console.error("Failed to fetch CMS:", error);
@@ -77,7 +85,7 @@ export async function fetchCMS(
 export const fetchPostIdBySlug = async (slug: string) => {
     try{
     const response = await fetch(
-        `${process.env.STRAPI_SERVER_URL}/api/blogs?populate=*`
+        `${EXTERNAL_LINKS.strapi}/api/blogs?populate=*`
     );
     const { data } = await response.json();
     const post = data.find((post: IBlog) => {
@@ -104,7 +112,7 @@ const fetchImagesImgbb = async (image: string) => {
 export const fetchPost = async (slug: string) => {
     const id = await fetchPostIdBySlug(slug);
     const response = await fetch(
-        `https://cms.layer1.foundation/api/blogs?filters[id]=${id}&populate=*`
+        `${EXTERNAL_LINKS.strapi}/api/blogs?filters[id]=${id}&populate=*`
     );
     const { data } = await response.json();
     return data[0];

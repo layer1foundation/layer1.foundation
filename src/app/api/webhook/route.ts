@@ -20,7 +20,7 @@ interface ImageUploadResponse {
         url: string;
     };
 }
-const strapiBaseUrl = 'https://localhost:1337';
+const strapiBaseUrl = process.env.STRAPI_SERVER_URL;
 
 export async function POST(req: NextRequest, res: NextResponse) {
     console.log('WEBHOOK:request received')
@@ -48,7 +48,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
                     headers: {
                         'Accept': 'image/*',
                         // Optionally adjust or remove the Cache-Control header
-                        // 'Cache-Control': 'no-cache',
+                        'Cache-Control': 'no-cache',
                     }
                 });
                 console.log(`Fetching image from URL: ${url}`);
@@ -59,7 +59,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
                 const arrayBuffer = await response.arrayBuffer();
                 return Buffer.from(arrayBuffer);
             } catch (err) {
-                console.error(`Attempt ${4 - retries} failed for URL: ${url}. Error: ${err}`);
+                console.error(`Attempt ${10 - retries} failed for URL: ${url}. Error: ${err}`);
                 retries -= 1;
                 if (retries === 0) throw err; // Rethrow error if all retries fail
                 // Optional: Implement exponential backoff or a fixed delay before retrying
@@ -142,9 +142,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         console.log(thumbnailUpdate)
         console.log(avatarUpdate)
 
-        // update Strapi with the new IMGBB URL
         const success = await updateStrapiEntry(data, coverUpdate, thumbnailUpdate, avatarUpdate)
-            .then(() => console.log('Entry updated successfully'))
             .catch(error => console.error('Error updating entry:', error));
 
         return NextResponse.json({ success: true });
@@ -166,9 +164,9 @@ const updateStrapiEntry = async (data: any, newCoverUrl: string, newThumbnailUrl
     const updateData = {
         ...data.entry,
     };
-    updateData.cover.url = newCoverUrl;
-    updateData.thumbnail.url = newThumbnailUrl;
-    updateData.author_avatar.url = newAvatarUrl;
+    updateData.cover_url = newCoverUrl;
+    updateData.thumbnail_url = newThumbnailUrl;
+    updateData.author_avatar_url = newAvatarUrl;
     
     console.log('WEBHOOK:updateData', updateData)
       try {

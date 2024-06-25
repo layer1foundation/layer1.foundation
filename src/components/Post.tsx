@@ -15,12 +15,12 @@ export default function Post({
     loading?: boolean;
 }) {
     const author = post?.author;
-    const avatar = post?.author_avatar?.data?.attributes?.url
-        ? `${EXTERNAL_LINKS.strapi}${post.author_avatar.data.attributes.url}`
+    const avatar = post?.author_avatar_url
+        ? `${post.author_avatar_url}`
         : "/apple-touch-icon.png";
     const readTime = estimateReadingTime(post?.content);
-    const imageUrl = post?.cover?.data?.attributes?.formats?.large?.url
-        ? `${EXTERNAL_LINKS.strapi}${post?.cover?.data?.attributes?.formats?.large?.url}`
+    const imageUrl = post?.cover_url
+        ? `${post?.cover_url}`
         : "/img/blog-img-1.png";
     const backupImageUrl = "/img/blog-img-1.png";
     return !loading ? (

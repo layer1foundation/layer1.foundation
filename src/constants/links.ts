@@ -15,7 +15,8 @@ export const EXTERNAL_LINKS = {
     ordinalsbot: "https://ordinalsbot.com/",
     ordio: "https://www.ord.io/",
     ordiscan: "https://ordiscan.com/",
-    strapi: "https://cms.layer1.foundation",
+    // strapi: "https://cms.layer1.foundation",
+    strapi:"http://localhost:1337", //for imgbb testing
     sandshrew: "https://www.sandshrew.io/",
     chisel: "https://chisel.xyz/",
     allium: "https://www.allium.so/",
