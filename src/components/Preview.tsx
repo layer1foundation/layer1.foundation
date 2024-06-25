@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IBlogPostAttributes } from "@/lib/cms";
 import { EXTERNAL_LINKS } from "@/constants/links";
 import ReactMarkedown from "react-markdown";
@@ -8,6 +8,7 @@ import Button from "./Button";
 import { Author } from "./Author";
 import { estimateReadingTime } from "@/helpers/readtime";
 import Image from "next/image";
+import { fetchImageFromImgBB } from "@/helpers/imgbb";
 
 export default function Preview({
     post,
@@ -18,23 +19,38 @@ export default function Preview({
     id?: string | number;
     loading?: boolean;
 }) {
-    const imageUrl = post?.thumbnail?.data?.attributes?.formats?.small?.url
+    const defaultImageUrl = post?.thumbnail?.data?.attributes?.formats?.small
+        ?.url
         ? `${EXTERNAL_LINKS.strapi}${post?.thumbnail?.data?.attributes?.formats?.small?.url}`
         : "/apple-touch-icon.png";
+    const [imageUrl, setImageUrl] = useState(defaultImageUrl);
     const backupImageUrl = "/apple-touch-icon.png";
     const author = post?.author ? post?.author : "Anon";
-    const avatar = post?.author_avatar?.data?.attributes?.url
+    const defaultAvatarUrl = post?.author_avatar?.data?.attributes?.url
         ? `${EXTERNAL_LINKS.strapi}${post.author_avatar.data.attributes.url}`
         : "/apple-touch-icon.png";
+    const [avatar, setAvatar] = useState(defaultAvatarUrl);
+
     let date = post?.publishedAt;
     typeof date === "string" ? (date = new Date(date)) : post?.publishedAt;
     const slug = post?.title.toLowerCase().split(" ").join("-");
     const readtime = post?.content ? estimateReadingTime(post?.content) : 1;
     const handleError = (e: any) => {
-        const target = e.target as HTMLImageElement;
-        target.onerror = null;
-        target.src = backupImageUrl;
+        console.log("ERROR IN PREVIEW");
+        setImageUrl("/apple-touch-icon.png");
     };
+    const handleAvatarError = async (e: any) => {
+        console.log("ERROR IN PREVIEW");
+        setAvatar(backupImageUrl);
+    };
+
+    useEffect(() => {
+        if (post?.thumbnail_url && post.thumbnail_url !== null)
+            setImageUrl(post?.thumbnail_url);
+
+        if (post?.author_avatar && post.author_avatar !== null)
+            setAvatar(post.author_avatar_url);
+    }, [JSON.stringify(post)]);
 
     return post && !loading ? (
         <div className="flex max-w-7xl md:items-center space-x-10 md:py-16 py-10 w-full border-b border-smoke20 justify-between">
