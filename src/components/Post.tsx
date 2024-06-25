@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { EXTERNAL_LINKS } from "@/constants/links";
 import { IBlogPostAttributes } from "@/lib/cms";
 import ReactMarkdown from "react-markdown";
@@ -15,13 +15,15 @@ export default function Post({
     loading?: boolean;
 }) {
     const author = post?.author;
+    const defaultAvatarUrl = post?.author_avatar?.data?.attributes?.url ? `${EXTERNAL_LINKS.strapi}${post.author_avatar.data.attributes.url}` : "/apple-touch-icon.png";
     const avatar = post?.author_avatar_url
         ? `${post.author_avatar_url}`
-        : "/apple-touch-icon.png";
+        : defaultAvatarUrl;
     const readTime = estimateReadingTime(post?.content);
-    const imageUrl = post?.cover_url
+    const defaultImageUrl = post?.cover?.data?.attributes?.formats?.large?.url ? `${EXTERNAL_LINKS.strapi}${post?.cover?.data?.attributes?.formats?.large?.url}`: "/img/blog-img-1.png";
+    const [imageUrl, setImageUrl ] = useState(post?.cover_url
         ? `${post?.cover_url}`
-        : "/img/blog-img-1.png";
+        : defaultImageUrl)
     const backupImageUrl = "/img/blog-img-1.png";
     return !loading ? (
         <div className="w-full px-4 md:px-10 max-w-7xl post font-suisse">

@@ -20,7 +20,7 @@ export default function Preview({
     loading?: boolean;
 }) {
     console.log("POST in PREVIEW", post);
-    const defaultImageUrl = "/apple-touch-icon.png";
+    const defaultImageUrl = post?.thumbnail?.data?.attributes?.formats?.small?.url ? `${EXTERNAL_LINKS.strapi}${post?.thumbnail?.data?.attributes?.formats?.small?.url}` : "/apple-touch-icon.png"
     const [imageUrl, setImageUrl] = useState(
         post?.thumbnail_url
             ? `${post?.thumbnail_url}`
@@ -28,11 +28,11 @@ export default function Preview({
     );
     const backupImageUrl = "/apple-touch-icon.png";
     const author = post?.author ? post?.author : "Anon";
-    const defaultAvatarUrl = "/apple-touch-icon.png";
+    const defaultAvatarUrl =  post?.author_avatar?.data?.attributes?.url ? `${EXTERNAL_LINKS.strapi}${post.author_avatar.data.attributes.url}` : "/apple-touch-icon.png"
     const [avatar, setAvatar] = useState(
     post?.author_avatar_url
         ? `${post.author_avatar_url}`
-        : "/apple-touch-icon.png"
+        :defaultAvatarUrl
     );
     let date = post?.publishedAt;
     typeof date === "string" ? (date = new Date(date)) : post?.publishedAt;
@@ -40,7 +40,7 @@ export default function Preview({
     const readtime = post?.content ? estimateReadingTime(post?.content) : 1;
     const handleError = (e: any) => {
         console.log("ERROR IN PREVIEW");
-        setImageUrl(defaultImageUrl);
+        setImageUrl('/apple-touch-icon.png');
     };
     const handleAvatarError = async (e: any) => {
         console.log("ERROR IN PREVIEW");
