@@ -21,7 +21,10 @@
     },
     "dependencies": {
         "@headlessui/react": "^1.7.18",
+        "dotenv": "^16.4.5",
+        "form-data": "^4.0.0",
         "next": "14.1.0",
+        "node-fetch": "^3.3.2",
         "react": "^18",
         "react-dom": "^18",
         "react-markdown": "^9.0.1",
@@ -29,6 +32,7 @@
         "remark-gfm": "^4.0.0"
     },
     "devDependencies": {
+        "@types/form-data": "^2.5.0",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",

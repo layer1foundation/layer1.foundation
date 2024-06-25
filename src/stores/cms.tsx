@@ -55,7 +55,8 @@ export function CmsProvider(props: { children: ReactNode }) {
                 loading: false,
             });
         })().catch(e => {
-            console.error(e);
+            console.log("Failed to fetch CMS store")
+            // console.error(e);
             setCms({ ...cms, error: true });
         });
     }, []);
