@@ -15,7 +15,6 @@ export default {
                 hostname: "localhost",
                 port: "1337",
             },
-            
         ],
     },
 };
