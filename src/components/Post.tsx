@@ -29,20 +29,22 @@ export default function Post({
 
     useEffect(() => {
         if (post?.cover_url) setImageUrl(post?.cover_url);
-    }, [JSON.stringify(post)]);
+    }, [JSON.stringify(post), loading]);
+
+    console.log("POST", post);
 
     return !loading ? (
         <div className="w-full px-4 md:px-10 max-w-7xl post font-suisse">
             <div className="w-full">
                 {imageUrl ? (
                     <div className="w-full h-64 md:h-96 overflow-hidden relative">
-                        <Image
+                        <img
                             src={imageUrl}
                             alt="L1F Blog Post"
                             onError={(e: any) => {
-                                const target = e.target as HTMLImageElement;
-                                target.onerror = null;
-                                target.src = defaultImageUrl;
+                                // const target = e.target as HTMLImageElement;
+                                // target.onerror = null;
+                                // target.src = defaultImageUrl;
                             }}
                             width={1300}
                             height={300}

@@ -41,7 +41,7 @@ export default function Preview({
     };
     const handleAvatarError = async (e: any) => {
         console.log("ERROR IN PREVIEW");
-        setAvatar(backupImageUrl);
+        // setAvatar(backupImageUrl);
     };
 
     useEffect(() => {
@@ -50,7 +50,7 @@ export default function Preview({
 
         if (post?.author_avatar && post.author_avatar !== null)
             setAvatar(post.author_avatar_url);
-    }, [JSON.stringify(post)]);
+    }, [JSON.stringify(post), loading]);
 
     return post && !loading ? (
         <div className="flex max-w-7xl md:items-center space-x-10 md:py-16 py-10 w-full border-b border-smoke20 justify-between">
@@ -76,7 +76,7 @@ export default function Preview({
                     />
                 </div>
             </div>
-            <Image
+            <img
                 className="w-24 h-24 min-w-24 md:h-40 md:w-40 md:min-w-40 object-cover object-center"
                 onError={handleError}
                 width={300}

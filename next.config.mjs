@@ -10,6 +10,12 @@ export default {
                 protocol: "https",
                 hostname: "cms.layer1.foundation",
             },
+            {
+                protocol: "http",
+                hostname: "localhost",
+                port: "1337",
+            },
+            
         ],
     },
 };
