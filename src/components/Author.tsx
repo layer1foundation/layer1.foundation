@@ -37,7 +37,7 @@ export const Author = ({
             {preview ? (
                 <div className="flex gap-4 items-center md:ml-6">
                     <img
-                        src={img}
+                        src={img ?? "/apple-touch-icon.png"}
                         alt={"avatar"}
                         width={50}
                         height={50}

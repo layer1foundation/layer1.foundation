@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import { EXTERNAL_LINKS } from "@/constants/links";
 import { IBlogPostAttributes } from "@/lib/cms";
 import ReactMarkdown from "react-markdown";
@@ -15,16 +15,22 @@ export default function Post({
     loading?: boolean;
 }) {
     const author = post?.author;
-    const defaultAvatarUrl = post?.author_avatar?.data?.attributes?.url ? `${EXTERNAL_LINKS.strapi}${post.author_avatar.data.attributes.url}` : "/apple-touch-icon.png";
+    const defaultAvatarUrl = post?.author_avatar?.data?.attributes?.url
+        ? `${EXTERNAL_LINKS.strapi}${post.author_avatar.data.attributes.url}`
+        : "/apple-touch-icon.png";
     const avatar = post?.author_avatar_url
         ? `${post.author_avatar_url}`
         : defaultAvatarUrl;
     const readTime = estimateReadingTime(post?.content);
-    const defaultImageUrl = post?.cover?.data?.attributes?.formats?.large?.url ? `${EXTERNAL_LINKS.strapi}${post?.cover?.data?.attributes?.formats?.large?.url}`: "/img/blog-img-1.png";
-    const [imageUrl, setImageUrl ] = useState(post?.cover_url
-        ? `${post?.cover_url}`
-        : defaultImageUrl)
-    const backupImageUrl = "/img/blog-img-1.png";
+    const defaultImageUrl = post?.cover?.data?.attributes?.formats?.large?.url
+        ? `${EXTERNAL_LINKS.strapi}${post?.cover?.data?.attributes?.formats?.large?.url}`
+        : "/img/blog-img-1.png";
+    const [imageUrl, setImageUrl] = useState(defaultImageUrl);
+
+    useEffect(() => {
+        if (post?.cover_url) setImageUrl(post?.cover_url);
+    }, [JSON.stringify(post)]);
+
     return !loading ? (
         <div className="w-full px-4 md:px-10 max-w-7xl post font-suisse">
             <div className="w-full">
@@ -36,7 +42,7 @@ export default function Post({
                             onError={(e: any) => {
                                 const target = e.target as HTMLImageElement;
                                 target.onerror = null;
-                                target.src = backupImageUrl;
+                                target.src = defaultImageUrl;
                             }}
                             width={1300}
                             height={300}
